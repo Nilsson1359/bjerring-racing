@@ -1,0 +1,9 @@
+node_modules/
+package.json
+package-lock.json
+*.js
+version1.html
+version2.html
+version3.html
+version4.html
+.DS_Store
