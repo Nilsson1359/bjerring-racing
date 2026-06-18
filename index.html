@@ -136,6 +136,11 @@
   .vid .vlabel small{display:block;font-family:'Inter';font-weight:500;font-size:.74rem;color:#cfcbe6;letter-spacing:.02em}
   .vid-side{display:flex;flex-direction:column;gap:22px}
   .video-note{margin-top:24px;color:#a8a3c6;font-size:.92rem;display:flex;align-items:center;gap:9px}
+  .vid-players{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:8px}
+  .vp{margin:0}
+  .vp video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:18px;background:#000;border:1px solid rgba(255,255,255,.12);display:block;box-shadow:0 18px 40px rgba(0,0,0,.4)}
+  .vp figcaption{font-family:'Saira Condensed',sans-serif;font-weight:700;letter-spacing:.05em;text-transform:uppercase;font-size:.86rem;color:#fff;margin-top:11px}
+  @media(max-width:940px){.vid-players{grid-template-columns:repeat(2,1fr)}}
 
   /* GALLERY */
   .gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:14px;grid-auto-flow:row dense}
@@ -387,28 +392,15 @@
     <div class="sec-head reveal">
       <span class="eyebrow light">På fuld gas</span>
       <h2 style="color:#fff">Se Mason i aktion</h2>
-      <p style="color:#b6b6bb">Følg løbene, testene og livet bag rattet. Tryk play, eller følg med live på TikTok og Instagram.</p>
+      <p style="color:#b6b6bb">Mason på banen i Aquila Formula 1000. Tryk play og oplev farten.</p>
     </div>
-    <div class="video-grid reveal">
-      <a class="vid big" href="https://www.youtube.com/results?search_query=Aquila+Formula+1000" target="_blank" rel="noopener">
-        <img src="assets/fb-vid-race.jpg" alt="Video: Aquila Formula 1000 løb live">
-        <span class="play"><svg width="24" height="24" viewBox="0 0 24 24" fill="#141220"><path d="M8 5v14l11-7z"/></svg></span>
-        <span class="vlabel">Aquila Formula 1000 · Race 3<small>YouTube · Se løbene live</small></span>
-      </a>
-      <div class="vid-side">
-        <a class="vid small" href="https://www.tiktok.com/@bjerring_racing" target="_blank" rel="noopener">
-          <img src="assets/fb-vid-vlog.jpg" alt="Video: Minivlog fra paddocken">
-          <span class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="#141220"><path d="M8 5v14l11-7z"/></svg></span>
-          <span class="vlabel">Minivlog fra paddocken<small>TikTok · @bjerring_racing</small></span>
-        </a>
-        <a class="vid small" href="https://www.instagram.com/bjerring_racing" target="_blank" rel="noopener">
-          <img src="assets/fb-paddock.jpg" alt="Video: Bag kulisserne med racerbilen">
-          <span class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="#141220"><path d="M8 5v14l11-7z"/></svg></span>
-          <span class="vlabel">Bag kulisserne<small>Instagram · Reels</small></span>
-        </a>
-      </div>
+    <div class="vid-players reveal">
+      <figure class="vp"><video src="assets/vid-3.mp4" poster="assets/vp-3.jpg" controls preload="metadata" playsinline></video><figcaption>Klar i paddocken</figcaption></figure>
+      <figure class="vp"><video src="assets/vid-0.mp4" poster="assets/vp-0.jpg" controls preload="metadata" playsinline></video><figcaption>Ud på banen</figcaption></figure>
+      <figure class="vp"><video src="assets/vid-1.mp4" poster="assets/vp-1.jpg" controls preload="metadata" playsinline></video><figcaption>Gennem svinget</figcaption></figure>
+      <figure class="vp"><video src="assets/vid-2.mp4" poster="assets/vp-2.jpg" controls preload="metadata" playsinline></video><figcaption>Bag kulisserne</figcaption></figure>
     </div>
-    <p class="video-note">🎬 Se alle løb live, søg på "Aquila Formula 1000" på YouTube.</p>
+    <p class="video-note">🎬 Følg flere klip på TikTok og Instagram, og se løbene live på YouTube (søg "Aquila Formula 1000").</p>
   </div>
 </section>
 
@@ -421,12 +413,12 @@
       <p>Fra de første gokart-runder til pokaler, podier og racerbilen.</p>
     </div>
     <div class="gallery reveal">
-      <a href="assets/fb-hero.jpg" target="_blank" class="g-wide g-tall"><img src="assets/fb-hero.jpg" alt="Mason ved sin Aquila Formula 1000 racerbil #10"></a>
+      <a href="assets/race-pan.jpg" target="_blank" class="g-wide g-tall"><img src="assets/race-pan.jpg" alt="Mason på fuld fart i Aquila Formula 1000 racerbil #10"></a>
+      <a href="assets/van-rear.jpg" target="_blank" class="g-tall"><img src="assets/van-rear.jpg" alt="Bjerring Racing kassevogn bagfra med sponsorlogoer"></a>
       <a href="assets/kart2.jpg" target="_blank" class="g-tall"><img src="assets/kart2.jpg" alt="Mason med pokaler og sejrskrans"></a>
-      <a href="assets/kart3.jpg" target="_blank" class="g-tall"><img src="assets/kart3.jpg" alt="Mason med to store pokaler"></a>
-      <a href="assets/fb-paddock.jpg" target="_blank" class="g-wide"><img src="assets/fb-paddock.jpg" alt="Aquila Formula 1000 racerbil #10 i paddocken"></a>
-      <a href="assets/podium.jpg" target="_blank"><img src="assets/podium.jpg" alt="Mason fejrer med far"></a>
-      <a href="assets/kart1.jpg" target="_blank"><img src="assets/kart1.jpg" alt="Mason i gokart på banen"></a>
+      <a href="assets/van-side.jpg" target="_blank" class="g-wide"><img src="assets/van-side.jpg" alt="Bjerring Racing kassevogn fra siden"></a>
+      <a href="assets/race-pack.jpg" target="_blank"><img src="assets/race-pack.jpg" alt="Mason #10 i feltet på banen"></a>
+      <a href="assets/team.jpg" target="_blank"><img src="assets/team.jpg" alt="Mason og teamet ved racerbilen"></a>
     </div>
   </div>
 </section>
@@ -464,8 +456,8 @@
 <section class="pad" id="rejse" style="padding-top:0">
   <div class="wrap journey">
     <div class="van reveal">
-      <img src="assets/pokaler.jpg" alt="Bjerring Racing kassevogn omgivet af pokaler">
-      <div class="cap">Holdets kassevogn. Din virksomheds logo kører med på vejene og banen i hele Danmark.</div>
+      <img src="assets/van-side.jpg" alt="Bjerring Racing kassevogn med sponsorlogoer">
+      <div class="cap">Holdets kassevogn med sponsorernes logoer. Din virksomhed kører med på vejene og banen i hele Danmark.</div>
     </div>
     <div class="reveal">
       <span class="eyebrow">Rejsen mod toppen</span>
