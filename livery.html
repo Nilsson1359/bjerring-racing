@@ -57,7 +57,7 @@
   @keyframes shine{0%,74%{transform:translateX(-120%)}90%,100%{transform:translateX(120%)}}
 
   /* ---------- NAV ---------- */
-  nav{position:fixed;top:50px;left:0;right:0;z-index:60}
+  nav{position:sticky;top:0;left:0;right:0;z-index:60}
   .nav-inner{margin:14px auto;max-width:1180px;display:flex;align-items:center;justify-content:space-between;padding:11px 16px 11px 18px;background:rgba(11,20,48,.78);backdrop-filter:saturate(180%) blur(18px);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
   .brand{display:flex;align-items:center;gap:12px;font-family:'Sora';font-weight:800;font-size:1.04rem;color:#fff}
   .brand .plate{width:38px;height:34px;font-size:1.25rem}
@@ -69,7 +69,7 @@
   .nav-toggle span{width:22px;height:2px;background:var(--gold);border-radius:2px}
 
   /* ---------- HERO ---------- */
-  .hero{position:relative;padding:178px 0 60px;overflow:hidden}
+  .hero{position:relative;padding:34px 0 60px;overflow:hidden}
   .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.02fr 1.1fr;gap:46px;align-items:center}
   .hero h1{font-size:clamp(3rem,7.4vw,5.6rem);font-weight:800;margin:14px 0 18px;line-height:.9}
   .hero h1 .tagline{display:block;font-family:'Saira Condensed';font-weight:700;font-size:.26em;letter-spacing:.22em;text-transform:uppercase;color:var(--lime);margin-bottom:14px}
@@ -239,7 +239,7 @@
   .foot-note{color:var(--ink-soft);font-size:.86rem;margin-top:26px;text-align:center}
 
   /* ticker (diamond separators + dashed gold edges) */
-  .ticker-block{position:fixed;top:0;left:0;right:0;z-index:70;overflow:hidden}
+  .ticker-block{position:relative;overflow:hidden}
   .ticker-dash{height:7px;background:repeating-linear-gradient(-55deg,var(--gold) 0 11px,transparent 11px 22px)}
   .ticker{background:var(--grad);overflow:hidden;height:36px;display:flex;align-items:center}
   .ticker-track{display:flex;align-items:center;white-space:nowrap;animation:tickerscroll 34s linear infinite;will-change:transform}
@@ -285,7 +285,7 @@
   @media(max-width:560px){
     .pkgs,.why,.gallery{grid-template-columns:1fr}
     .g-wide{grid-column:span 1}
-    .hero{padding:158px 0 0}
+    .hero{padding:22px 0 0}
     section.pad{padding:70px 0}
     .contact-card{padding:42px 26px}
     .vid-side{flex-direction:column}
