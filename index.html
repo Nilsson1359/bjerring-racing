@@ -268,6 +268,30 @@
   .tl2-step h4{font-size:1.18rem;margin-top:2px;color:#fff}
   .tl2-step p{color:var(--ink-soft);margin-top:6px;font-size:.97rem}
 
+  /* race calendar */
+  .cal{display:flex;flex-direction:column;gap:12px}
+  .cal-row{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 22px;transition:.2s}
+  .cal-row:hover{border-color:var(--gold);transform:translateX(3px)}
+  .cal-row.done{opacity:.5}
+  .cal-row.next{border-color:var(--gold);box-shadow:inset 0 0 0 1px var(--gold),0 14px 30px rgba(198,162,76,.16)}
+  .cal-main{display:flex;align-items:center;gap:24px;min-width:0}
+  .cal-date{font-family:'Saira Condensed';font-weight:800;color:var(--gold);font-size:1.04rem;letter-spacing:.02em;min-width:120px}
+  .cal-venue b{font-family:'Saira Condensed';font-weight:700;text-transform:uppercase;font-size:1.16rem;color:#fff;letter-spacing:.02em;display:block;line-height:1.1}
+  .cal-venue span{color:var(--ink-soft);font-size:.86rem}
+  .cls{font-style:normal;font-weight:700;text-transform:uppercase;font-size:.72rem;letter-spacing:.06em}
+  .cls-f1000{color:var(--gold)}
+  .cls-kart{color:var(--lime)}
+  .cal-badge{flex:none;font-family:'Saira Condensed';font-weight:700;text-transform:uppercase;font-size:.74rem;letter-spacing:.08em;padding:6px 14px;border-radius:999px;white-space:nowrap}
+  .cal-badge.b-next{background:var(--grad);color:var(--navy-deep)}
+  .cal-badge.b-up{background:rgba(255,255,255,.07);color:var(--ink-soft);border:1px solid var(--line)}
+  .cal-badge.b-done{background:transparent;color:var(--ink-soft);border:1px solid var(--line)}
+  @media(max-width:620px){
+    .cal-main{flex-direction:column;align-items:flex-start;gap:4px}
+    .cal-date{min-width:0;font-size:.92rem}
+    .cal-venue b{font-size:1.02rem}
+    .cal-row{padding:14px 16px}
+  }
+
   .reveal{opacity:0;transform:translateY(30px);transition:.85s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
 
@@ -312,6 +336,7 @@
       <a href="#video">Video</a>
       <a href="#galleri">Galleri</a>
       <a href="#resultater">Resultater</a>
+      <a href="#kalender">Kalender</a>
       <a href="#sponsor">Sponsorpakker</a>
       <a href="#kontakt" class="btn btn-primary" style="padding:10px 18px">Bliv sponsor</a>
     </div>
@@ -449,6 +474,27 @@
       <div class="res-card"><div class="rn">2026</div><div class="rl">Fuld sæson i Aquila Formula 1000.</div></div>
     </div>
     <div class="dkse reveal"><div class="big">DK &amp; SE</div><div class="txt">Løb i både Danmark og udlandet, bl.a. Mittsverigebanan i Sverige.</div></div>
+  </div>
+</section>
+
+<!-- KALENDER -->
+<section class="pad" id="kalender" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Kommende løb</span>
+      <h2>Race-kalender <span class="grad-text">2026</span></h2>
+      <p>Mason kører to klasser i 2026: <span class="lime-text">Gokart DM</span> og <span class="grad-text">Aquila Formula 1000</span>. Følg sæsonen i Danmark, Sverige og Norge.</p>
+    </div>
+    <div class="cal reveal">
+      <div class="cal-row" data-end="2026-05-31"><div class="cal-main"><div class="cal-date">30.-31. maj</div><div class="cal-venue"><b>Gelleråsen Arena</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇸🇪 Sverige</span></div></div><span class="cal-badge"></span></div>
+      <div class="cal-row" data-end="2026-06-14"><div class="cal-main"><div class="cal-date">13.-14. juni</div><div class="cal-venue"><b>Mittsverigebanan</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇸🇪 Sverige</span></div></div><span class="cal-badge"></span></div>
+      <div class="cal-row" data-end="2026-06-21"><div class="cal-main"><div class="cal-date">19.-21. juni</div><div class="cal-venue"><b>Midtjysk Karting Bane</b><span><em class="cls cls-kart">Gokart DM</em> · 🇩🇰 Danmark</span></div></div><span class="cal-badge"></span></div>
+      <div class="cal-row" data-end="2026-06-28"><div class="cal-main"><div class="cal-date">27.-28. juni</div><div class="cal-venue"><b>Sturup Raceway</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇸🇪 Sverige</span></div></div><span class="cal-badge"></span></div>
+      <div class="cal-row" data-end="2026-07-05"><div class="cal-main"><div class="cal-date">4.-5. juli</div><div class="cal-venue"><b>Ring Knutstorp</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇸🇪 Sverige</span></div></div><span class="cal-badge"></span></div>
+      <div class="cal-row" data-end="2026-07-26"><div class="cal-main"><div class="cal-date">25.-26. juli</div><div class="cal-venue"><b>Kinnekulle Ring</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇸🇪 Sverige</span></div></div><span class="cal-badge"></span></div>
+      <div class="cal-row" data-end="2026-08-09"><div class="cal-main"><div class="cal-date">8.-9. august</div><div class="cal-venue"><b>Rudskogen</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇳🇴 Norge</span></div></div><span class="cal-badge"></span></div>
+      <div class="cal-row" data-end="2026-09-20"><div class="cal-main"><div class="cal-date">19.-20. september</div><div class="cal-venue"><b>Ring Djursland</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇩🇰 Danmark</span></div></div><span class="cal-badge"></span></div>
+    </div>
   </div>
 </section>
 
@@ -621,6 +667,21 @@
   }
   window.addEventListener('load',fillMarquee);
   let _mqT; window.addEventListener('resize',()=>{clearTimeout(_mqT);_mqT=setTimeout(fillMarquee,200)});
+
+  // race calendar: auto mark past races as "Kørt" and highlight the next one
+  (function(){
+    const rows=document.querySelectorAll('#kalender .cal-row');
+    if(!rows.length) return;
+    const today=new Date(); today.setHours(0,0,0,0);
+    let nextSet=false;
+    rows.forEach(r=>{
+      const badge=r.querySelector('.cal-badge'); if(!badge) return;
+      const end=new Date(r.getAttribute('data-end')+'T23:59:59');
+      if(end < today){ r.classList.add('done'); badge.textContent='Kørt'; badge.classList.add('b-done'); }
+      else if(!nextSet){ nextSet=true; r.classList.add('next'); badge.textContent='Næste løb'; badge.classList.add('b-next'); }
+      else { badge.textContent='Kommende'; badge.classList.add('b-up'); }
+    });
+  })();
 </script>
 </body>
 </html>
