@@ -419,6 +419,10 @@
   .marquee:hover{animation-play-state:paused}
   .marquee img{height:64px;width:auto;max-width:168px;object-fit:contain;padding:13px 24px;border-radius:14px;border:1px solid rgba(0,0,0,.06);background:#fff;box-shadow:0 8px 22px rgba(0,0,0,.35);transition:.3s;flex:none}
   .marquee img:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 14px 30px rgba(0,0,0,.5)}
+  @media(max-width:620px){
+    .marquee{gap:11px;animation-duration:26s}
+    .marquee img{height:32px;max-width:74px;padding:8px 11px;border-radius:11px}
+  }
   @keyframes scrollx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
   /* ---------- SECTIONS ---------- */
