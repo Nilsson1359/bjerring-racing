@@ -1065,5 +1065,9 @@
     });
   })();
 </script>
+<script>
+/* Cookiefri besøgstælling på egen server. Gemmer ingen cookies eller IP-adresser. */
+(function(){try{navigator.sendBeacon('https://stats.appsendmates.site/hit',JSON.stringify({p:location.pathname,r:document.referrer}))}catch(e){}})();
+</script>
 </body>
 </html>
