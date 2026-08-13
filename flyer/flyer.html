@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<title>Bjerring Racing · Flyer 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&family=Saira+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b1430;
+    --bg-soft:#081027;
+    --ink:#ffffff;
+    --ink-soft:#a9b2cb;
+    --line:rgba(255,255,255,.12);
+    --card:#15244e;
+    --navy:#0b1430;
+    --navy-deep:#081027;
+    --gold:#c6a24c;
+    --gold-hi:#e6cf86;
+    --lime:#c8d519;
+    --grad:linear-gradient(100deg,#c6a24c,#e6cf86);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#222}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);line-height:1.5;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  img{display:block;max-width:100%}
+  @page{size:148mm 210mm;margin:0}
+  .page{position:relative;width:148mm;height:210mm;overflow:hidden;background:var(--bg);page-break-after:always;display:flex;flex-direction:column}
+  .cond{font-family:'Saira Condensed',sans-serif;font-weight:800;letter-spacing:.01em}
+  /* Chrome PDF-print kan ikke background-clip:text — brug solid guld i stedet for gradient */
+  .grad-text{color:var(--gold-hi)}
+  .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:6.4pt;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+  .eyebrow::before{content:"";width:18px;height:2px;background:var(--grad);border-radius:2px}
+  .checker{height:11px;background-image:repeating-conic-gradient(#0b1430 0% 25%, #c6a24c 0% 50%);background-size:11px 11px;flex:none}
+  .ticker-dash{height:5px;background:repeating-linear-gradient(-55deg,var(--gold) 0 8px,transparent 8px 16px);flex:none}
+  .plate{display:inline-grid;place-items:center;font-family:'Saira Condensed';font-weight:800;color:var(--navy-deep);background:linear-gradient(140deg,#c6a24c,#e6cf86);border-radius:8px}
+  .pad-x{padding-left:11mm;padding-right:11mm}
+
+  /* ---------- PAGE 1 · COVER ---------- */
+  .cover-hero{position:relative;flex:none;height:118mm}
+  .cover-hero img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+  .cover-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,20,48,.18) 40%,rgba(11,20,48,.72) 82%,var(--bg) 100%)}
+  .cover-plate{position:absolute;top:7mm;left:8mm;z-index:3;width:17mm;height:15mm;font-size:26pt;box-shadow:0 4mm 8mm rgba(0,0,0,.45)}
+  .keda-tag{position:absolute;top:7mm;right:8mm;z-index:3;background:rgba(11,20,48,.88);border:1px solid var(--line);border-radius:7px;padding:2.2mm 3.6mm;font-family:'Saira Condensed';font-weight:700;font-size:8pt;letter-spacing:.06em;color:#fff}
+  .keda-tag b{color:var(--gold)}
+  .cover-body{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding:0 11mm 8mm;margin-top:-14mm}
+  .cover-tagline{font-family:'Saira Condensed';font-weight:700;font-size:9.5pt;letter-spacing:.3em;text-transform:uppercase;color:var(--lime);margin-bottom:2.5mm}
+  .cover-title{font-family:'Saira Condensed';font-weight:800;text-transform:uppercase;font-size:41pt;line-height:.88;color:#fff}
+  .cover-sub{font-family:'Saira Condensed';font-weight:800;text-transform:uppercase;font-size:19pt;line-height:1;margin-top:2.5mm}
+  .cover-lead{color:var(--ink-soft);font-size:8.6pt;margin-top:4mm;max-width:96mm}
+  .cover-meta{display:flex;gap:9mm;margin-top:5.5mm}
+  .cover-meta b{font-family:'Saira Condensed';font-size:17pt;display:block;line-height:1}
+  .cover-meta span{font-size:6.6pt;color:var(--ink-soft)}
+  .cover-foot{flex:none;margin:0 11mm;border-top:1px solid var(--line);padding:3.6mm 0 5mm;display:flex;justify-content:space-between;align-items:center}
+  .cover-foot .who{font-family:'Saira Condensed';font-weight:700;font-size:9.5pt;letter-spacing:.05em;color:#fff}
+  .cover-foot .who small{display:block;font-family:'Inter';font-weight:600;font-size:6.4pt;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
+  .cover-foot .web{font-family:'Saira Condensed';font-weight:800;font-size:12pt;letter-spacing:.04em}
+
+  /* ---------- SECTION HEADS ---------- */
+  .sec-head h2{font-family:'Saira Condensed';font-weight:800;text-transform:uppercase;font-size:21pt;line-height:.94;margin:2mm 0 2.6mm;color:#fff}
+  .sec-head p{color:var(--ink-soft);font-size:8.2pt}
+
+  /* ---------- PAGE 2 · OM MASON ---------- */
+  .about-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:6mm;align-items:start;margin-top:5mm}
+  .about-copy p{color:var(--ink-soft);font-size:8.2pt;margin-bottom:2.8mm}
+  .about-copy p strong{color:#fff}
+  .photo-stack{position:relative;margin-top:2mm}
+  .photo-stack .main{border-radius:5mm;overflow:hidden;border:1px solid var(--line);box-shadow:0 6mm 12mm rgba(0,0,0,.5)}
+  .photo-stack .main img{width:100%;height:62mm;object-fit:cover;object-position:center 20%}
+  .photo-stack .pip{position:absolute;bottom:-7mm;left:-6mm;width:42%;border-radius:3.4mm;overflow:hidden;border:1.6mm solid var(--gold);box-shadow:0 5mm 10mm rgba(0,0,0,.5)}
+  .photo-stack .pip img{width:100%;aspect-ratio:1/1;object-fit:cover}
+  .ribbon{position:absolute;top:-4mm;right:-3mm;z-index:2;background:var(--navy-deep);border:1px solid var(--gold);color:#fff;font-family:'Saira Condensed';font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:6.8pt;padding:2mm 3.4mm;border-radius:2.6mm}
+  .ribbon b{color:var(--gold)}
+  .res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm;margin-top:8mm}
+  .res-card{background:var(--card);border:1px solid var(--line);border-radius:3.4mm;padding:3.6mm 3.4mm}
+  .res-card .rn{font-family:'Saira Condensed';font-weight:800;font-size:15.5pt;line-height:1;color:var(--gold-hi)}
+  .res-card .rl{color:var(--ink-soft);margin-top:1.6mm;font-size:6.9pt;line-height:1.35}
+  .padborg{margin-top:5mm;background:var(--grad);color:var(--navy-deep);border-radius:3.6mm;padding:4.2mm 5.5mm;display:flex;align-items:center;gap:5mm;clip-path:polygon(0 0,100% 0,100% 100%,14px 100%,0 calc(100% - 14px))}
+  .padborg .big{font-family:'Saira Condensed';font-weight:800;font-size:15pt;line-height:1;white-space:nowrap}
+  .padborg .txt{font-size:7.6pt;font-weight:600;color:rgba(8,16,39,.92)}
+
+  /* ---------- PAGE 3 · TAL + PAKKER ---------- */
+  .reach-panel{background:var(--card);border:1px solid var(--line);border-radius:4mm;padding:4.6mm 5.5mm;margin-top:5mm}
+  .reach-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm}
+  .reach-stat b{font-family:'Saira Condensed';font-weight:800;font-size:17.5pt;line-height:1;display:block}
+  .reach-stat span{display:block;color:var(--ink-soft);font-size:6.8pt;margin-top:1.4mm}
+  .reach-stat .up{color:var(--lime);font-style:normal;font-weight:700;font-size:6.6pt;white-space:nowrap}
+  .reach-note{margin-top:3.4mm;padding-top:3mm;border-top:1px solid var(--line);color:var(--ink-soft);font-size:6.9pt}
+  .pkgs{display:grid;grid-template-columns:1fr 1fr;gap:3.6mm;margin-top:5mm}
+  .pkg{position:relative;background:var(--card);border:1px solid var(--line);border-radius:4mm;padding:4.4mm 4.6mm;display:flex;flex-direction:column}
+  .pkg .tier-row{display:flex;align-items:center;gap:2.6mm;margin-bottom:1.6mm}
+  .pkg .medal{width:8.4mm;height:8.4mm;border-radius:2.4mm;display:grid;place-items:center;font-size:10.5pt}
+  .m-bronze{background:rgba(207,128,77,.20)}.m-silver{background:rgba(180,190,210,.20)}
+  .m-gold{background:rgba(198,162,76,.24)}.m-plat{background:rgba(200,213,25,.18)}
+  .pkg .tier{font-family:'Saira Condensed';font-weight:800;letter-spacing:.04em;font-size:12.5pt;text-transform:uppercase;color:#fff}
+  .pkg .price{font-family:'Saira Condensed';font-weight:800;font-size:15.5pt;color:#fff;line-height:1}
+  .pkg .price small{font-size:7.6pt;font-weight:600;color:var(--ink-soft);font-family:'Inter'}
+  .pkg ul{list-style:none;margin-top:2.6mm;display:flex;flex-direction:column;gap:1.7mm}
+  .pkg li{display:flex;gap:2mm;align-items:flex-start;font-size:7.1pt;color:var(--ink-soft);line-height:1.35}
+  .pkg li::before{content:"";flex:none;width:3.4mm;height:3.4mm;margin-top:.5mm;border-radius:50%;background:var(--grad);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/3mm no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/3mm no-repeat}
+  .pkg.platin{background:linear-gradient(170deg,#0b1430,#15244e);border-color:var(--gold)}
+  .pkg .badge{position:absolute;top:-2.6mm;right:4mm;background:var(--grad);color:var(--navy-deep);font-family:'Saira Condensed';font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:5.8pt;padding:1.2mm 3.2mm;border-radius:99px}
+  .pkg-note{color:var(--ink-soft);font-size:6.9pt;margin-top:3.6mm;text-align:center}
+
+  /* ---------- PAGE 4 · SPONSORER + KONTAKT ---------- */
+  .logo-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2mm;margin-top:3mm}
+  .logo-grid .lg{background:#fff;border-radius:2.4mm;padding:1.6mm;display:grid;place-items:center;height:11mm;box-shadow:0 2mm 5mm rgba(0,0,0,.35)}
+  .logo-grid .lg img{max-height:8mm;max-width:100%;object-fit:contain}
+  .follow{display:grid;grid-template-columns:repeat(4,1fr);gap:2.6mm;margin-top:2.6mm}
+  .qr{background:var(--card);border:1px solid var(--line);border-radius:3mm;padding:2.4mm;text-align:center}
+  .qr .qbox{background:#fff;border-radius:2mm;padding:1.4mm;display:inline-block}
+  .qr img{width:14.5mm;height:14.5mm}
+  .qr b{display:block;font-family:'Saira Condensed';font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:7.2pt;margin-top:1.4mm;color:#fff}
+  .qr span{display:block;color:var(--ink-soft);font-size:5.7pt}
+  .contact-card{position:relative;overflow:hidden;background:linear-gradient(135deg,#081027,#15244e);border:1px solid var(--line);border-radius:4mm;padding:4mm 4.6mm;margin-top:3.2mm}
+  .contact-card .cblob{position:absolute;border-radius:50%;filter:blur(18mm);opacity:.4}
+  .contact-card .cblob.x1{width:55mm;height:55mm;background:#c6a24c;top:-24mm;right:-12mm}
+  .contact-card .cblob.x2{width:45mm;height:45mm;background:#c8d519;bottom:-26mm;left:-10mm;opacity:.2}
+  .contact-inner{position:relative;z-index:2}
+  .contact-inner h3{font-family:'Saira Condensed';font-weight:800;text-transform:uppercase;font-size:13pt;color:#fff;line-height:1;margin:1.2mm 0 2.4mm}
+  .ci-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2.6mm}
+  .ci{display:flex;align-items:center;gap:2.6mm;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:3mm;padding:2.6mm 3mm}
+  .ci .ic{width:7.6mm;height:7.6mm;flex:none;border-radius:2.2mm;display:grid;place-items:center;background:var(--grad);font-size:8.5pt}
+  .ci small{display:block;color:var(--ink-soft);font-size:5.3pt;text-transform:uppercase;letter-spacing:.09em}
+  .ci b{font-size:7.6pt;font-weight:600;font-family:'Saira Condensed';letter-spacing:.02em;color:#fff}
+  .p4-foot{margin-top:auto;padding:2.6mm 11mm 3.6mm;display:flex;justify-content:space-between;align-items:center}
+  .p4-foot .brand{display:flex;align-items:center;gap:2.8mm;font-family:'Sora';font-weight:800;font-size:9pt;color:#fff}
+  .p4-foot .brand .plate{width:9.5mm;height:8.5mm;font-size:11pt}
+  .p4-foot .brand small{display:block;font-family:'Inter';font-weight:600;font-size:5.6pt;letter-spacing:.16em;color:var(--ink-soft);text-transform:uppercase}
+  .p4-foot .keda{font-family:'Saira Condensed';font-weight:700;font-size:8.5pt;color:#fff;text-align:right}
+  .p4-foot .keda b{color:var(--gold)}
+  .p4-foot .keda small{display:block;font-family:'Inter';font-weight:600;font-size:5.4pt;letter-spacing:.14em;color:var(--ink-soft);text-transform:uppercase}
+
+  .page-head{padding-top:8mm}
+  .page-num{position:absolute;bottom:4.5mm;right:11mm;font-family:'Saira Condensed';font-weight:700;font-size:7pt;color:var(--ink-soft);letter-spacing:.1em}
+</style>
+</head>
+<body>
+
+<!-- ================= PAGE 1 · COVER ================= -->
+<div class="page">
+  <div class="ticker-dash"></div>
+  <div class="checker"></div>
+  <div class="cover-hero">
+    <img src="../assets/fb-hero.jpg" alt="">
+    <span class="plate cover-plate">10</span>
+    <span class="keda-tag">KEDA <b>MOTORSPORT</b></span>
+  </div>
+  <div class="cover-body">
+    <div class="cover-tagline">100% Pure Racing · Sæson 2026</div>
+    <div class="cover-title">Bjerring<br>Racing</div>
+    <div class="cover-sub">Fra <span class="grad-text">gokart</span> til <span class="grad-text">racerbil</span></div>
+    <p class="cover-lead">Mason Bjerring, 13 år, kører Aquila Formula 1000 under KEDA Motorsport, med løb i Danmark, Sverige og Norge. Drømmen er hele vejen til toppen.</p>
+    <div class="cover-meta">
+      <div><b class="grad-text cond">100+</b><span>Podieplaceringer</span></div>
+      <div><b class="grad-text cond">P4</b><span>Til DM, yngste i feltet</span></div>
+      <div><b class="grad-text cond">4,4 mio.</b><span>Visninger på 28 dage</span></div>
+    </div>
+  </div>
+  <div class="cover-foot">
+    <div class="who">Mason Bjerring · #10<small>Aquila Formula 1000 · KEDA Motorsport</small></div>
+    <div class="web grad-text cond">bjerringracing.dk</div>
+  </div>
+  <div class="checker"></div>
+  <div class="ticker-dash"></div>
+</div>
+
+<!-- ================= PAGE 2 · OM MASON ================= -->
+<div class="page">
+  <div class="checker"></div>
+  <div class="pad-x page-head">
+    <div class="sec-head">
+      <span class="eyebrow">Hvem er jeg?</span>
+      <h2>Gør min rejse til <span class="grad-text">vores rejse</span></h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-copy">
+        <p>Jeg hedder <strong>Mason Max Carøe Bjerring</strong>, er <strong>13 år</strong> og har kørt gokart, siden jeg var 6. Motorsport er mit liv, og min drøm er at nå hele vejen til toppen.</p>
+        <p>I 2026 tager jeg et stort skridt videre: Jeg debuterer i en <strong>Aquila Formula 1000-racerbil</strong> under KEDA Motorsport. Jeg har allerede testet bilen, og teamet blev imponerede over min fart.</p>
+        <p>Nu handler det om at bygge videre og udvikle mig som racerkører, med en fuld sæson i både Danmark og udlandet.</p>
+        <p style="font-weight:700;color:#fff">Skal du med til Padborg Park, så giver jeg en tur i en racerbil! 🏎️</p>
+      </div>
+      <div class="photo-stack">
+        <span class="ribbon cond">Aquila F1000 · <b>#10</b></span>
+        <div class="main"><img src="../assets/about-main.jpg" alt=""></div>
+        <div class="pip"><img src="../assets/about-pip.jpg" alt=""></div>
+      </div>
+    </div>
+    <div class="sec-head" style="margin-top:9mm">
+      <span class="eyebrow">Resultater &amp; erfaring</span>
+    </div>
+    <div class="res-grid">
+      <div class="res-card"><div class="rn">Nr. 4</div><div class="rl">Til DM, som yngste kører i feltet.</div></div>
+      <div class="res-card"><div class="rn">1. &amp; 2.</div><div class="rl">Plads samlet i Jysk-Fynsk Mesterskab.</div></div>
+      <div class="res-card"><div class="rn">Nr. 3</div><div class="rl">I Dansk Rotax Max Challenge, 46 deltagere.</div></div>
+      <div class="res-card"><div class="rn">2. plads</div><div class="rl">I DASU Ungdomscup.</div></div>
+      <div class="res-card"><div class="rn">100+</div><div class="rl">Podieplaceringer gennem karrieren.</div></div>
+      <div class="res-card"><div class="rn">2026</div><div class="rl">Fuld sæson i Aquila Formula 1000.</div></div>
+    </div>
+    <div class="padborg">
+      <div class="big">DK · SE · NO</div>
+      <div class="txt">Målet for 2026 er klart: at kæmpe helt i front og tage næste skridt mod international racing.</div>
+    </div>
+  </div>
+  <div class="page-num">BJERRING RACING · 02</div>
+</div>
+
+<!-- ================= PAGE 3 · SPONSORPAKKER ================= -->
+<div class="page">
+  <div class="checker"></div>
+  <div class="pad-x page-head">
+    <div class="sec-head">
+      <span class="eyebrow">Sponsorpakker 2026</span>
+      <h2>Vælg din <span class="grad-text">plads på holdet</span></h2>
+      <p>Som sponsor bliver du en del af Danmarks bedste sponsor-fællesskab, hvor virksomheder mødes, netværker og deler passionen for fart, både på og uden for banen.</p>
+    </div>
+    <div class="reach-panel">
+      <div class="reach-stats">
+        <div class="reach-stat"><b class="grad-text">4,4 mio.</b><span>Visninger <em class="up">▲ 60x</em></span></div>
+        <div class="reach-stat"><b class="grad-text">25.000+</b><span>Følgere</span></div>
+        <div class="reach-stat"><b class="grad-text">183.000</b><span>Interaktioner <em class="up">▲ 48x</em></span></div>
+      </div>
+      <div class="reach-note">Tal fra de seneste 28 dage. Dit logo bliver set millioner af gange på Instagram, Facebook og TikTok.</div>
+    </div>
+    <div class="pkgs">
+      <div class="pkg">
+        <div class="tier-row"><div class="medal m-bronze">🥉</div><div class="tier">Bronze</div></div>
+        <div class="price cond">5.000 <small>kr.</small></div>
+        <ul><li>Logo på kassevognen</li><li>Banner ved løb</li><li>Logo på teamtøjet</li><li>Omtale på sociale medier</li></ul>
+      </div>
+      <div class="pkg">
+        <div class="tier-row"><div class="medal m-silver">🥈</div><div class="tier">Sølv</div></div>
+        <div class="price cond">10.000 <small>kr.</small></div>
+        <ul><li>Logo på bil &amp; kassevogn</li><li>Logo på kørerdragt (arm)</li><li>Banner ved løb</li><li>Eksponering på sociale medier</li></ul>
+      </div>
+      <div class="pkg">
+        <div class="tier-row"><div class="medal m-gold">🥇</div><div class="tier">Guld</div></div>
+        <div class="price cond">20.000 <small>kr.</small></div>
+        <ul><li>Stort logo på bil &amp; kassevogn</li><li>Logo på kørerdragt (bryst)</li><li>Banner ved løb</li><li>Trackday på Padborg Park</li></ul>
+      </div>
+      <div class="pkg platin">
+        <span class="badge cond">Hovedsponsor</span>
+        <div class="tier-row"><div class="medal m-plat">💎</div><div class="tier">Platin</div></div>
+        <div class="price cond">30.000 <small>kr. +</small></div>
+        <ul><li>Eksklusiv hovedsponsor</li><li>Logo på front &amp; side af bilen</li><li>Logo på kassevogn, dragt &amp; hjelm</li><li>Trackday på Padborg Park</li></ul>
+      </div>
+    </div>
+    <p class="pkg-note">Alle pakker giver din virksomhed synlighed nationalt og internationalt, repræsenteret professionelt på og uden for banen.</p>
+  </div>
+  <div class="page-num">BJERRING RACING · 03</div>
+</div>
+
+<!-- ================= PAGE 4 · SPONSORER + KONTAKT ================= -->
+<div class="page">
+  <div class="checker"></div>
+  <div class="pad-x page-head">
+    <div class="sec-head">
+      <span class="eyebrow">Vi kører med støtte fra</span>
+      <h2>Holdet bag <span class="grad-text">holdet</span></h2>
+    </div>
+    <div class="logo-grid">
+      <div class="lg"><img src="../assets/sp26-00.png"></div><div class="lg"><img src="../assets/sp26-01.png"></div><div class="lg"><img src="../assets/sp26-02.png"></div><div class="lg"><img src="../assets/sp26-03.png"></div><div class="lg"><img src="../assets/sp26-04.png"></div>
+      <div class="lg"><img src="../assets/sp26-05.png"></div><div class="lg"><img src="../assets/sp26-06.png"></div><div class="lg"><img src="../assets/sp26-07.png"></div><div class="lg"><img src="../assets/sp26-08.png"></div><div class="lg"><img src="../assets/sp26-09.png"></div>
+      <div class="lg"><img src="../assets/sp26-10.png"></div><div class="lg"><img src="../assets/sp26-11.png"></div><div class="lg"><img src="../assets/sp26-12.png"></div><div class="lg"><img src="../assets/sp26-13.png"></div><div class="lg"><img src="../assets/sp26-14.png"></div>
+      <div class="lg"><img src="../assets/sp26-15.png"></div><div class="lg"><img src="../assets/sp26-16.png"></div><div class="lg"><img src="../assets/sp26-17.png"></div><div class="lg"><img src="../assets/sp26-18.png"></div><div class="lg"><img src="../assets/sp26-19.png"></div>
+      <div class="lg"><img src="../assets/sp26-20.png"></div><div class="lg"><img src="../assets/sp26-21.png"></div><div class="lg"><img src="../assets/sp26-22.png"></div><div class="lg"><img src="../assets/sp26-23.png"></div><div class="lg"><img src="../assets/sp26-24.png"></div>
+      <div class="lg"><img src="../assets/sp26-25.png"></div><div class="lg"><img src="../assets/sp26-26.png"></div><div class="lg"><img src="../assets/sp26-27.png"></div><div class="lg"><img src="../assets/sp26-28.png"></div>
+      <div class="lg" style="background:var(--grad)"><span class="cond" style="color:var(--navy-deep);font-size:8.5pt;text-align:center;line-height:1.1">DIT LOGO<br>HER?</span></div>
+    </div>
+    <div class="sec-head" style="margin-top:4mm">
+      <span class="eyebrow">Følg med på rejsen</span>
+    </div>
+    <div class="follow">
+      <div class="qr"><span class="qbox"><img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=0&data=https%3A%2F%2Fbjerringracing.dk"></span><b>Hjemmeside</b><span>bjerringracing.dk</span></div>
+      <div class="qr"><span class="qbox"><img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=0&data=https%3A%2F%2Fwww.instagram.com%2Fbjerring_racing"></span><b>Instagram</b><span>@bjerring_racing</span></div>
+      <div class="qr"><span class="qbox"><img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=0&data=https%3A%2F%2Fwww.facebook.com%2Fbjerringracing"></span><b>Facebook</b><span>@bjerringracing</span></div>
+      <div class="qr"><span class="qbox"><img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=0&data=https%3A%2F%2Fwww.tiktok.com%2F%40bjerring_racing"></span><b>TikTok</b><span>@bjerring_racing</span></div>
+    </div>
+    <div class="contact-card">
+      <div class="cblob x1"></div><div class="cblob x2"></div>
+      <div class="contact-inner">
+        <span class="eyebrow">Kom med på rejsen</span>
+        <h3>Send en mail, eller ring til os</h3>
+        <div class="ci-row">
+          <div class="ci"><div class="ic">✉️</div><div><small>Email</small><b style="font-size:6.6pt">Lassebjerring@hotmail.com</b></div></div>
+          <div class="ci"><div class="ic">🏎️</div><div><small>Mason Bjerring</small><b>93 84 06 96</b></div></div>
+          <div class="ci"><div class="ic">📞</div><div><small>Lasse Bjerring</small><b>28 90 99 90</b></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p4-foot">
+    <div class="brand"><span class="plate cond">10</span><span>Bjerring Racing<small>Fra gokart til racerbil</small></span></div>
+    <div class="keda">KEDA <b>MOTORSPORT</b><small>Ultimate Driver Development</small></div>
+  </div>
+  <div class="checker"></div>
+  <div class="ticker-dash"></div>
+</div>
+
+</body>
+</html>

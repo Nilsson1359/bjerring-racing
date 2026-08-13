@@ -1,43 +1,31 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bjerring Racing · Fra Gokart til Racerbil · Mason Bjerring #10</title>
-<meta name="description" content="Fra Gokart til Racerbil. Mason Max Carøe Bjerring, 13 år, kører Aquila Formula 1000 under KEDA Motorsport. Se løb, resultater og videoer, og bliv sponsor for en ung dansk racerkører.">
-<meta name="keywords" content="Bjerring Racing, Mason Bjerring, Aquila Formula 1000, KEDA Motorsport, gokart, racerkører, motorsport sponsor, sponsorat, Padborg Park, Danmark">
+<title>Bjerring Racing · From Go-kart to Race Car · Mason Bjerring #10</title>
+<meta name="description" content="From Go-kart to Race Car. Mason Max Caroee Bjerring, 13 years old, races Aquila Formula 1000 with KEDA Motorsport. See races, results and videos, and sponsor a young Danish racing driver.">
+<meta name="keywords" content="Bjerring Racing, Mason Bjerring, Aquila Formula 1000, KEDA Motorsport, go-kart, racing driver, motorsport sponsor, sponsorship, Padborg Park, Denmark">
 <meta name="author" content="Bjerring Racing">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0b1430">
-<link rel="canonical" href="https://bjerringracing.dk/">
+<link rel="canonical" href="https://bjerringracing.dk/en/">
 <link rel="alternate" hreflang="da" href="https://bjerringracing.dk/">
 <link rel="alternate" hreflang="en" href="https://bjerringracing.dk/en/">
 <link rel="alternate" hreflang="x-default" href="https://bjerringracing.dk/">
 
 <script>
-/* Sprogvalg: besøgende uden for Danmark sendes automatisk til den engelske udgave (/en/).
-   IP-landeopslag uden cookies; valget huskes i localStorage, og manuelt skift vinder altid. */
-(function(){
-  try{
-    if(location.search.indexOf('lang=da')>-1){localStorage.setItem('br-lang','da');return;}
-    var pref=localStorage.getItem('br-lang');
-    if(pref==='da')return;
-    if(pref==='en'){location.replace('/en/');return;}
-    fetch('https://api.country.is/').then(function(r){return r.json()}).then(function(d){
-      if(d&&d.country&&d.country!=='DK'){localStorage.setItem('br-lang','en');location.replace('/en/');}
-      else if(d&&d.country){localStorage.setItem('br-lang','da');}
-    }).catch(function(){});
-  }catch(e){}
-})();
+/* Engelsk udgave: intet auto-redirect her. ?lang=en gemmer blot valget. */
+(function(){try{if(location.search.indexOf('lang=en')>-1)localStorage.setItem('br-lang','en')}catch(e){}})();
 </script>
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Bjerring Racing">
-<meta property="og:locale" content="da_DK">
-<meta property="og:url" content="https://bjerringracing.dk/">
-<meta property="og:title" content="Bjerring Racing · Mason Bjerring #10 · Fra Gokart til Racerbil">
-<meta property="og:description" content="Mason Max Carøe Bjerring, 13 år, kører Aquila Formula 1000 under KEDA Motorsport. Se løb, resultater og videoer, og bliv sponsor.">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://bjerringracing.dk/en/">
+<meta property="og:title" content="Bjerring Racing · Mason Bjerring #10 · From Go-kart to Race Car">
+<meta property="og:description" content="Mason Max Caroee Bjerring, 13 years old, races Aquila Formula 1000 with KEDA Motorsport. See races, results and videos, and become a sponsor.">
 <meta property="og:image" content="https://bjerringracing.dk/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -45,13 +33,13 @@
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Bjerring Racing · Mason Bjerring #10">
-<meta name="twitter:description" content="Fra Gokart til Racerbil. Aquila Formula 1000 under KEDA Motorsport. Bliv sponsor.">
+<meta name="twitter:description" content="From Go-kart to Race Car. Aquila Formula 1000 with KEDA Motorsport. Become a sponsor.">
 <meta name="twitter:image" content="https://bjerringracing.dk/assets/og-image.jpg">
 
 <!-- Favicons -->
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 
 <!-- Struktureret data -->
 <script type="application/ld+json">
@@ -60,11 +48,11 @@
   "@type": "Person",
   "name": "Mason Max Carøe Bjerring",
   "alternateName": "Mason Bjerring",
-  "jobTitle": "Racerkører",
+  "jobTitle": "Racing driver",
   "nationality": "Danish",
   "url": "https://bjerringracing.dk/",
   "image": "https://bjerringracing.dk/assets/og-image.jpg",
-  "description": "Dansk racerkører (13 år), startnummer 10. Kører Aquila Formula 1000 under KEDA Motorsport.",
+  "description": "Danish racing driver (13 years old), car number 10. Races Aquila Formula 1000 with KEDA Motorsport.",
   "sport": "Motorsport",
   "memberOf": { "@type": "SportsTeam", "name": "Bjerring Racing / KEDA Motorsport" },
   "sameAs": [
@@ -79,7 +67,7 @@
 {
  "@context": "https://schema.org",
  "@type": "ItemList",
- "name": "Bjerring Racing race-kalender 2026",
+ "name": "Bjerring Racing race calendar 2026",
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -324,7 +312,7 @@
  "url": "https://bjerringracing.dk/",
  "logo": "https://bjerringracing.dk/assets/og-image.jpg",
  "image": "https://bjerringracing.dk/assets/og-image.jpg",
- "description": "Bjerring Racing. Mason Bjerring, dansk racerkører nummer 10, kører Aquila Formula 1000 og gokart under KEDA Motorsport. Søger sponsorer.",
+ "description": "Bjerring Racing. Mason Bjerring, Danish racing driver number 10, races Aquila Formula 1000 and karting with KEDA Motorsport. Looking for sponsors.",
  "sport": "Motorsport",
  "areaServed": "DK",
  "memberOf": {
@@ -343,7 +331,7 @@
 }
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "WebSite", "name": "Bjerring Racing", "url": "https://bjerringracing.dk/", "inLanguage": "da-DK"}
+{"@context": "https://schema.org", "@type": "WebSite", "name": "Bjerring Racing", "url": "https://bjerringracing.dk/en/", "inLanguage": "en"}
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -698,16 +686,16 @@
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="#top" class="brand"><span class="plate cond">10</span><span>Bjerring Racing<small>Fra gokart til racerbil</small></span></a>
+    <a href="#top" class="brand"><span class="plate cond">10</span><span>Bjerring Racing<small>From go-kart to race car</small></span></a>
     <div class="nav-links" id="navlinks">
-      <a href="#om">Om Mason</a>
-      <a href="#video">Video</a>
-      <a href="#galleri">Galleri</a>
-      <a href="#resultater">Resultater</a>
-      <a href="#kalender">Kalender</a>
-      <a href="#sponsor">Sponsorpakker</a>
-      <a href="#kontakt" class="btn btn-primary" style="padding:10px 18px">Bliv sponsor</a>
-      <a href="/en/" onclick="try{localStorage.setItem('br-lang','en')}catch(e){}" title="Read in English" style="font-weight:700;letter-spacing:.06em">EN</a>
+      <a href="#om">About Mason</a>
+      <a href="#video">Videos</a>
+      <a href="#galleri">Gallery</a>
+      <a href="#resultater">Results</a>
+      <a href="#kalender">Calendar</a>
+      <a href="#sponsor">Sponsor packages</a>
+      <a href="#kontakt" class="btn btn-primary" style="padding:10px 18px">Become a sponsor</a>
+      <a href="/" onclick="try{localStorage.setItem('br-lang','da')}catch(e){}" title="Læs på dansk" style="font-weight:700;letter-spacing:.06em">DA</a>
     </div>
     <button class="nav-toggle" id="navtoggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -717,16 +705,16 @@
 <header class="hero" id="top">
   <div class="wrap hero-grid">
     <div class="reveal in">
-      <span class="eyebrow">Bjerring Racing · Sæson 2026</span>
-      <h1><span class="tagline">100% pure racing</span>Fra <span class="grad-text">gokart</span><br>til <span class="grad-text">racerbil</span></h1>
-      <p class="lead">Jeg hedder Mason, jeg er 13 år, og jeg kører Aquila Formula 1000 under KEDA Motorsport, med løb i Danmark og udlandet. Motorsport er mit liv, og drømmen er hele vejen til toppen.</p>
+      <span class="eyebrow">Bjerring Racing · Season 2026</span>
+      <h1><span class="tagline">100% pure racing</span>From <span class="grad-text">go-kart</span><br>to <span class="grad-text">race car</span></h1>
+      <p class="lead">My name is Mason, I'm 13 years old, and I race Aquila Formula 1000 with KEDA Motorsport, competing in Denmark and abroad. Motorsport is my life, and the dream is to go all the way to the top.</p>
       <div class="hero-cta">
-        <a href="#sponsor" class="btn btn-primary">Bliv sponsor →</a>
-        <a href="#video" class="btn btn-ghost">▶ Se videoer</a>
+        <a href="#sponsor" class="btn btn-primary">Become a sponsor →</a>
+        <a href="#video" class="btn btn-ghost">▶ Watch videos</a>
       </div>
       <div class="hero-meta">
-        <div><b class="grad-text cond">100+</b><span>Podieplaceringer</span></div>
-        <div><b class="grad-text cond">P4</b><span>Til DM, yngste i feltet</span></div>
+        <div><b class="grad-text cond">100+</b><span>Podium finishes</span></div>
+        <div><b class="grad-text cond">P4</b><span>In the Danish Championship, youngest in the field</span></div>
         <div><b class="grad-text cond">2026</b><span>Aquila Formula 1000</span></div>
       </div>
     </div>
@@ -735,7 +723,7 @@
         <span class="plate plate-tag cond">10</span>
         <span class="keda-tag">KEDA <b>MOTORSPORT</b></span>
         <div class="speedlines" id="speedlines"></div>
-        <img src="assets/fb-hero.jpg" alt="Mason Max Carøe Bjerring ved sin Aquila Formula 1000-racerbil nummer 10">
+        <img src="/assets/fb-hero.jpg" alt="Mason Max Carøe Bjerring with his Aquila Formula 1000 race car number 10">
         <div class="car-cap">Mason · Aquila Formula 1000 · #10</div>
       </div>
     </div>
@@ -744,18 +732,18 @@
 
 <!-- MARQUEE -->
 <div class="marquee-wrap">
-  <div class="marquee-lab">Vi kører med støtte fra</div>
+  <div class="marquee-lab">Proudly supported by</div>
   <div class="marquee" id="marqueeTrack">
-    <img src="assets/sp26-00.png" alt="Auto-Syn"><img src="assets/sp26-01.png" alt="EJ"><img src="assets/sp26-02.png" alt="Sponsor">
-    <img src="assets/sp26-03.png" alt="Djurslands Bank"><img src="assets/sp26-04.png" alt="Kabinescooter.nu"><img src="assets/sp26-05.png" alt="Davai">
-    <img src="assets/sp26-06.png" alt="Solid Skilte"><img src="assets/sp26-07.png" alt="Dancrimp"><img src="assets/sp26-08.png" alt="RW VVS">
-    <img src="assets/sp26-09.png" alt="Rema 1000"><img src="assets/sp26-10.png" alt="DOL Rådgivende Ingeniør"><img src="assets/sp26-11.png" alt="Skovsbøl Holding">
-    <img src="assets/sp26-12.png" alt="Sponsor"><img src="assets/sp26-13.png" alt="Makeup Lagersalg"><img src="assets/sp26-14.png" alt="Gitte & Torben">
-    <img src="assets/sp26-15.png" alt="Super Dæk"><img src="assets/sp26-16.png" alt="Mercedes"><img src="assets/sp26-17.png" alt="Together For You">
-    <img src="assets/sp26-18.png" alt="LB Gulvservice"><img src="assets/sp26-19.png" alt="Romalt"><img src="assets/sp26-20.png" alt="Professional's Choice">
-    <img src="assets/sp26-21.png" alt="Niva Byg & Montage"><img src="assets/sp26-22.png" alt="Grenaa Murerforretning"><img src="assets/sp26-23.png" alt="Varme Pumpe Service">
-    <img src="assets/sp26-24.png" alt="Holmegaard"><img src="assets/sp26-25.png" alt="M. Junker"><img src="assets/sp26-26.png" alt="Begravelsesforretning">
-    <img src="assets/sp26-27.png" alt="Nilsson"><img src="assets/sp26-28.png" alt="Küdahl">
+    <img src="/assets/sp26-00.png" alt="Auto-Syn"><img src="/assets/sp26-01.png" alt="EJ"><img src="/assets/sp26-02.png" alt="Sponsor">
+    <img src="/assets/sp26-03.png" alt="Djurslands Bank"><img src="/assets/sp26-04.png" alt="Kabinescooter.nu"><img src="/assets/sp26-05.png" alt="Davai">
+    <img src="/assets/sp26-06.png" alt="Solid Skilte"><img src="/assets/sp26-07.png" alt="Dancrimp"><img src="/assets/sp26-08.png" alt="RW VVS">
+    <img src="/assets/sp26-09.png" alt="Rema 1000"><img src="/assets/sp26-10.png" alt="DOL Rådgivende Ingeniør"><img src="/assets/sp26-11.png" alt="Skovsbøl Holding">
+    <img src="/assets/sp26-12.png" alt="Sponsor"><img src="/assets/sp26-13.png" alt="Makeup Lagersalg"><img src="/assets/sp26-14.png" alt="Gitte & Torben">
+    <img src="/assets/sp26-15.png" alt="Super Dæk"><img src="/assets/sp26-16.png" alt="Mercedes"><img src="/assets/sp26-17.png" alt="Together For You">
+    <img src="/assets/sp26-18.png" alt="LB Gulvservice"><img src="/assets/sp26-19.png" alt="Romalt"><img src="/assets/sp26-20.png" alt="Professional's Choice">
+    <img src="/assets/sp26-21.png" alt="Niva Byg & Montage"><img src="/assets/sp26-22.png" alt="Grenaa Murerforretning"><img src="/assets/sp26-23.png" alt="Varme Pumpe Service">
+    <img src="/assets/sp26-24.png" alt="Holmegaard"><img src="/assets/sp26-25.png" alt="M. Junker"><img src="/assets/sp26-26.png" alt="Begravelsesforretning">
+    <img src="/assets/sp26-27.png" alt="Nilsson"><img src="/assets/sp26-28.png" alt="Küdahl">
   </div>
 </div>
 
@@ -763,17 +751,17 @@
 <section class="pad" id="om">
   <div class="wrap about">
     <div class="copy reveal">
-      <span class="eyebrow">Hvem er jeg?</span>
-      <h2 style="font-size:clamp(2.1rem,4.4vw,3.1rem);font-weight:800;margin:16px 0 22px">Gør min rejse<br>til <span class="grad-text">vores rejse</span></h2>
-      <p>Jeg hedder <strong>Mason Max Carøe Bjerring</strong>, er <strong>13 år</strong> og har kørt gokart, siden jeg var 6. Motorsport er mit liv, og min drøm er at nå hele vejen til toppen.</p>
-      <p>Nu kører jeg <strong>Aquila Formula 1000</strong> under KEDA Motorsport, og i 2026 venter en fuld sæson med løb i både Danmark og udlandet. Teamet bag mig var imponeret over min fart. Nu handler det om at udvikle mig som racerkører.</p>
-      <p style="font-weight:600;color:#fff">Skal du med til Padborg Park, så giver jeg en tur i en racerbil! 🏎️</p>
-      <a href="#sponsor" class="btn btn-primary" style="margin-top:8px">Bliv en del af holdet →</a>
+      <span class="eyebrow">Who am I?</span>
+      <h2 style="font-size:clamp(2.1rem,4.4vw,3.1rem);font-weight:800;margin:16px 0 22px">Make my journey<br><span class="grad-text">our journey</span></h2>
+      <p>My name is <strong>Mason Max Carøe Bjerring</strong>, I'm <strong>13 years old</strong> and I've been karting since I was 6. Motorsport is my life, and my dream is to go all the way to the top.</p>
+      <p>I now race an <strong>Aquila Formula 1000</strong> with KEDA Motorsport, and 2026 brings a full season with races in Denmark and abroad. The team behind me was impressed by my pace. Now it's all about developing as a racing driver.</p>
+      <p style="font-weight:600;color:#fff">Join us at Padborg Park and I’ll take you for a ride in a race car! 🏎️</p>
+      <a href="#sponsor" class="btn btn-primary" style="margin-top:8px">Join the team →</a>
     </div>
     <div class="photo-stack reveal">
       <span class="ribbon cond">Aquila Formula 1000 · <b>#10</b></span>
-      <div class="main"><img src="assets/about-main.jpg" alt="Mason Max Carøe Bjerring i kørerdragt"></div>
-      <div class="pip"><img src="assets/about-pip.jpg" alt="Mason ved sin Aquila Formula 1000 racerbil #10 med pokal"></div>
+      <div class="main"><img src="/assets/about-main.jpg" alt="Mason Max Carøe Bjerring in his race suit"></div>
+      <div class="pip"><img src="/assets/about-pip.jpg" alt="Mason with his Aquila Formula 1000 race car #10 and a trophy"></div>
     </div>
   </div>
 </section>
@@ -784,17 +772,17 @@
 <section class="pad video-sec" id="video">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow light">På fuld gas</span>
-      <h2 style="color:#fff">Se Mason i aktion</h2>
-      <p style="color:var(--ink-soft)">Mason på banen i Aquila Formula 1000. Tryk play og oplev farten.</p>
+      <span class="eyebrow light">Full throttle</span>
+      <h2 style="color:#fff">See Mason in action</h2>
+      <p style="color:var(--ink-soft)">Mason on track in the Aquila Formula 1000. Press play and feel the speed.</p>
     </div>
     <div class="vid-players reveal">
-      <figure class="vp"><video src="assets/vid-3.mp4" poster="assets/vp-3.jpg" controls preload="metadata" playsinline></video><figcaption>Klar i paddocken</figcaption></figure>
-      <figure class="vp"><video src="assets/vid-0.mp4" poster="assets/vp-0.jpg" controls preload="metadata" playsinline></video><figcaption>Ud på banen</figcaption></figure>
-      <figure class="vp"><video src="assets/vid-1.mp4" poster="assets/vp-1.jpg" controls preload="metadata" playsinline></video><figcaption>Gennem svinget</figcaption></figure>
-      <figure class="vp"><video src="assets/vid-2.mp4" poster="assets/vp-2.jpg" controls preload="metadata" playsinline></video><figcaption>Bag kulisserne</figcaption></figure>
+      <figure class="vp"><video src="/assets/vid-3.mp4" poster="/assets/vp-3.jpg" controls preload="metadata" playsinline></video><figcaption>Ready in the paddock</figcaption></figure>
+      <figure class="vp"><video src="/assets/vid-0.mp4" poster="/assets/vp-0.jpg" controls preload="metadata" playsinline></video><figcaption>Out on track</figcaption></figure>
+      <figure class="vp"><video src="/assets/vid-1.mp4" poster="/assets/vp-1.jpg" controls preload="metadata" playsinline></video><figcaption>Through the corner</figcaption></figure>
+      <figure class="vp"><video src="/assets/vid-2.mp4" poster="/assets/vp-2.jpg" controls preload="metadata" playsinline></video><figcaption>Behind the scenes</figcaption></figure>
     </div>
-    <p class="video-note">🎬 Følg flere klip på TikTok og Instagram, og se løbene live på YouTube (søg "Aquila Formula 1000").</p>
+    <p class="video-note">🎬 Follow more clips on TikTok and Instagram, and watch the races live on YouTube (search "Aquila Formula 1000").</p>
   </div>
 </section>
 
@@ -802,17 +790,17 @@
 <section class="pad" id="galleri">
   <div class="wrap">
     <div class="sec-head center reveal">
-      <span class="eyebrow" style="justify-content:center">Galleri</span>
-      <h2>Øjeblikke fra <span class="grad-text">banen</span></h2>
-      <p>Fra de første gokart-runder til pokaler, podier og racerbilen.</p>
+      <span class="eyebrow" style="justify-content:center">Gallery</span>
+      <h2>Moments from <span class="grad-text">the track</span></h2>
+      <p>From the first karting laps to trophies, podiums and the race car.</p>
     </div>
     <div class="gallery reveal">
-      <a href="assets/race-pan.jpg" target="_blank" class="g-wide g-tall"><img src="assets/race-pan.jpg" alt="Mason på fuld fart i Aquila Formula 1000 racerbil #10"></a>
-      <a href="assets/van-rear.jpg" target="_blank" class="g-tall"><img src="assets/van-rear.jpg" alt="Bjerring Racing kassevogn bagfra med sponsorlogoer"></a>
-      <a href="assets/kart2.jpg" target="_blank" class="g-tall"><img src="assets/kart2.jpg" alt="Mason med pokaler og sejrskrans"></a>
-      <a href="assets/van-side.jpg" target="_blank" class="g-wide"><img src="assets/van-side.jpg" alt="Bjerring Racing kassevogn fra siden"></a>
-      <a href="assets/race-pack.jpg" target="_blank"><img src="assets/race-pack.jpg" alt="Mason #10 i feltet på banen"></a>
-      <a href="assets/team.jpg" target="_blank"><img src="assets/team.jpg" alt="Mason og teamet ved racerbilen"></a>
+      <a href="/assets/race-pan.jpg" target="_blank" class="g-wide g-tall"><img src="/assets/race-pan.jpg" alt="Mason at full speed in the Aquila Formula 1000 race car #10"></a>
+      <a href="/assets/van-rear.jpg" target="_blank" class="g-tall"><img src="/assets/van-rear.jpg" alt="Bjerring Racing team van from behind with sponsor logos"></a>
+      <a href="/assets/kart2.jpg" target="_blank" class="g-tall"><img src="/assets/kart2.jpg" alt="Mason with trophies and a winner's wreath"></a>
+      <a href="/assets/van-side.jpg" target="_blank" class="g-wide"><img src="/assets/van-side.jpg" alt="Bjerring Racing team van from the side"></a>
+      <a href="/assets/race-pack.jpg" target="_blank"><img src="/assets/race-pack.jpg" alt="Mason #10 in the pack on track"></a>
+      <a href="/assets/team.jpg" target="_blank"><img src="/assets/team.jpg" alt="Mason and the team with the race car"></a>
     </div>
   </div>
 </section>
@@ -821,19 +809,19 @@
 <section class="pad" id="raekkevidde">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">På sociale medier</span>
-      <h2>Vist på tværs af <span class="grad-text">sociale medier</span></h2>
-      <p>Mason og holdet deler løb, test og livet bag rattet. Det giver sponsorerne synlighed langt ud over banen.</p>
+      <span class="eyebrow">On social media</span>
+      <h2>Seen across <span class="grad-text">social media</span></h2>
+      <p>Mason and the team share races, testing and life behind the wheel, giving sponsors visibility far beyond the track.</p>
     </div>
     <div class="reach-grid reveal">
-      <figure class="reach-vid"><video src="assets/social-vid.mp4" poster="assets/social-poster.jpg" controls preload="metadata" playsinline></video></figure>
+      <figure class="reach-vid"><video src="/assets/social-vid.mp4" poster="/assets/social-poster.jpg" controls preload="metadata" playsinline></video></figure>
       <div class="reach-panel">
         <div class="reach-stats">
-          <div class="reach-stat"><b class="grad-text">4,4 mio.</b><span>Visninger <em class="up">▲ 60x</em></span></div>
-          <div class="reach-stat"><b class="grad-text">25.000+</b><span>Følgere</span></div>
-          <div class="reach-stat"><b class="grad-text">183.000</b><span>Interaktioner <em class="up">▲ 48x</em></span></div>
+          <div class="reach-stat"><b class="grad-text">4.4M</b><span>Views <em class="up">▲ 60x</em></span></div>
+          <div class="reach-stat"><b class="grad-text">25,000+</b><span>Followers</span></div>
+          <div class="reach-stat"><b class="grad-text">183,000</b><span>Interactions <em class="up">▲ 48x</em></span></div>
         </div>
-        <div class="reach-note">Tal fra de seneste 28 dage. Din virksomheds logo bliver set millioner af gange, på og uden for banen.</div>
+        <div class="reach-note">Figures from the last 28 days. Your company's logo gets seen millions of times, on and off the track.</div>
         <div class="reach-socials">
           <a href="https://www.instagram.com/bjerring_racing" target="_blank" rel="noopener">Instagram</a>
           <a href="https://www.facebook.com/bjerringracing" target="_blank" rel="noopener">Facebook</a>
@@ -854,7 +842,7 @@
 <!-- QUOTE BAND -->
 <section class="video-sec" style="padding:0">
   <div class="wrap" style="text-align:center;padding:70px 24px;position:relative;z-index:2">
-    <span class="eyebrow light" style="justify-content:center">Mottoet</span>
+    <span class="eyebrow light" style="justify-content:center">The motto</span>
     <blockquote style="font-family:'Sora';font-weight:700;font-size:clamp(1.7rem,3.6vw,2.7rem);line-height:1.22;max-width:880px;margin:16px auto 0;color:#fff">"In order to win, <span class="grad-text">first you have to finish</span>."</blockquote>
     <cite style="display:block;margin-top:18px;color:var(--ink-soft);font-style:normal;font-weight:600">John Nielsen</cite>
   </div>
@@ -864,19 +852,19 @@
 <section class="pad" id="resultater">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">Palmares</span>
-      <h2>Resultater der <span class="grad-text">taler</span></h2>
-      <p>Et udvalg af milepæle fra gokart-karrieren. Tusindvis af omgange, lige til kanten af bilens grænse.</p>
+      <span class="eyebrow">Palmarès</span>
+      <h2>Results that <span class="grad-text">speak</span></h2>
+      <p>A selection of milestones from the karting career. Thousands of laps, right on the edge of the limit.</p>
     </div>
     <div class="res-grid reveal">
-      <div class="res-card"><div class="rn">Nr. 4</div><div class="rl">Til DM, som yngste kører i feltet.</div></div>
-      <div class="res-card"><div class="rn">1. &amp; 2.</div><div class="rl">Plads samlet i Jysk-Fynsk Mesterskab.</div></div>
-      <div class="res-card"><div class="rn">Nr. 3</div><div class="rl">I Dansk Rotax Max Challenge ud af 46 deltagere.</div></div>
-      <div class="res-card"><div class="rn">2. plads</div><div class="rl">I DASU Ungdomscup.</div></div>
-      <div class="res-card"><div class="rn">100+</div><div class="rl">Podieplaceringer gennem karrieren.</div></div>
-      <div class="res-card"><div class="rn">2026</div><div class="rl">Fuld sæson i Aquila Formula 1000.</div></div>
+      <div class="res-card"><div class="rn">P4</div><div class="rl">In the Danish Championship, as the youngest driver in the field.</div></div>
+      <div class="res-card"><div class="rn">1st &amp; 2nd</div><div class="rl">Overall in the Jysk-Fynsk Championship.</div></div>
+      <div class="res-card"><div class="rn">P3</div><div class="rl">In the Danish Rotax Max Challenge out of 46 entrants.</div></div>
+      <div class="res-card"><div class="rn">2nd place</div><div class="rl">In the DASU Youth Cup.</div></div>
+      <div class="res-card"><div class="rn">100+</div><div class="rl">Podium finishes throughout the career.</div></div>
+      <div class="res-card"><div class="rn">2026</div><div class="rl">Full season in Aquila Formula 1000.</div></div>
     </div>
-    <div class="dkse reveal"><div class="big">DK &amp; SE</div><div class="txt">Løb i både Danmark og udlandet, bl.a. Mittsverigebanan i Sverige.</div></div>
+    <div class="dkse reveal"><div class="big">DK &amp; SE</div><div class="txt">Racing in Denmark and abroad, including Mittsverigebanan in Sweden.</div></div>
   </div>
 </section>
 
@@ -884,19 +872,19 @@
 <section class="pad" id="kalender" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">Kommende løb</span>
-      <h2>Race-kalender <span class="grad-text">2026</span></h2>
-      <p>Mason kører to klasser i 2026: <span class="lime-text">Gokart DM</span> og <span class="grad-text">Aquila Formula 1000</span>. Følg sæsonen i Danmark, Sverige og Norge.</p>
+      <span class="eyebrow">Upcoming races</span>
+      <h2>Race calendar <span class="grad-text">2026</span></h2>
+      <p>Mason races two classes in 2026: the <span class="lime-text">Danish Karting Championship</span> and <span class="grad-text">Aquila Formula 1000</span>. Follow the season across Denmark, Sweden and Norway.</p>
     </div>
     <div class="cal reveal">
-      <div class="cal-row" data-end="2026-05-31"><div class="cal-main"><div class="cal-date">30.-31. maj</div><div class="cal-venue"><b>Gelleråsen Arena</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇸🇪 Sverige</span></div></div><span class="cal-badge"></span></div>
-      <div class="cal-row" data-end="2026-06-14"><div class="cal-main"><div class="cal-date">13.-14. juni</div><div class="cal-venue"><b>Mittsverigebanan</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇸🇪 Sverige</span></div></div><span class="cal-badge"></span></div>
-      <div class="cal-row" data-end="2026-06-21"><div class="cal-main"><div class="cal-date">19.-21. juni</div><div class="cal-venue"><b>Midtjysk Karting Bane</b><span><em class="cls cls-kart">Gokart DM</em> · 🇩🇰 Danmark</span></div></div><span class="cal-badge"></span></div>
-      <div class="cal-row" data-end="2026-06-28"><div class="cal-main"><div class="cal-date">27.-28. juni</div><div class="cal-venue"><b>Sturup Raceway</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇸🇪 Sverige</span></div></div><span class="cal-badge"></span></div>
-      <div class="cal-row" data-end="2026-07-05"><div class="cal-main"><div class="cal-date">4.-5. juli</div><div class="cal-venue"><b>Ring Knutstorp</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇸🇪 Sverige</span></div></div><span class="cal-badge"></span></div>
-      <div class="cal-row" data-end="2026-07-26"><div class="cal-main"><div class="cal-date">25.-26. juli</div><div class="cal-venue"><b>Kinnekulle Ring</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇸🇪 Sverige</span></div></div><span class="cal-badge"></span></div>
-      <div class="cal-row" data-end="2026-08-09"><div class="cal-main"><div class="cal-date">8.-9. august</div><div class="cal-venue"><b>Rudskogen</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇳🇴 Norge</span></div></div><span class="cal-badge"></span></div>
-      <div class="cal-row" data-end="2026-09-20"><div class="cal-main"><div class="cal-date">19.-20. september</div><div class="cal-venue"><b>Ring Djursland</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇩🇰 Danmark</span></div></div><span class="cal-badge"></span></div>
+      <div class="cal-row" data-end="2026-05-31"><div class="cal-main"><div class="cal-date">May 30-31</div><div class="cal-venue"><b>Gelleråsen Arena</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇸🇪 Sweden</span></div></div><span class="cal-badge"></span></div>
+      <div class="cal-row" data-end="2026-06-14"><div class="cal-main"><div class="cal-date">June 13-14</div><div class="cal-venue"><b>Mittsverigebanan</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇸🇪 Sweden</span></div></div><span class="cal-badge"></span></div>
+      <div class="cal-row" data-end="2026-06-21"><div class="cal-main"><div class="cal-date">June 19-21</div><div class="cal-venue"><b>Midtjysk Karting Bane</b><span><em class="cls cls-kart">Karting DM</em> · 🇩🇰 Denmark</span></div></div><span class="cal-badge"></span></div>
+      <div class="cal-row" data-end="2026-06-28"><div class="cal-main"><div class="cal-date">June 27-28</div><div class="cal-venue"><b>Sturup Raceway</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇸🇪 Sweden</span></div></div><span class="cal-badge"></span></div>
+      <div class="cal-row" data-end="2026-07-05"><div class="cal-main"><div class="cal-date">July 4-5</div><div class="cal-venue"><b>Ring Knutstorp</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇸🇪 Sweden</span></div></div><span class="cal-badge"></span></div>
+      <div class="cal-row" data-end="2026-07-26"><div class="cal-main"><div class="cal-date">July 25-26</div><div class="cal-venue"><b>Kinnekulle Ring</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇸🇪 Sweden</span></div></div><span class="cal-badge"></span></div>
+      <div class="cal-row" data-end="2026-08-09"><div class="cal-main"><div class="cal-date">August 8-9</div><div class="cal-venue"><b>Rudskogen</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇳🇴 Norway</span></div></div><span class="cal-badge"></span></div>
+      <div class="cal-row" data-end="2026-09-20"><div class="cal-main"><div class="cal-date">September 19-20</div><div class="cal-venue"><b>Ring Djursland</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇩🇰 Denmark</span></div></div><span class="cal-badge"></span></div>
     </div>
   </div>
 </section>
@@ -905,18 +893,18 @@
 <section class="pad" id="rejse" style="padding-top:0">
   <div class="wrap journey">
     <div class="van reveal">
-      <img src="assets/van-side.jpg" alt="Bjerring Racing kassevogn med sponsorlogoer">
-      <div class="cap">Holdets kassevogn med sponsorernes logoer. Din virksomhed kører med på vejene og banen i hele Danmark.</div>
+      <img src="/assets/van-side.jpg" alt="Bjerring Racing team van with sponsor logos">
+      <div class="cap">The team van with the sponsors' logos. Your company rides along on roads and tracks all over Denmark.</div>
     </div>
     <div class="reveal">
-      <span class="eyebrow">Rejsen mod toppen</span>
-      <h2 style="font-size:clamp(2rem,4vw,2.8rem);font-weight:800;margin:16px 0 26px">Fra de første runder<br>til international racing</h2>
+      <span class="eyebrow">The road to the top</span>
+      <h2 style="font-size:clamp(2rem,4vw,2.8rem);font-weight:800;margin:16px 0 26px">From the first laps<br>to international racing</h2>
       <div class="timeline">
         <div class="tl-line"></div>
-        <div class="tl-step"><div class="dot cond">6 år</div><div><h4>Det startede med gokart</h4><p>Bag rattet siden jeg var 6 år, forelsket i fart lige siden.</p></div></div>
-        <div class="tl-step"><div class="dot cond">100+</div><div><h4>Podier i national elite</h4><p>Over 100 podier, DM-top og mesterskabsmedaljer på tværs af klasser.</p></div></div>
-        <div class="tl-step future"><div class="dot cond">2026</div><div><h4>Racerbil · Aquila Formula 1000</h4><p>Skiftet til racerbil under KEDA Motorsport, nu med løb i ind- og udland.</p></div></div>
-        <div class="tl-step future"><div class="dot">🏆</div><div><h4>Målet: international racing</h4><p>2026 handler om at kæmpe helt i front, og tage næste skridt ud i verden.</p></div></div>
+        <div class="tl-step"><div class="dot cond">Age 6</div><div><h4>It started with karting</h4><p>Behind the wheel since age 6, in love with speed ever since.</p></div></div>
+        <div class="tl-step"><div class="dot cond">100+</div><div><h4>Podiums in the national elite</h4><p>Over 100 podiums, top national results and championship medals across classes.</p></div></div>
+        <div class="tl-step future"><div class="dot cond">2026</div><div><h4>Race car · Aquila Formula 1000</h4><p>The step up to a race car with KEDA Motorsport, now racing at home and abroad.</p></div></div>
+        <div class="tl-step future"><div class="dot">🏆</div><div><h4>The goal: international racing</h4><p>2026 is about fighting at the front and taking the next step out into the world.</p></div></div>
       </div>
     </div>
   </div>
@@ -926,15 +914,15 @@
 <section class="pad" style="background:var(--bg-soft)">
   <div class="wrap">
     <div class="sec-head center reveal">
-      <span class="eyebrow" style="justify-content:center">Hvorfor være med?</span>
-      <h2>Mere end et logo på en bil</h2>
-      <p>Som sponsor bliver du en del af Danmarks bedste sponsor-fællesskab, hvor virksomheder mødes, netværker og deler passionen for fart.</p>
+      <span class="eyebrow" style="justify-content:center">Why join?</span>
+      <h2>More than a logo on a car</h2>
+      <p>As a sponsor you join Denmark's best sponsor community, where companies meet, network and share a passion for speed.</p>
     </div>
     <div class="why">
-      <div class="why-card reveal"><div class="ic">👀</div><h4>Synlighed</h4><p>Dit logo kører med på bil, kassevogn, dragt og banner, på banen og på vejene i hele Danmark.</p></div>
-      <div class="why-card reveal"><div class="ic">🤝</div><h4>Netværk</h4><p>Mød andre engagerede virksomheder i fællesskabet og skab nye forbindelser uden for banen.</p></div>
-      <div class="why-card reveal"><div class="ic">📱</div><h4>Sociale medier</h4><p>Eksponering til over 25.000 følgere og millioner af visninger på Instagram, Facebook og TikTok.</p></div>
-      <div class="why-card reveal"><div class="ic">🏁</div><h4>Trackday</h4><p>Oplev farten selv, kom med til Padborg Park og få en tur i racerbilen.</p></div>
+      <div class="why-card reveal"><div class="ic">👀</div><h4>Visibility</h4><p>Your logo rides along on the car, team van, race suit and banners, on track and on roads all over Denmark.</p></div>
+      <div class="why-card reveal"><div class="ic">🤝</div><h4>Network</h4><p>Meet other engaged companies in the community and build new connections off the track.</p></div>
+      <div class="why-card reveal"><div class="ic">📱</div><h4>Social media</h4><p>Exposure to over 25,000 followers and millions of views on Instagram, Facebook and TikTok.</p></div>
+      <div class="why-card reveal"><div class="ic">🏁</div><h4>Track day</h4><p>Feel the speed yourself: join us at Padborg Park and get a ride in the race car.</p></div>
     </div>
   </div>
 </section>
@@ -943,38 +931,38 @@
 <section class="pad" id="sponsor">
   <div class="wrap">
     <div class="sec-head center reveal">
-      <span class="eyebrow" style="justify-content:center">Sponsorpakker 2026</span>
-      <h2>Vælg din <span class="grad-text">plads på holdet</span></h2>
-      <p>Fra logo på kassevognen til eksklusiv hovedsponsor med navnet på hjelmen. Der er en pakke til enhver virksomhed.</p>
+      <span class="eyebrow" style="justify-content:center">Sponsor packages 2026</span>
+      <h2>Choose your <span class="grad-text">place on the team</span></h2>
+      <p>From a logo on the team van to exclusive main sponsor with your name on the helmet. There is a package for every company.</p>
     </div>
     <div class="pkgs">
       <div class="pkg reveal">
         <div class="medal m-bronze">🥉</div><div class="tier">Bronze</div>
-        <div class="price cond">5.000 <small>kr.</small></div>
-        <ul><li>Logo på kassevognen</li><li>Banner ved løb</li><li>Logo på teamtøjet</li><li>Omtale på sociale medier</li></ul>
-        <a href="#kontakt" class="btn btn-ghost">Vælg Bronze</a>
+        <div class="price cond">DKK 5,000</div>
+        <ul><li>Logo on the team van</li><li>Banner at races</li><li>Logo on team wear</li><li>Mentions on social media</li></ul>
+        <a href="#kontakt" class="btn btn-ghost">Choose Bronze</a>
       </div>
       <div class="pkg reveal">
-        <div class="medal m-silver">🥈</div><div class="tier">Sølv</div>
-        <div class="price cond">10.000 <small>kr.</small></div>
-        <ul><li>Logo på bil &amp; kassevogn</li><li>Logo på kørerdragt (arm)</li><li>Banner ved løb</li><li>Eksponering på sociale medier</li></ul>
-        <a href="#kontakt" class="btn btn-ghost">Vælg Sølv</a>
+        <div class="medal m-silver">🥈</div><div class="tier">Silver</div>
+        <div class="price cond">DKK 10,000</div>
+        <ul><li>Logo on car &amp; team van</li><li>Logo on race suit (arm)</li><li>Banner at races</li><li>Exposure on social media</li></ul>
+        <a href="#kontakt" class="btn btn-ghost">Choose Silver</a>
       </div>
       <div class="pkg reveal">
-        <div class="medal m-gold">🥇</div><div class="tier">Guld</div>
-        <div class="price cond">20.000 <small>kr.</small></div>
-        <ul><li>Stort logo på bil &amp; kassevogn</li><li>Logo på kørerdragt (bryst)</li><li>Banner ved løb</li><li>Trackday på Padborg Park</li></ul>
-        <a href="#kontakt" class="btn btn-ghost">Vælg Guld</a>
+        <div class="medal m-gold">🥇</div><div class="tier">Gold</div>
+        <div class="price cond">DKK 20,000</div>
+        <ul><li>Large logo on car &amp; team van</li><li>Logo on race suit (chest)</li><li>Banner at races</li><li>Track day at Padborg Park</li></ul>
+        <a href="#kontakt" class="btn btn-ghost">Choose Gold</a>
       </div>
       <div class="pkg platin reveal">
-        <span class="badge cond">Hovedsponsor</span>
-        <div class="medal m-plat">💎</div><div class="tier">Platin</div>
-        <div class="price cond">30.000 <small>kr. +</small></div>
-        <ul><li>Eksklusiv hovedsponsor</li><li>Logo på front &amp; side af bilen</li><li>Logo på kassevogn, dragt &amp; hjelm</li><li>Trackday på Padborg Park</li></ul>
-        <a href="#kontakt" class="btn btn-primary">Vælg Platin</a>
+        <span class="badge cond">Main sponsor</span>
+        <div class="medal m-plat">💎</div><div class="tier">Platinum</div>
+        <div class="price cond">DKK 30,000+</div>
+        <ul><li>Exclusive main sponsor</li><li>Logo on the front &amp; sides of the car</li><li>Logo on team van, suit &amp; helmet</li><li>Track day at Padborg Park</li></ul>
+        <a href="#kontakt" class="btn btn-primary">Choose Platinum</a>
       </div>
     </div>
-    <p class="pkg-note">Alle pakker giver din virksomhed synlighed nationalt og internationalt, repræsenteret professionelt på og uden for banen.</p>
+    <p class="pkg-note">Every package gives your company visibility nationally and internationally, represented professionally on and off the track.</p>
   </div>
 </section>
 
@@ -982,8 +970,8 @@
 <section class="pad" id="social" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head center reveal">
-      <span class="eyebrow" style="justify-content:center">Følg med</span>
-      <h2>Vær med på rejsen, <span class="grad-text">hver dag</span></h2>
+      <span class="eyebrow" style="justify-content:center">Follow along</span>
+      <h2>Join the journey, <span class="grad-text">every day</span></h2>
     </div>
     <div class="social-grid reveal">
       <a class="soc" href="https://www.instagram.com/bjerring_racing" target="_blank" rel="noopener">
@@ -1009,9 +997,9 @@
       <div class="cblob x1"></div><div class="cblob x2"></div>
       <div class="contact-grid">
         <div>
-          <span class="eyebrow light">Kom med på rejsen</span>
-          <h2 style="margin-top:16px">Send en mail og<br>kom med på rejsen</h2>
-          <p>Ring eller skriv, så finder vi den sponsorpakke, der passer din virksomhed bedst. Og husk: der venter en tur i racerbilen på Padborg Park.</p>
+          <span class="eyebrow light">Come along for the ride</span>
+          <h2 style="margin-top:16px">Send an email and<br>join the journey</h2>
+          <p>Call or write, and we will find the sponsor package that fits your company best. And remember: a ride in the race car awaits at Padborg Park.</p>
         </div>
         <div class="contact-list">
           <a href="mailto:Lassebjerring@hotmail.com" class="ci"><div class="ic">✉️</div><div><small>Email</small><b>Lassebjerring@hotmail.com</b></div></a>
@@ -1047,7 +1035,7 @@
 
   // build scrolling ticker (diamond separators, duplicated for seamless loop)
   const tt=document.getElementById('tickerTrack');
-  if(tt){const its=["SÆSON 2026 · DK + SVERIGE","BJERRING RACING","KEDA MOTORSPORT","100% PURE RACING","STARTNUMMER #10","FRA GOKART TIL RACERBIL","GØR MIN REJSE TIL VORES REJSE","AQUILA FORMULA 1000","100+ PODIEPLACERINGER","25.000+ FØLGERE","4,4 MIO. VISNINGER PÅ 28 DAGE"];const h=its.map(x=>'<span class="ti-item">'+x+'</span><span class="di">◆</span>').join('');tt.innerHTML=h+h;}
+  if(tt){const its=["SEASON 2026 · DK + SWEDEN","BJERRING RACING","KEDA MOTORSPORT","100% PURE RACING","CAR NUMBER #10","FROM GO-KART TO RACE CAR","MAKE MY JOURNEY OUR JOURNEY","AQUILA FORMULA 1000","100+ PODIUM FINISHES","25,000+ FOLLOWERS","4.4M VIEWS IN 28 DAYS"];const h=its.map(x=>'<span class="ti-item">'+x+'</span><span class="di">◆</span>').join('');tt.innerHTML=h+h;}
 
   const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
@@ -1080,9 +1068,9 @@
     rows.forEach(r=>{
       const badge=r.querySelector('.cal-badge'); if(!badge) return;
       const end=new Date(r.getAttribute('data-end')+'T23:59:59');
-      if(end < today){ r.classList.add('done'); badge.textContent='Kørt'; badge.classList.add('b-done'); }
-      else if(!nextSet){ nextSet=true; r.classList.add('next'); badge.textContent='Næste løb'; badge.classList.add('b-next'); }
-      else { badge.textContent='Kommende'; badge.classList.add('b-up'); }
+      if(end < today){ r.classList.add('done'); badge.textContent='Done'; badge.classList.add('b-done'); }
+      else if(!nextSet){ nextSet=true; r.classList.add('next'); badge.textContent='Next race'; badge.classList.add('b-next'); }
+      else { badge.textContent='Upcoming'; badge.classList.add('b-up'); }
     });
   })();
 </script>
