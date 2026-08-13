@@ -103,7 +103,32 @@
   .pkg .badge{position:absolute;top:-2.6mm;right:4mm;background:var(--grad);color:var(--navy-deep);font-family:'Saira Condensed';font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:5.8pt;padding:1.2mm 3.2mm;border-radius:99px}
   .pkg-note{color:var(--ink-soft);font-size:6.9pt;margin-top:3.6mm;text-align:center}
 
-  /* ---------- PAGE 4 · SPONSORER + KONTAKT ---------- */
+  /* ---------- PAGE 4 · SOCIALE MEDIER ---------- */
+  .circles{position:relative;height:74mm;margin-top:5mm}
+  .circ{position:absolute;border-radius:50%;overflow:hidden;border:1.4mm solid var(--gold);box-shadow:0 4mm 9mm rgba(0,0,0,.5);background:#000}
+  .circ img{width:100%;height:100%;object-fit:cover}
+  .circ.c-mid{width:44mm;height:44mm;left:50%;top:50%;transform:translate(-50%,-50%);border-width:1.8mm;z-index:2}
+  .circ.c-tl{width:30mm;height:30mm;left:6mm;top:0}
+  .circ.c-tr{width:30mm;height:30mm;right:6mm;top:2mm}
+  .circ.c-bl{width:27mm;height:27mm;left:16mm;bottom:0}
+  .circ.c-br{width:27mm;height:27mm;right:16mm;bottom:2mm}
+  .soc-line{text-align:center;font-family:'Saira Condensed';font-weight:800;text-transform:uppercase;font-size:14pt;color:#fff;margin-top:6mm;letter-spacing:.03em}
+  .qr-big{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm;margin-top:4.5mm}
+  .qrb{background:var(--card);border:1px solid var(--line);border-radius:3.6mm;padding:3.6mm 3mm;text-align:center}
+  .qrb .pic{width:8.5mm;height:8.5mm;border-radius:2.4mm;margin:0 auto 2.4mm;display:grid;place-items:center;color:#fff}
+  .pic.ig{background:linear-gradient(135deg,#f9ce34,#ee2a7b,#6228d7)}
+  .pic.fb{background:#1877f2}
+  .pic.tt{background:var(--navy-deep);border:1px solid var(--gold)}
+  .qrb .qbox{background:#fff;border-radius:2.2mm;padding:1.8mm;display:inline-block}
+  .qrb img.q{width:23mm;height:23mm}
+  .qrb b{display:block;font-family:'Saira Condensed';font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:9pt;margin-top:2.2mm;color:#fff}
+  .qrb span{display:block;color:var(--ink-soft);font-size:6.6pt}
+  .soc-stats{margin-top:5mm;background:var(--grad);color:var(--navy-deep);border-radius:3.6mm;padding:3.8mm 5mm;display:flex;justify-content:space-around;align-items:center;clip-path:polygon(0 0,100% 0,100% 100%,14px 100%,0 calc(100% - 14px))}
+  .soc-stats .st{text-align:center}
+  .soc-stats b{font-family:'Saira Condensed';font-weight:800;font-size:14.5pt;line-height:1;display:block}
+  .soc-stats span{font-size:6.4pt;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:rgba(8,16,39,.85)}
+
+  /* ---------- PAGE 5 · SPONSORER + KONTAKT ---------- */
   .logo-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2mm;margin-top:3mm}
   .logo-grid .lg{background:#fff;border-radius:2.4mm;padding:1.6mm;display:grid;place-items:center;height:11mm;box-shadow:0 2mm 5mm rgba(0,0,0,.35)}
   .logo-grid .lg img{max-height:8mm;max-width:100%;object-fit:contain}
@@ -251,13 +276,56 @@
   <div class="page-num">BJERRING RACING · 03</div>
 </div>
 
-<!-- ================= PAGE 4 · SPONSORER + KONTAKT ================= -->
+<!-- ================= PAGE 4 · SOCIALE MEDIER ================= -->
+<div class="page">
+  <div class="checker"></div>
+  <div class="pad-x page-head">
+    <div class="sec-head" style="text-align:center">
+      <span class="eyebrow" style="justify-content:center">På sociale medier</span>
+      <h2>Følg med på <span class="grad-text">de sociale medier!</span></h2>
+    </div>
+    <div class="circles">
+      <div class="circ c-tl"><img src="../assets/kart2.jpg"></div>
+      <div class="circ c-tr"><img src="../assets/race-pack.jpg"></div>
+      <div class="circ c-mid"><img src="../assets/about-pip.jpg"></div>
+      <div class="circ c-bl"><img src="../assets/team.jpg"></div>
+      <div class="circ c-br"><img src="../assets/race-pan.jpg"></div>
+    </div>
+    <div class="qr-big">
+      <div class="qrb">
+        <div class="pic ig"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></div>
+        <span class="qbox"><img class="q" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=0&data=https%3A%2F%2Fwww.instagram.com%2Fbjerring_racing"></span>
+        <b>Instagram</b><span>@bjerring_racing</span>
+      </div>
+      <div class="qrb">
+        <div class="pic fb"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12Z"/></svg></div>
+        <span class="qbox"><img class="q" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=0&data=https%3A%2F%2Fwww.facebook.com%2Fbjerringracing"></span>
+        <b>Facebook</b><span>@bjerringracing</span>
+      </div>
+      <div class="qrb">
+        <div class="pic tt"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.3 2 1.5 3.6 3.5 3.9v2.6c-1.3 0-2.5-.4-3.6-1.1v6.2a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v2.7a3 3 0 1 0 2.1 2.8V3h2.7Z"/></svg></div>
+        <span class="qbox"><img class="q" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=0&data=https%3A%2F%2Fwww.tiktok.com%2F%40bjerring_racing"></span>
+        <b>TikTok</b><span>@bjerring_racing</span>
+      </div>
+    </div>
+    <div class="soc-stats">
+      <div class="st"><b>4,4 mio.</b><span>Visninger</span></div>
+      <div class="st"><b>25.000+</b><span>Følgere</span></div>
+      <div class="st"><b>183.000</b><span>Interaktioner</span></div>
+      <div class="st"><b>bjerringracing.dk</b><span>Hjemmeside</span></div>
+    </div>
+  </div>
+  <div class="page-num">BJERRING RACING · 04</div>
+</div>
+
+<!-- ================= PAGE 5 · SPONSORER + KONTAKT ================= -->
 <div class="page">
   <div class="checker"></div>
   <div class="pad-x page-head">
     <div class="sec-head">
       <span class="eyebrow">Vi kører med støtte fra</span>
       <h2>Holdet bag <span class="grad-text">holdet</span></h2>
+      <p>Bliv en del af Danmarks bedste sponsor-fællesskab.</p>
     </div>
     <div class="logo-grid">
       <div class="lg"><img src="../assets/sp26-00.png"></div><div class="lg"><img src="../assets/sp26-01.png"></div><div class="lg"><img src="../assets/sp26-02.png"></div><div class="lg"><img src="../assets/sp26-03.png"></div><div class="lg"><img src="../assets/sp26-04.png"></div>
@@ -268,16 +336,7 @@
       <div class="lg"><img src="../assets/sp26-25.png"></div><div class="lg"><img src="../assets/sp26-26.png"></div><div class="lg"><img src="../assets/sp26-27.png"></div><div class="lg"><img src="../assets/sp26-28.png"></div>
       <div class="lg" style="background:var(--grad)"><span class="cond" style="color:var(--navy-deep);font-size:8.5pt;text-align:center;line-height:1.1">DIT LOGO<br>HER?</span></div>
     </div>
-    <div class="sec-head" style="margin-top:4mm">
-      <span class="eyebrow">Følg med på rejsen</span>
-    </div>
-    <div class="follow">
-      <div class="qr"><span class="qbox"><img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=0&data=https%3A%2F%2Fbjerringracing.dk"></span><b>Hjemmeside</b><span>bjerringracing.dk</span></div>
-      <div class="qr"><span class="qbox"><img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=0&data=https%3A%2F%2Fwww.instagram.com%2Fbjerring_racing"></span><b>Instagram</b><span>@bjerring_racing</span></div>
-      <div class="qr"><span class="qbox"><img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=0&data=https%3A%2F%2Fwww.facebook.com%2Fbjerringracing"></span><b>Facebook</b><span>@bjerringracing</span></div>
-      <div class="qr"><span class="qbox"><img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=0&data=https%3A%2F%2Fwww.tiktok.com%2F%40bjerring_racing"></span><b>TikTok</b><span>@bjerring_racing</span></div>
-    </div>
-    <div class="contact-card">
+    <div class="contact-card" style="margin-top:6mm">
       <div class="cblob x1"></div><div class="cblob x2"></div>
       <div class="contact-inner">
         <span class="eyebrow">Kom med på rejsen</span>
@@ -287,6 +346,7 @@
           <div class="ci"><div class="ic">🏎️</div><div><small>Mason Bjerring</small><b>93 84 06 96</b></div></div>
           <div class="ci"><div class="ic">📞</div><div><small>Lasse Bjerring</small><b>28 90 99 90</b></div></div>
         </div>
+        <p style="margin-top:3mm;font-size:7pt;color:var(--ink-soft)">Send en mail og kom med på rejsen. Find os på bjerringracing.dk</p>
       </div>
     </div>
   </div>
