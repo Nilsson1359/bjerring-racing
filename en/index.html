@@ -671,6 +671,57 @@
     .vid-side{flex-direction:column}
   }
   @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+
+.nav-links a.btn-primary,.nav-links a.btn-primary:hover{color:var(--navy-deep);font-weight:700}
+
+/* ---- SÆSON 2026 ---- */
+.s26-top{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:28px;align-items:stretch}
+.s26-poster{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-lg);display:block}
+.s26-poster img{width:100%;height:100%;object-fit:cover;display:block}
+.s26-side{display:flex;flex-direction:column;gap:14px}
+.s26-medals{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.s26-medal{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 18px;box-shadow:var(--shadow);text-align:center;position:relative;overflow:hidden}
+.s26-medal::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:var(--grad)}
+.s26-medal .ic{font-size:1.7rem;line-height:1}
+.s26-medal .p{font-family:'Saira Condensed';font-weight:800;font-size:3.2rem;line-height:1;margin-top:8px;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.s26-medal .l{font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;margin-top:6px}
+.s26-medal .d{color:var(--ink-soft);font-size:.86rem;margin-top:6px;line-height:1.4}
+.s26-persp{background:var(--grad);color:var(--navy-deep);border-radius:18px;padding:22px 26px;box-shadow:var(--shadow-lg);clip-path:polygon(0 0,100% 0,100% 100%,18px 100%,0 calc(100% - 18px))}
+.s26-persp .ages{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.s26-persp .ages span{background:rgba(8,16,39,.1);border-radius:999px;padding:6px 12px;font-weight:700;font-size:.9rem}
+.s26-persp .ages span.me{background:var(--navy-deep);color:var(--gold-hi)}
+.s26-persp p{font-weight:600;font-size:1.05rem;line-height:1.45;margin:0}
+.s26-facts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.s26-fact{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:flex;gap:12px;align-items:flex-start}
+.s26-fact b{display:block;font-size:.98rem}
+.s26-fact span{color:var(--ink-soft);font-size:.88rem;line-height:1.4}
+.s26-fact .ic{font-size:1.3rem;line-height:1.2}
+.s26-final{margin-top:56px}
+.s26-final h3{font-size:clamp(1.6rem,3.2vw,2.2rem);font-weight:800;margin:12px 0 10px}
+.s26-final>p{color:var(--ink-soft);max-width:720px;font-size:1.04rem;margin:0 0 24px}
+.s26-heats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.s26-heat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px}
+.s26-heat .h{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.s26-heat .r{font-family:'Saira Condensed';font-weight:800;font-size:2.4rem;line-height:1}
+.s26-heat p{color:var(--ink-soft);font-size:.92rem;line-height:1.45;margin:0}
+.s26-heat.win{background:linear-gradient(160deg,#1d3066,var(--card));border-color:rgba(198,162,76,.55)}
+.s26-heat.win .r{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.s26-photos{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:12px;margin-top:40px;grid-auto-flow:row dense}
+.s26-photos a{border-radius:14px;overflow:hidden;border:1px solid var(--line);display:block;box-shadow:var(--shadow)}
+.s26-photos img{width:100%;height:100%;object-fit:cover;display:block;transition:.6s}
+.s26-photos a:hover img{transform:scale(1.06)}
+.s26-photos .w{grid-column:span 2}.s26-photos .t{grid-row:span 2}
+.s26-end{margin-top:40px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px;align-items:stretch}
+.s26-quote{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 28px;margin:0}
+.s26-quote p{font-family:'Sora';font-weight:700;font-size:clamp(1.25rem,2.4vw,1.7rem);line-height:1.3;margin:0}
+.s26-quote cite{display:block;margin-top:12px;color:var(--ink-soft);font-style:normal;font-size:.92rem}
+.s26-press{background:var(--bg-soft);border:1px solid var(--line);border-radius:18px;padding:22px 24px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:8px;transition:.25s}
+.s26-press:hover{border-color:rgba(198,162,76,.5);transform:translateY(-3px)}
+.s26-press .src{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.s26-press b{font-size:1.05rem;line-height:1.35}
+.s26-press .go{color:var(--gold-hi);font-weight:700;font-size:.9rem;margin-top:auto}
+@media(max-width:940px){.s26-top{grid-template-columns:1fr}.s26-poster{max-width:460px;margin:0 auto;width:100%}.s26-heats{grid-template-columns:1fr 1fr}.s26-end{grid-template-columns:1fr}}
+@media(max-width:620px){.s26-medals{gap:8px}.s26-medal{padding:16px 6px}.s26-medal .p{font-size:2.4rem}.s26-medal .l{font-size:.66rem;letter-spacing:.06em}.s26-medal .d{display:none}.s26-facts{grid-template-columns:1fr}.s26-heats{grid-template-columns:1fr 1fr;gap:10px}.s26-heat{padding:16px 14px}.s26-heat .r{font-size:2rem}.s26-heat p{font-size:.84rem}.s26-photos{grid-template-columns:1fr 1fr;grid-auto-rows:140px}.s26-photos .w{grid-column:span 2}.s26-final{margin-top:40px}}
 </style>
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
@@ -692,6 +743,7 @@
       <a href="#video">Videos</a>
       <a href="#galleri">Gallery</a>
       <a href="#resultater">Results</a>
+      <a href="#saeson">Season 2026</a>
       <a href="#kalender">Calendar</a>
       <a href="#sponsor">Sponsor packages</a>
       <a href="#kontakt" class="btn btn-primary" style="padding:10px 18px">Become a sponsor</a>
@@ -862,9 +914,39 @@
       <div class="res-card"><div class="rn">P3</div><div class="rl">In the Danish Rotax Max Challenge out of 46 entrants.</div></div>
       <div class="res-card"><div class="rn">2nd place</div><div class="rl">In the DASU Youth Cup.</div></div>
       <div class="res-card"><div class="rn">100+</div><div class="rl">Podium finishes throughout the career.</div></div>
-      <div class="res-card"><div class="rn">2026</div><div class="rl">Full season in Aquila Formula 1000.</div></div>
+      <div class="res-card"><div class="rn">P3</div><div class="rl">In the Swedish Junior Championship in his Aquila Formula 1000 debut season.</div></div>
     </div>
     <div class="dkse reveal"><div class="big">DK &amp; SE</div><div class="txt">Racing in Denmark and abroad, including Mittsverigebanan in Sweden.</div></div>
+  </div>
+</section>
+
+<!-- SÆSON 2026 -->
+<section class="pad" id="saeson" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Season 2026 · Aquila Formula 1000</span>
+      <h2>What a first <span class="grad-text">season</span></h2>
+      <p>13 years old, straight from karting and his first ever season in a formula car. Still, Mason finished on the championship podium in the official Swedish Junior Championship.</p>
+    </div>
+    <div class="s26-top reveal">
+      <a class="s26-poster" href="/assets/s26-poster.jpg" target="_blank"><img src="/assets/s26-poster.jpg" alt="Mason Bjerring with the Danish flag and trophy at race car #10: P2 Rookie, P3 Junior, P4 Overall" loading="lazy" decoding="async"></a>
+      <div class="s26-side">
+        <div class="s26-medals"><div class="s26-medal"><div class="ic">🥈</div><div class="p">P2</div><div class="l">Rookie</div><div class="d">Rookie Championship</div></div><div class="s26-medal"><div class="ic">🥉</div><div class="p">P3</div><div class="l">Junior</div><div class="d">Swedish Junior Championship</div></div><div class="s26-medal"><div class="ic">🏁</div><div class="p">P4</div><div class="l">Overall</div><div class="d">The entire Aquila F1000 field</div></div></div>
+        <div class="s26-persp"><p>Only three drivers finished ahead of him in the overall championship:</p><div class="ages"><span>Age 26</span><span>Age 19</span><span>Age 17</span><span class="me">Mason: 13</span></div></div>
+        <div class="s26-facts"><div class="s26-fact"><span class="ic">🏆</span><div><b>Double podium at Sturup</b><span>P3 twice in the same weekend</span></div></div><div class="s26-fact"><span class="ic">🇳🇴</span><div><b>Podium at Rudskogen</b><span>Another podium in Norway</span></div></div><div class="s26-fact"><span class="ic">⭐</span><div><b>Rookie Driver of the Week</b><span>Named after a weekend of big progress</span></div></div><div class="s26-fact"><span class="ic">📈</span><div><b>From karting to formula</b><span>New car, new tracks, older rivals</span></div></div></div>
+      </div>
+    </div>
+    <div class="s26-final reveal">
+      <span class="eyebrow">Season finale · Ring Djursland</span>
+      <h3>Decided on the final weekend</h3>
+      <p>Mason needed 67 points to secure P3 in the Junior championship, on a track he had never driven, with just 10 minutes of practice. He still qualified P3.</p>
+      <div class="s26-heats"><div class="s26-heat"><span class="h">Qualifying</span><span class="r">P3</span><p>Only 10 minutes of practice on a brand new track, and still P3 in qualifying.</p></div><div class="s26-heat"><span class="h">Heat 1</span><span class="r">P5</span><p>Hit hard from behind while running P3 and pushed half off the track. Fought back up to the leaders.</p></div><div class="s26-heat"><span class="h">Heat 2</span><span class="r">P8</span><p>Up to P2, but contact during an overtake brought a Stop &amp; Go penalty and a drop to P10. Won back two places.</p></div><div class="s26-heat win"><span class="h">Heat 3</span><span class="r">P5</span><p>Needed a top 7 finish. Drove smart on the wet track, and P3 in the championship was secured. 🥉</p></div></div>
+    </div>
+    <div class="s26-photos reveal"><a href="/assets/s26-pan.jpg" target="_blank" class="w"><img src="/assets/s26-pan.jpg" alt="Mason at full speed in race car #10" loading="lazy" decoding="async"></a><a href="/assets/s26-podium.jpg" target="_blank" class="t"><img src="/assets/s26-podium.jpg" alt="Mason on the podium at Ring Djursland with the Danish flag" loading="lazy" decoding="async"></a><a href="/assets/s26-duel.jpg" target="_blank" class=""><img src="/assets/s26-duel.jpg" alt="Close battle with champion #58" loading="lazy" decoding="async"></a><a href="/assets/s26-front.jpg" target="_blank" class=""><img src="/assets/s26-front.jpg" alt="Mason #10 ahead of the field" loading="lazy" decoding="async"></a><a href="/assets/s26-rain.jpg" target="_blank" class="w"><img src="/assets/s26-rain.jpg" alt="Mason leading the field on a wet track" loading="lazy" decoding="async"></a><a href="/assets/s26-trophies.jpg" target="_blank" class="t"><img src="/assets/s26-trophies.jpg" alt="Mason with his two trophies at the race car" loading="lazy" decoding="async"></a><a href="/assets/s26-pack.jpg" target="_blank" class=""><img src="/assets/s26-pack.jpg" alt="Mason in the field at Ring Djursland" loading="lazy" decoding="async"></a><a href="/assets/s26-team.jpg" target="_blank" class=""><img src="/assets/s26-team.jpg" alt="Mason and KEDA Motorsport celebrating the season" loading="lazy" decoding="async"></a></div>
+    <div class="s26-end reveal">
+      <blockquote class="s26-quote"><p>“First season in Formula 1000: DONE! Next year we go for gold.” 🚀</p><cite>Mason Bjerring · Thank you to KEDA Motorsport, sponsors, family, friends and followers</cite></blockquote>
+      <a class="s26-press" href="https://www.motorsporten.dk/news.asp?aID=81882" target="_blank" rel="noopener"><span class="src">Motorsporten.dk · 22 September 2026 · in Danish</span><b>13-year-old Mason Bjerring finished among Sweden’s best juniors in his first formula season</b><span class="go">Read the article →</span></a>
+    </div>
   </div>
 </section>
 
@@ -903,7 +985,7 @@
         <div class="tl-line"></div>
         <div class="tl-step"><div class="dot cond">Age 6</div><div><h4>It started with karting</h4><p>Behind the wheel since age 6, in love with speed ever since.</p></div></div>
         <div class="tl-step"><div class="dot cond">100+</div><div><h4>Podiums in the national elite</h4><p>Over 100 podiums, top national results and championship medals across classes.</p></div></div>
-        <div class="tl-step future"><div class="dot cond">2026</div><div><h4>Race car · Aquila Formula 1000</h4><p>The step up to a race car with KEDA Motorsport, now racing at home and abroad.</p></div></div>
+        <div class="tl-step"><div class="dot cond">2026</div><div><h4>Race car · Aquila Formula 1000</h4><p>First season with KEDA Motorsport: P3 Junior, P2 Rookie and P4 Overall.</p></div></div>
         <div class="tl-step future"><div class="dot">🏆</div><div><h4>The goal: international racing</h4><p>2026 is about fighting at the front and taking the next step out into the world.</p></div></div>
       </div>
     </div>
