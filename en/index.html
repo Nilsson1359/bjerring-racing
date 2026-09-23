@@ -722,6 +722,14 @@
 .s26-press .go{color:var(--gold-hi);font-weight:700;font-size:.9rem;margin-top:auto}
 @media(max-width:940px){.s26-top{grid-template-columns:1fr}.s26-poster{max-width:460px;margin:0 auto;width:100%}.s26-heats{grid-template-columns:1fr 1fr}.s26-end{grid-template-columns:1fr}}
 @media(max-width:620px){.s26-medals{gap:8px}.s26-medal{padding:16px 6px}.s26-medal .p{font-size:2.4rem}.s26-medal .l{font-size:.66rem;letter-spacing:.06em}.s26-medal .d{display:none}.s26-facts{grid-template-columns:1fr}.s26-heats{grid-template-columns:1fr 1fr;gap:10px}.s26-heat{padding:16px 14px}.s26-heat .r{font-size:2rem}.s26-heat p{font-size:.84rem}.s26-photos{grid-template-columns:1fr 1fr;grid-auto-rows:140px}.s26-photos .w{grid-column:span 2}.s26-final{margin-top:40px}}
+.hero-s26{display:flex;align-items:center;gap:14px;margin:0 0 22px;padding:12px 14px 12px 12px;border-radius:16px;background:linear-gradient(100deg,rgba(198,162,76,.18),rgba(198,162,76,.06));border:1px solid rgba(198,162,76,.5);text-decoration:none;color:var(--ink);max-width:520px;transition:.25s;box-shadow:0 12px 30px rgba(198,162,76,.15)}
+.hero-s26:hover{transform:translateY(-2px);border-color:var(--gold-hi)}
+.hero-s26 img{width:58px;height:58px;border-radius:11px;object-fit:cover;object-position:top;flex:none}
+.hero-s26 .t{display:flex;flex-direction:column;gap:3px;min-width:0}
+.hero-s26 .k{font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.hero-s26 b{font-family:'Saira Condensed';font-weight:800;font-size:1.35rem;line-height:1.05;letter-spacing:.01em}
+.hero-s26 .go{margin-left:auto;flex:none;font-weight:700;color:var(--gold-hi);font-size:.9rem;white-space:nowrap}
+@media(max-width:520px){.hero-s26{display:grid;grid-template-columns:50px minmax(0,1fr);column-gap:12px;row-gap:4px}.hero-s26 img{grid-row:span 2;width:50px;height:50px;align-self:center}.hero-s26 .k{font-size:.6rem;letter-spacing:.1em}.hero-s26 b{font-size:1.05rem}.hero-s26 .go{margin:0;font-size:.86rem}}
 </style>
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
@@ -760,6 +768,7 @@
       <span class="eyebrow">Bjerring Racing · Season 2026</span>
       <h1><span class="tagline">100% pure racing</span>From <span class="grad-text">go-kart</span><br>to <span class="grad-text">race car</span></h1>
       <p class="lead">My name is Mason, I'm 13 years old, and I race Aquila Formula 1000 with KEDA Motorsport, competing in Denmark and abroad. Motorsport is my life, and the dream is to go all the way to the top.</p>
+      <a class="hero-s26" href="#saeson" aria-label="See how the first season went: P2 Rookie, P3 Junior, P4 Overall"><img src="/assets/s26-poster.jpg" alt=""><span class="t"><span class="k">🏁 First season in a formula car</span><b>P2 Rookie · P3 Junior · P4 Overall</b></span><span class="go">See the season →</span></a>
       <div class="hero-cta">
         <a href="#sponsor" class="btn btn-primary">Become a sponsor →</a>
         <a href="#video" class="btn btn-ghost">▶ Watch videos</a>
@@ -767,7 +776,7 @@
       <div class="hero-meta">
         <div><b class="grad-text cond">100+</b><span>Podium finishes</span></div>
         <div><b class="grad-text cond">P4</b><span>In the Danish Championship, youngest in the field</span></div>
-        <div><b class="grad-text cond">2026</b><span>Aquila Formula 1000</span></div>
+        <div><b class="grad-text cond">P3</b><span>Swedish Junior Championship 2026, debut season</span></div>
       </div>
     </div>
     <div class="hero-visual reveal in">
