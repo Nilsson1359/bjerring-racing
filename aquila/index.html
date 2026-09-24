@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07070a">
 <meta name="robots" content="noindex,nofollow">
 <title>Aquila Formula 1000 — The Nordic Single-Seater Championship</title>
 <meta name="description" content="Aquila Formula 1000 — the Nordic region's premier entry-level single-seater championship. Sweden · Norway · Denmark.">
@@ -10,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
 <link rel="icon" href="img/logo.png">
-<link rel="preload" as="image" href="img/r5.jpg">
+<link rel="preload" as="image" href="img/r5.jpg" imagesrcset="img/m/r5.jpg 900w, img/r5.jpg 1900w" imagesizes="100vw">
 <style>
 :root{
   --bg:#07070a; --bg2:#0e0e13; --panel:#13131a; --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.16);
@@ -224,6 +225,7 @@ tr:nth-child(1) td.pos{color:var(--y)}
 .drv .bar{width:4px;height:26px;border-radius:2px;background:var(--nat)}
 .drv .no{font-size:12px;color:var(--mute);font-weight:700;width:28px}
 .drv b{font-weight:700}
+.drv b i{font-style:normal}.drv .fi{display:none}
 .drv b span{font-weight:900;text-transform:uppercase;font-style:italic;font-variation-settings:"wdth" 112}
 .flag{display:inline-block;width:20px;height:14px;border-radius:2px;vertical-align:middle;overflow:hidden}
 .ptsb{display:flex;align-items:center;gap:12px;justify-content:flex-end}
@@ -401,6 +403,132 @@ footer{background:#000;border-top:1px solid var(--line);padding:70px 0 30px;marg
   td{padding:0 8px}.drv{gap:8px}.drv .no{display:none}.drv b{font-size:14px}
   .hero{min-height:640px}
 }
+
+/* ---------- MOBILE POLISH ---------- */
+.drawer-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:auto;padding-top:28px}
+.drawer-foot a{border:0;font-size:12px!important;font-style:normal!important;font-variation-settings:"wdth" 100!important;padding:0}
+.drawer-foot .lang a{min-width:44px;min-height:44px;display:grid;place-items:center;font-size:13px!important}
+.mcta{display:none}
+body.nav-open{overflow:hidden}
+@media (max-width:640px){
+  .util{display:none}
+  header.main{padding-top:env(safe-area-inset-top)}
+  .drawer{padding-top:calc(100px + env(safe-area-inset-top));padding-bottom:calc(28px + env(safe-area-inset-bottom))}
+  .drawer a{font-size:30px;padding:10px 0}
+  .strip .wrap{gap:0;padding-right:0}
+  .chip{width:54px}
+  .chip .av em{font-size:10px}
+  .brand{min-height:44px}
+  .chip small{font-size:11px}
+  /* hero */
+  .hero{min-height:0;height:auto}
+  .hero-in{padding-top:110px;padding-bottom:26px;min-height:min(620px,calc(100svh - 140px))}
+  .hero h1{margin:16px 0 18px}
+  .hero .eyebrow{font-size:11px;letter-spacing:.16em}
+  .hero-lead{font-size:15.5px;margin-bottom:24px}
+  .hero-row{gap:10px}
+  .hero-row .btn{flex:1 1 auto;justify-content:center}
+  .speed i{opacity:.35!important;height:1px}
+  .speed{-webkit-mask-image:linear-gradient(0deg,transparent 45%,#000 70%);mask-image:linear-gradient(0deg,transparent 45%,#000 70%)}
+  .hero-stats{display:flex;position:relative;right:auto;bottom:auto;margin:0 var(--gut) 8px;z-index:3}
+  .hs{flex:1;padding:14px 12px;text-align:center}
+  .hs b{font-size:26px}
+  .hs > span{font-size:11px;letter-spacing:.1em}
+  .scroll-cue{display:none}
+  .ticker span{padding:11px 20px;font-size:12px}
+  /* type + tap */
+  .eyebrow{font-size:11px}
+  .link-arrow{min-height:44px;padding-bottom:0;align-items:center}
+  .sec-head{gap:14px}
+  .sec-head h2{margin-top:10px}
+  .card .meta,.card .tx .meta{font-size:11px}
+  .tag{font-size:11px}
+  th{font-size:11px}
+  .tab{min-height:44px}
+  .tbl-foot button{min-height:44px;padding:0 4px}
+  .nl{min-height:0;padding:12px 0}
+  .nl img{width:84px;height:58px}
+  .nl b{font-size:14.5px}
+  /* standings */
+  .podium{gap:10px;margin-bottom:6px}
+  .pod{padding:14px 16px}
+  .pod .nm small{font-size:11px}
+  /* calendar */
+  .rnd .rn,.rnd .fbadge{font-size:11px!important}
+  .rnd .win small{font-size:11px}
+  .rnd h3{font-size:25px}
+  /* onboard */
+  .onboard{height:auto;min-height:0;padding:120px 0 70px}
+  .onboard h2{font-size:clamp(40px,11.5vw,56px)}
+  .onboard p{font-size:15.5px}
+  .rec{font-size:11px;top:24px}
+  .hud{display:flex;position:relative;top:auto;right:auto;transform:none;flex-direction:row;gap:8px;margin-top:30px}
+  .onboard .hud-row{position:relative;z-index:2}
+  .hud div{min-width:0;flex:1;padding:10px 12px}
+  .hud small{font-size:11px;letter-spacing:.08em}
+  .hud b{font-size:19px;white-space:nowrap}
+  .drv .fn{display:none}.drv .fi{display:inline}
+  td:last-child{padding-right:14px}
+  footer{margin-top:0}
+  .news-sign{gap:24px}
+  /* car */
+  .car-img{aspect-ratio:4/3}
+  .car-img .cap{font-size:11px;letter-spacing:.14em}
+  .car q{font-size:17px}
+  .spec small{font-size:11px}
+  /* ladder -> compact timeline */
+  .ladder{grid-template-columns:1fr;gap:0;padding-left:0}
+  .ladder::before{display:block;left:27px;right:auto;top:10px;bottom:10px;width:2px;height:auto;background:linear-gradient(180deg,var(--line2),var(--y))}
+  .step{display:grid;grid-template-columns:56px 1fr;column-gap:16px;padding:0 0 26px}
+  .step .dot{width:56px;height:56px;font-size:17px;margin:0;grid-row:span 2}
+  .step h4{font-size:20px;margin:6px 0 4px}
+  .step p{font-size:14.5px}
+  .fees{margin-top:26px;gap:10px}
+  .fee{padding:20px}
+  .fee small{font-size:11px}
+  .fee b{font-size:30px}
+  .cta-band{margin-top:30px;padding:30px 22px}
+  .cta-band::before{font-size:140px}
+  .cta-band .btn{width:100%;justify-content:center}
+  /* gallery: swipe instead of marquee */
+  .gal{overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--gut);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .gal::-webkit-scrollbar{display:none}
+  .gal-track{animation:none}
+  .gal figure{width:78vw;scroll-snap-align:center}
+  .gal figure:nth-child(even){width:56vw}
+  .gal figure.dup{display:none}
+  .partners{padding:24px 0}
+  .p-track span{font-size:18px}
+  /* newsletter */
+  .nform input{font-size:17px}
+  .nform button{min-height:48px}
+  /* footer */
+  footer{padding:50px 0 calc(100px + env(safe-area-inset-bottom))}
+  .foot{grid-template-columns:1fr 1fr;gap:30px 20px}
+  .foot > div:first-child{grid-column:1/3}
+  .foot ul{gap:0}
+  .foot li a{display:flex;align-items:center;min-height:40px;font-size:14.5px}
+  .foot h5{font-size:11px;margin-bottom:6px}
+  .social a{width:44px;height:44px}
+  .foot address a{display:inline-block;padding:10px 0}
+  .legal{margin-top:34px;font-size:12px;flex-direction:column;gap:8px}
+  /* sticky CTA */
+  .mcta{display:flex;gap:10px;align-items:center;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px var(--gut) calc(10px + env(safe-area-inset-bottom));background:rgba(7,7,10,.86);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .45s var(--ease)}
+  .mcta.show{transform:none}
+  body.nav-open .mcta{transform:translateY(110%)}
+  .mcta .btn{flex:1;justify-content:center;height:48px;white-space:nowrap}
+  body.lb-open .mcta{transform:translateY(110%)}
+  .mcta-s{height:48px;display:grid;place-items:center;padding:0 18px;border:1px solid var(--line2);font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);background:rgba(255,255,255,.06)}
+  .lb button{top:calc(14px + env(safe-area-inset-top))}
+}
+@media (max-width:374px){
+  .hero h1{font-size:40px}
+  .hs b{font-size:22px}
+  .hud b{font-size:16px}
+  .tab{font-size:10.5px;padding:10px 4px}
+  .foot{grid-template-columns:1fr}.foot > div:first-child{grid-column:auto}
+  .mcta .btn{padding:0 12px;letter-spacing:.08em;font-size:11.5px}.mcta-s{padding:0 14px;letter-spacing:.08em;font-size:11.5px}
+}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   #intro{display:none}
@@ -459,6 +587,7 @@ footer{background:#000;border-top:1px solid var(--line);padding:70px 0 30px;marg
   <a href="#media">Media <small>06</small></a>
   <a href="https://www.aquilaformula1000.com/contact/" target="_blank" rel="noopener">Contact <small>↗</small></a>
   <a href="#join" class="btn btn-y">Book a test drive</a>
+  <div class="drawer-foot"><a class="live-dot" href="https://www.youtube.com/@AquilaFormula1000/streams" target="_blank" rel="noopener">Every race live on YouTube</a><div class="lang"><a href="#" class="act">EN</a><a href="https://www.aquilaformula1000.com/da/" target="_blank" rel="noopener">DA</a></div></div>
 </nav>
 
 <div class="strip">
@@ -472,7 +601,7 @@ footer{background:#000;border-top:1px solid var(--line);padding:70px 0 30px;marg
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-media"><img src="img/r5.jpg" alt="Aquila Synergy racing through the spray"></div>
+  <div class="hero-media"><img src="img/r5.jpg" srcset="img/m/r5.jpg 900w, img/r5.jpg 1900w" sizes="100vw" alt="Aquila Synergy racing through the spray" fetchpriority="high"></div>
   <div class="speed" id="speed"></div>
   <div class="wrap hero-in">
     <span class="eyebrow fade">2026 Champion · Ring Djursland finale</span>
@@ -552,25 +681,25 @@ footer{background:#000;border-top:1px solid var(--line);padding:70px 0 30px;marg
 <!-- ONBOARD -->
 <section class="onboard" id="media">
   <img class="poster" src="img/onboard.jpg" alt="">
-  <video id="obv" muted loop playsinline preload="none" poster="img/onboard.jpg"><source src="img/onboard.mp4" type="video/mp4"></video>
+  <video id="obv" muted loop playsinline preload="none" poster="img/onboard.jpg"><source src="img/onboard-m.mp4" type="video/mp4" media="(max-width:760px)"><source src="img/onboard.mp4" type="video/mp4"></video>
   <div class="rec">Onboard · Race 3</div>
   <div class="wrap">
     <span class="eyebrow">Ride along</span>
     <h2 class="display">Wheel to wheel. <span style="color:var(--y)">Every lap.</span></h2>
     <p>Twenty identical cars, 410 kilos each, separated by thousandths. Every race weekend streams live and free.</p>
     <a class="btn btn-y" href="https://www.youtube.com/@AquilaFormula1000/streams" target="_blank" rel="noopener">Watch on YouTube <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-  </div>
-  <div class="hud">
+    <div class="hud">
     <div><small>Power</small><b class="num"><span data-count="93">0</span> HP</b></div>
     <div><small>Weight</small><b class="num"><span data-count="410">0</span> KG</b></div>
-    <div><small>Quali gap · Finale</small><b class="num">0.036 S</b></div>
+    <div><small>Pole gap</small><b class="num">0.036 S</b></div>
+  </div>
   </div>
 </section>
 
 <!-- CAR -->
 <section class="sec" id="car">
   <div class="wrap car">
-    <div class="car-img rv" id="carImg"><img src="img/r6a.jpg" alt="Aquila Synergy with driver" loading="lazy"><span class="cap">Aquila Synergy · Built in Denmark</span></div>
+    <div class="car-img rv" id="carImg"><img src="img/r6a.jpg" srcset="img/m/r6a.jpg 900w, img/r6a.jpg 1900w" sizes="(max-width:980px) 100vw, 55vw" alt="Aquila Synergy with driver" loading="lazy"><span class="cap">Aquila Synergy · Built in Denmark</span></div>
     <div class="rv">
       <span class="eyebrow">The Car</span>
       <h2 class="display">Aquila<br>Synergy</h2>
@@ -672,6 +801,8 @@ footer{background:#000;border-top:1px solid var(--line);padding:70px 0 30px;marg
   </div>
 </footer>
 
+<div class="mcta" id="mcta"><a href="#standings" class="mcta-s">Standings</a><a href="#join" class="btn btn-y">Book a test drive</a></div>
+
 <div class="lb" id="lb"><button aria-label="Close">✕</button><img alt=""></div>
 
 <script>
@@ -713,6 +844,7 @@ const NEWS=[
  {t:'Hoff Knai fastest as the season opened at Gelleråsen',d:'1 Jun 2026',img:'r1.jpg',u:'even-hoff-knai-fastest-as-aquila-formula-1000-opened-the-season-at-gelleraasen'}
 ];
 const BASE='https://www.aquilaformula1000.com/';
+const im=(g,sz='100vw')=>`src="img/${g}" srcset="img/m/${g} 900w, img/${g} 1900w" sizes="${sz}"`;
 const arrow='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 
 /* driver codes */
@@ -731,9 +863,9 @@ $('#ticker').innerHTML=[...tk,...tk].map(t=>`<span>${t}</span>`).join('');
 /* news */
 const [n0,...nr]=NEWS;
 $('#newsGrid').innerHTML=`
-<a class="card big rv" href="${BASE+n0.u}/" target="_blank" rel="noopener"><div class="ph"><img src="img/${n0.img}" alt="" loading="lazy"></div><div class="tx"><div class="meta"><span class="tag">Race report</span>${n0.d}</div><h3>${n0.t}</h3><p>${n0.x}</p></div></a>
-${nr.slice(0,4).map((n,i)=>`<a class="card rv" style="transition-delay:${i*.08}s" href="${BASE+n.u}/" target="_blank" rel="noopener"><div class="ph"><img src="img/${n.img}" alt="" loading="lazy"></div><div class="tx"><div class="meta">${n.d}</div><h3>${n.t}</h3></div></a>`).join('')}
-<div class="news-list rv">${nr.slice(4).map(n=>`<a class="nl" href="${BASE+n.u}/" target="_blank" rel="noopener"><img src="img/${n.img}" alt="" loading="lazy"><div><div class="meta" style="font-size:11px;color:var(--mute);letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px">${n.d}</div><b>${n.t}</b></div></a>`).join('')}</div>`;
+<a class="card big rv" href="${BASE+n0.u}/" target="_blank" rel="noopener"><div class="ph"><img ${im(n0.img,'(max-width:980px) 100vw, 45vw')} alt="" loading="lazy"></div><div class="tx"><div class="meta"><span class="tag">Race report</span>${n0.d}</div><h3>${n0.t}</h3><p>${n0.x}</p></div></a>
+${nr.slice(0,4).map((n,i)=>`<a class="card rv" style="transition-delay:${i*.08}s" href="${BASE+n.u}/" target="_blank" rel="noopener"><div class="ph"><img ${im(n.img,'(max-width:640px) 100vw, 30vw')} alt="" loading="lazy"></div><div class="tx"><div class="meta">${n.d}</div><h3>${n.t}</h3></div></a>`).join('')}
+<div class="news-list rv">${nr.slice(4).map(n=>`<a class="nl" href="${BASE+n.u}/" target="_blank" rel="noopener"><img src="img/m/${n.img}" alt="" loading="lazy"><div><div class="meta" style="font-size:11px;color:var(--mute);letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px">${n.d}</div><b>${n.t}</b></div></a>`).join('')}</div>`;
 
 /* standings */
 let cur='overall',all=false;
@@ -743,7 +875,7 @@ function render(k,animate=true){
   const tb=$('#tbody');tb.classList.remove('show');
   tb.innerHTML=show.map((d,i)=>{const [f,l]=split(d.name);const mx=Math.max(...d.r);
     return `<tr data-no="${d.no}" style="transition-delay:${i*.035}s"><td class="pos">${i+1}</td>
-    <td><div class="drv" style="--nat:${NAT[d.n]}"><span class="bar"></span><span class="no">#${d.no}</span><b>${f} <span>${l}</span></b></div></td>
+    <td><div class="drv" style="--nat:${NAT[d.n]}"><span class="bar"></span><span class="no">#${d.no}</span><b><i class="fn">${f}</i><i class="fi">${f[0]}.</i> <span>${l}</span></b></div></td>
     <td>${FLAG[d.n]}</td>
     <td><div class="rounds">${d.r.map((v,j)=>`<i class="${v===mx&&v>0?'best':''}" style="height:${Math.max(2,v/115*26)}px" data-t="R${j+1} · ${ROUNDS[j].t}: ${v}"></i>`).join('')}</div></td>
     <td class="r gap num">${i?'−'+(top-d.p):'Leader'}</td>
@@ -764,7 +896,7 @@ $('#strip').addEventListener('click',e=>{const c=e.target.closest('.chip');if(!c
 
 /* calendar: round top scorer computed from official round points */
 $('#cal').innerHTML=ROUNDS.map((r,i)=>{const best=S.overall.reduce((a,d)=>d[3][i]>a[3][i]?d:a);const [f,l]=split(best[1]);
- return `<article class="rnd ${r.final?'final':''}"><img src="img/${r.img}" alt="" loading="lazy"><span class="rn">Round ${i+1}</span>${r.final?'<span class="fbadge">Season finale</span>':''}<span class="rbig">${String(i+1).padStart(2,'0')}</span>
+ return `<article class="rnd ${r.final?'final':''}"><img ${im(r.img,'(max-width:640px) 82vw, 320px')} alt="" loading="lazy"><span class="rn">Round ${i+1}</span>${r.final?'<span class="fbadge">Season finale</span>':''}<span class="rbig">${String(i+1).padStart(2,'0')}</span>
  <span class="dt">${r.d} 2026</span><h3 class="display">${r.t}</h3><span class="ctry">${FLAG[r.n]} ${r.c}</span>
  <div class="win"><div><small>Top scorer</small><b>${f[0]}. ${l}</b></div><em class="num">${best[3][i]}</em></div></article>`}).join('')+
  `<article class="rnd next"><span class="eyebrow">2027</span><h3 class="display">Bigger.<br>Eight rounds?</h3><p>Four in Sweden, two in Norway, two in Denmark are under consideration. Calendar to be confirmed.</p></article>`;
@@ -774,11 +906,11 @@ $('#calPrev').onclick=()=>cal.scrollBy({left:-step(),behavior:'smooth'});
 
 /* gallery */
 const G=['r5.jpg','insta.jpg','r3.jpg','r1.jpg','r6c.jpg','r2.jpg','sturup.jpg','r6b.jpg','r4.jpg','r6a.jpg'];
-$('#gal').innerHTML=[...G,...G].map(g=>`<figure><img src="img/${g}" alt="" loading="lazy"></figure>`).join('');
+$('#gal').innerHTML=[...G,...G].map((g,i)=>`<figure class="${i>=G.length?'dup':''}"><img src="img/m/${g}" data-full="img/${g}" alt="" loading="lazy"></figure>`).join('');
 const lb=$('#lb');
-$('#gal').addEventListener('click',e=>{const im=e.target.closest('img');if(!im)return;lb.querySelector('img').src=im.src;lb.classList.add('open')});
-lb.onclick=()=>lb.classList.remove('open');
-addEventListener('keydown',e=>{if(e.key==='Escape'){lb.classList.remove('open');document.body.classList.remove('nav-open')}});
+$('#gal').addEventListener('click',e=>{const im=e.target.closest('img');if(!im)return;lb.querySelector('img').src=im.dataset.full||im.src;lb.classList.add('open');document.body.classList.add('lb-open')});
+lb.onclick=()=>{lb.classList.remove('open');document.body.classList.remove('lb-open')};
+addEventListener('keydown',e=>{if(e.key==='Escape'){lb.classList.remove('open');document.body.classList.remove('lb-open');document.body.classList.remove('nav-open')}});
 
 /* partners */
 const P=['Kärnkraft.se','BeDriver','MiddleGround','Focused','Rallystudion','Racefoto','nameISP','BAAR Design','SKCC','Subframe','Aquila Racing Cars'];
@@ -795,6 +927,12 @@ const secs=['news','standings','calendar','car','join','media'].map(id=>document
 addEventListener('scroll',()=>{hdr.classList.toggle('scrolled',scrollY>40);
   const y=scrollY+140;let act=null,best=-1;secs.forEach(s=>{const t=s.getBoundingClientRect().top+scrollY;if(t<=y&&t>best){best=t;act=s.id}});
   $$('.menu a').forEach(a=>a.classList.toggle('act',a.getAttribute('href')==='#'+act))},{passive:true});
+
+/* mobile sticky CTA: after hero, hidden near join/footer */
+const mcta=$('#mcta'),heroEl=$('.hero'),joinEl=$('.cta-band'),footEl=$('footer');
+function mctaUpd(){const past=heroEl.getBoundingClientRect().bottom<0;const jb=joinEl.getBoundingClientRect(),fb=footEl.getBoundingClientRect();
+  const near=(jb.top<innerHeight&&jb.bottom>0)||fb.top<innerHeight;mcta.classList.toggle('show',past&&!near)}
+addEventListener('scroll',mctaUpd,{passive:true});mctaUpd();
 
 /* count up */
 function countUp(el){const t=+el.dataset.count;if(el.dataset.done)return;el.dataset.done=1;const s=performance.now(),D=1400;
