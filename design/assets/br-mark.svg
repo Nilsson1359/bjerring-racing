@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 100" fill="currentColor">
+  <g transform="skewX(-14) translate(22 0)">
+    <!-- speed wedge -->
+    <path d="M0 40 L30 40 L34 50 L30 60 L0 60 L10 50 Z"/>
+    <!-- upper bowl -->
+    <path d="M36 8 H86 Q104 8 104 25 Q104 40 90 45 H70 V34 H82 Q88 34 88 27 Q88 20 82 20 H52 V44 H36 Z"/>
+    <!-- lower bowl -->
+    <path d="M36 54 H92 Q108 58 108 74 Q108 92 88 92 H36 Z M52 66 V80 H84 Q91 80 91 73 Q91 66 84 66 Z" fill-rule="evenodd"/>
+  </g>
+</svg>
