@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Bjerring Racing · Race Poster · Mason Bjerring #10</title>
+<meta name="description" content="Fra Gokart til Racerbil. Mason Max Carøe Bjerring, 13 år, kører Aquila Formula 1000 under KEDA Motorsport.">
+<meta name="theme-color" content="#FFD400">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wdth,wght@0,50..125,300..900;1,50..125,300..900&family=Kaushan+Script&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --y:#FFD400; --ink:#0b0b0b; --paper:#f2ede0; --paper2:#e8e1cf; --white:#fff;
+    --mute:#5b574d;
+    --grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    --checker:repeating-conic-gradient(var(--ink) 0 25%, var(--white) 0 50%);
+    --gut:clamp(16px,4vw,48px);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:clip}
+  img,video{display:block;max-width:100%}
+  a{color:inherit}
+  .disp{font-family:'Saira',sans-serif;font-style:italic;font-weight:900;font-stretch:125%;text-transform:uppercase;line-height:.88;letter-spacing:-.01em}
+  .cond{font-family:'Saira',sans-serif;font-weight:800;font-stretch:62%;text-transform:uppercase;line-height:.86}
+  .mono{font-family:'JetBrains Mono',ui-monospace,monospace;font-weight:500;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+  .script{font-family:'Kaushan Script',cursive;font-weight:400;text-transform:none}
+  .wrap{max-width:1320px;margin:0 auto;padding:0 var(--gut)}
+  .grain{position:relative;isolation:isolate}
+  .grain::before{content:"";position:absolute;inset:0;background-image:var(--grain);opacity:.22;mix-blend-mode:multiply;pointer-events:none;z-index:0}
+  .grain > *{position:relative;z-index:1}
+
+  /* ===== halftone print effect ===== */
+  .ht{position:relative;overflow:hidden;background:var(--y);isolation:isolate}
+  .ht .htc{position:absolute;inset:0;filter:contrast(16);background:#fff;mix-blend-mode:multiply}
+  .ht .htc img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(var(--br,1.1)) contrast(1.1) blur(1px)}
+  .ht .htc::after{content:"";position:absolute;inset:-60%;background:radial-gradient(closest-side,#000,#fff) 0 0/var(--dot,6px) var(--dot,6px);transform:rotate(22deg);mix-blend-mode:overlay;pointer-events:none}
+  .ht.on-paper{background:var(--paper)}
+  .ht.on-white{background:#fff}
+  .ht .clr{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s ease}
+  .ht:hover .clr{opacity:1}
+  @media (hover:none){.ht .clr{display:none}}
+
+  /* ===== ticker ===== */
+  .ticker{background:var(--ink);color:var(--y);overflow:hidden;white-space:nowrap;border-bottom:3px solid var(--y)}
+  .ticker-track{display:inline-flex;animation:tick 48s linear infinite;padding:7px 0}
+  .ticker span{font-family:'Saira';font-style:italic;font-weight:800;font-stretch:110%;font-size:.78rem;letter-spacing:.12em;padding:0 16px}
+  .ticker .di{color:#fff;padding:0}
+  @keyframes tick{to{transform:translateX(-50%)}}
+
+  /* ===== nav ===== */
+  nav{position:sticky;top:0;z-index:50;background:var(--ink);color:#fff}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;height:64px}
+  .brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:#fff}
+  .brand svg{height:34px;width:auto;color:var(--y)}
+  .wm{font-family:'Saira';font-style:italic;font-weight:900;font-stretch:125%;line-height:.84}
+  .wm b{display:block;font-size:21px;font-weight:900}
+  .wm span{display:block;font-size:9.5px;letter-spacing:.38em;margin-left:3px}
+  .nav-links{display:flex;align-items:center;gap:2px}
+  .nav-links a{text-decoration:none;font-family:'Saira';font-weight:700;font-stretch:80%;text-transform:uppercase;font-size:.92rem;letter-spacing:.04em;padding:8px 10px;color:#ddd}
+  .nav-links a:hover{color:var(--y)}
+  .nav-links a.cta{background:var(--y);color:var(--ink);margin-left:8px;padding:9px 16px;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%)}
+  .nav-toggle{display:none;background:var(--y);border:0;width:46px;height:46px;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:5px}
+  .nav-toggle span{display:block;width:22px;height:3px;background:var(--ink)}
+  @media (max-width:1080px){
+    .nav-toggle{display:flex}
+    .nav-links{position:absolute;top:64px;left:0;right:0;background:var(--ink);flex-direction:column;align-items:stretch;padding:8px var(--gut) 20px;display:none;border-top:3px solid var(--y)}
+    .nav-links.open{display:flex}
+    .nav-links a{padding:13px 4px;border-bottom:1px solid #262626;font-size:1.1rem}
+    .nav-links a.cta{margin:14px 0 0;text-align:center;border:0}
+  }
+
+  /* ===== poster header strip ===== */
+  .pstrip{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:14px;padding:16px 0 14px;border-bottom:3px solid currentColor}
+  .pstrip .rule{height:1px;background:currentColor;opacity:.4}
+  .hero .pstrip b{background:var(--y);padding:2px 0 2px 10px;position:relative;z-index:2}
+  .pstrip b{font-family:'Saira';font-style:italic;font-weight:900;font-stretch:125%;font-size:.86rem;letter-spacing:.06em}
+  @media (max-width:560px){.pstrip{grid-template-columns:1fr auto}.pstrip .rule{display:none}}
+
+  .btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-family:'Saira';font-style:italic;font-weight:900;font-stretch:110%;text-transform:uppercase;letter-spacing:.04em;font-size:.98rem;padding:15px 26px;min-height:48px;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);transition:transform .15s}
+  .btn:hover{transform:translateX(3px)}
+  .btn-k{background:var(--ink);color:var(--y)}
+  .btn-y{background:var(--y);color:var(--ink)}
+  .btn-o{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 3px var(--ink);clip-path:none}
+  .btn-ow{background:transparent;color:#fff;box-shadow:inset 0 0 0 3px #fff;clip-path:none}
+
+  .checker{height:22px;background:var(--checker) 0 0/22px 22px}
+  .checker.sm{height:14px;background-size:14px 14px}
+
+  /* ===== HERO POSTER ===== */
+  .hero{background:var(--y);overflow:hidden;position:relative}
+  .hero .wrap{position:relative}
+  .hero-arcs{position:absolute;right:-16vw;top:-4vw;width:52vw;max-width:820px;aspect-ratio:1;pointer-events:none;opacity:.9}
+  .hero-num{position:absolute;right:-2vw;bottom:-6vw;font-family:'Saira';font-style:italic;font-weight:900;font-stretch:125%;font-size:min(44vw,640px);line-height:.8;color:transparent;-webkit-text-stroke:3px var(--ink);letter-spacing:-.06em;pointer-events:none;z-index:0}
+  .hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(20px,3vw,46px);padding:34px 0 0;position:relative;z-index:2}
+  .h-meta{display:flex;flex-wrap:wrap;gap:6px 18px;margin-bottom:22px}
+  .h-meta span{display:flex;align-items:center;gap:8px}
+  .h-meta span::before{content:"";width:9px;height:9px;background:var(--ink);transform:skewX(-14deg)}
+  .sig{font-family:'Kaushan Script';font-size:clamp(2.2rem,4.6vw,3.8rem);line-height:1;transform:rotate(-4deg);transform-origin:left;display:inline-block;margin:6px 0 4px}
+  .sig-line{display:block;height:7px;width:min(380px,80%);background:var(--ink);clip-path:polygon(0 60%,100% 0,96% 100%,2% 100%);margin:2px 0 18px 10px;transform:rotate(-3deg)}
+  .tagline{display:inline-block;background:var(--ink);color:var(--y);padding:5px 12px 4px;font-family:'Saira';font-style:italic;font-weight:900;font-stretch:120%;font-size:.86rem;letter-spacing:.24em;margin-bottom:14px}
+  .hero h1{font-size:clamp(2.5rem,5.7vw,5.9rem);line-height:.84;margin-bottom:22px}
+  .hero h1 .o{color:transparent;-webkit-text-stroke:2px var(--ink)}
+  .hero h1 em{font-style:inherit;display:block}
+  .lead{font-size:clamp(1rem,1.25vw,1.12rem);max-width:540px;font-weight:500;margin-bottom:22px}
+  .s26chip{display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:center;background:var(--ink);color:#fff;text-decoration:none;padding:10px 16px 10px 10px;max-width:560px;margin-bottom:22px;clip-path:polygon(0 0,100% 0,calc(100% - 14px) 100%,0 100%)}
+  .s26chip img{width:64px;height:64px;object-fit:cover}
+  .s26chip .k{color:var(--y);display:block;margin-bottom:3px}
+  .s26chip b{font-family:'Saira';font-weight:800;font-stretch:75%;font-size:1.28rem;text-transform:uppercase;line-height:1.05;display:block}
+  .s26chip .go{font-family:'Saira';font-weight:800;font-style:italic;color:var(--y);font-size:.9rem;padding-right:10px;white-space:nowrap}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:6px}
+
+  .hero-photo{position:relative;align-self:stretch;min-height:520px}
+  .hero-photo .ht{position:absolute;inset:0 0 0 0;clip-path:polygon(0 0,100% 0,100% 88%,50% 100%,0 88%);--dot:5px;--br:.97;background:#fff;box-shadow:inset 0 0 0 3px var(--ink)}
+  .hero-photo .ht .htc img{object-position:50% 30%}
+  .plate10{position:absolute;left:-26px;bottom:70px;z-index:4;background:var(--ink);color:var(--y);font-family:'Saira';font-style:italic;font-weight:900;font-stretch:125%;font-size:clamp(4rem,7vw,6.6rem);line-height:.8;padding:14px 22px 10px 16px;clip-path:polygon(0 0,100% 0,calc(100% - 18px) 100%,0 100%)}
+  .plate10 small{font-size:.32em;vertical-align:top;margin-right:2px}
+  .hero-photo .cap{position:absolute;left:-14px;top:22px;z-index:3;background:var(--ink);color:var(--y);padding:8px 14px;font-family:'Saira';font-style:italic;font-weight:900;font-stretch:115%;font-size:.84rem;letter-spacing:.1em}
+  .hero-photo .keda{position:absolute;right:-8px;top:70px;z-index:3;background:#fff;color:var(--ink);padding:7px 12px;font-family:'Saira';font-style:italic;font-weight:900;font-stretch:115%;font-size:.8rem;letter-spacing:.08em;border:3px solid var(--ink)}
+  .speed{position:absolute;left:-40px;bottom:120px;z-index:3;display:flex;flex-direction:column;gap:7px}
+  .speed i{display:block;height:7px;background:var(--ink);transform:skewX(-30deg)}
+  .speed i:nth-child(1){width:150px}.speed i:nth-child(2){width:110px;margin-left:24px}.speed i:nth-child(3){width:70px;margin-left:48px}
+
+  .hero-stats{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);border-top:3px solid var(--ink);margin-top:34px;background:var(--y)}
+  .hero-stats div{padding:16px 18px 20px;border-right:3px solid var(--ink)}
+  .hero-stats div:last-child{border-right:0}
+  .hero-stats b{display:block;font-size:clamp(2.4rem,4.6vw,4.2rem)}
+  .hero-stats span{display:block;font-size:.88rem;font-weight:600;margin-top:4px}
+
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr}
+    .hero-photo{min-height:0;aspect-ratio:4/4.2;margin:6px 0 0}
+    .hero-num{font-size:68vw;bottom:auto;top:30%;right:-6vw;-webkit-text-stroke:2px var(--ink)}
+    .hero-stats{grid-template-columns:1fr 1fr}
+    .hero-stats div:nth-child(2){border-right:0}
+    .hero-stats div:nth-child(-n+2){border-bottom:3px solid var(--ink)}
+    .hero-photo .cap{left:0}
+    .hero-photo .keda{right:0}
+    .plate10{left:0;bottom:50px}
+  }
+  @media (max-width:420px){
+    .s26chip{grid-template-columns:52px 1fr;padding-right:20px}
+    .s26chip img{width:52px;height:52px}
+    .s26chip .go{display:none}
+    .hero h1 .o{-webkit-text-stroke:1.5px var(--ink)}
+    .hero-stats div{padding:14px 12px 16px}
+  }
+
+  /* ===== sponsor band ===== */
+  .spons{background:#fff;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);display:grid;grid-template-columns:auto 1fr;align-items:stretch}
+  .spons-lab{background:var(--ink);color:var(--y);display:flex;align-items:center;padding:0 22px;font-family:'Saira';font-style:italic;font-weight:900;font-stretch:115%;text-transform:uppercase;font-size:.82rem;letter-spacing:.1em;line-height:1.1;max-width:190px}
+  .marquee-box{overflow:hidden}
+  .marquee{display:flex;align-items:center;gap:46px;padding:16px 23px;width:max-content;animation:tick 70s linear infinite}
+  .marquee img{height:48px;width:auto;max-width:150px;object-fit:contain}
+  @media (max-width:640px){.spons{grid-template-columns:1fr}.spons-lab{padding:10px 16px;max-width:none}.marquee img{height:38px}}
+
+  /* ===== generic poster section ===== */
+  .poster{padding:0 0 clamp(60px,8vw,110px)}
+  .p-head{display:grid;grid-template-columns:auto 1fr;gap:clamp(16px,3vw,40px);align-items:end;margin:clamp(28px,4vw,48px) 0 clamp(26px,3.5vw,44px)}
+  .p-no{font-family:'Saira';font-style:italic;font-weight:900;font-stretch:125%;font-size:clamp(4.4rem,11vw,10rem);line-height:.78;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:2px var(--ink)}
+  .dark .p-no{-webkit-text-stroke-color:var(--y)}
+  .p-head h2{font-size:clamp(1.9rem,5.4vw,5rem)}
+  .p-head > div{min-width:0}
+  .p-head p{max-width:640px;margin-top:14px;font-size:1.04rem}
+  .p-head .eb{display:block;margin-bottom:10px}
+  @media (max-width:640px){.p-head{grid-template-columns:1fr;gap:6px}.p-no{font-size:4.4rem}}
+  .dark{background:var(--ink);color:#fff}
+  .dark .pstrip{color:var(--y)}
+  .yel{background:var(--y)}
+  .hl{background:linear-gradient(transparent 14%,var(--y) 14%,var(--y) 90%,transparent 90%);color:var(--ink);padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .dark .hl{color:var(--ink)}
+  h2.disp{line-height:.98;overflow-wrap:break-word}
+  @media (max-width:360px){h2.disp{hyphens:auto;-webkit-hyphens:auto}}
+
+  /* ===== OM ===== */
+  .about{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(24px,4vw,60px);align-items:start}
+  .about-photo{position:relative}
+  .about-photo .ht{aspect-ratio:4/5;clip-path:polygon(0 0,100% 0,100% 100%,14% 100%,0 90%);--dot:6px}
+  .about-photo .ht .htc img{object-position:50% 10%}
+  .about-photo .ht .clr{opacity:1}
+  .about-photo .vert{position:absolute;right:-38px;top:0;writing-mode:vertical-rl;font-family:'Saira';font-style:italic;font-weight:900;font-stretch:120%;font-size:.86rem;letter-spacing:.24em;text-transform:uppercase;white-space:nowrap}
+  .about-photo .pip{position:absolute;right:-18px;bottom:-26px;width:44%;border:5px solid var(--paper);box-shadow:0 0 0 3px var(--ink)}
+  .about-photo .pip img{aspect-ratio:3/4;object-fit:cover;width:100%}
+  .about-photo .tag{position:absolute;left:0;top:18px;background:var(--y);padding:7px 13px;font-family:'Saira';font-style:italic;font-weight:900;font-stretch:115%;font-size:.84rem;letter-spacing:.06em;border:3px solid var(--ink);border-left:0}
+  .about-copy h2{font-size:clamp(2.3rem,5vw,4.6rem);margin-bottom:22px}
+  .about-copy p{margin-bottom:14px;font-size:1.06rem;max-width:560px}
+  .about-copy .pull{font-family:'Saira';font-weight:800;font-stretch:80%;font-size:1.5rem;line-height:1.12;text-transform:uppercase;border-left:8px solid var(--y);padding:6px 0 6px 16px;margin:22px 0 26px;max-width:520px;background:linear-gradient(90deg,rgba(255,212,0,.25),transparent 70%)}
+  .about-copy .sig2{font-family:'Kaushan Script';font-size:2.6rem;transform:rotate(-5deg);display:inline-block;margin:6px 0 20px}
+  @media (max-width:860px){.about{grid-template-columns:1fr}.about-photo{margin-right:34px;margin-bottom:30px}}
+
+  /* ===== VIDEO ===== */
+  .vgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .vp{position:relative;background:#111;border:3px solid #fff}
+  .vp video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#000}
+  .vp figcaption{display:flex;justify-content:space-between;align-items:baseline;padding:10px 12px;background:#fff;color:var(--ink)}
+  .vp figcaption b{font-family:'Saira';font-style:italic;font-weight:900;font-stretch:110%;text-transform:uppercase;font-size:.95rem}
+  .vnote{margin-top:24px;color:#bbb;font-size:.95rem}
+  .vbig{font-size:clamp(3rem,10vw,9.5rem);color:transparent;-webkit-text-stroke:2px var(--y);white-space:nowrap;line-height:.8;margin:6px 0 30px;overflow:hidden}
+  @media (max-width:900px){.vgrid{grid-template-columns:1fr 1fr}}
+  @media (max-width:360px){.vgrid{gap:10px}.vp figcaption b{font-size:.8rem}}
+
+  /* ===== GALLERI ===== */
+  .gal{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(130px,15vw,210px);gap:10px;grid-auto-flow:dense}
+  .gal a{display:block;position:relative;border:3px solid var(--ink)}
+  .gal a .ht{position:absolute;inset:0;--dot:5px}
+  .gal .w3{grid-column:span 3}.gal .w2{grid-column:span 2}.gal .h2{grid-row:span 2}
+  .gal .lbl{position:absolute;left:0;bottom:0;z-index:3;background:var(--ink);color:var(--y);padding:4px 9px}
+  @media (max-width:760px){.gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}.gal .w3,.gal .w2{grid-column:span 2}.gal .h2{grid-row:span 2}}
+
+  /* ===== REACH ===== */
+  .reach{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(20px,3vw,44px);align-items:start}
+  .reach-vid{border:3px solid var(--ink);background:#000}
+  .reach-vid video{width:100%;aspect-ratio:9/16;object-fit:cover}
+  .bignums{display:grid;gap:0}
+  .bn{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:end;border-bottom:3px solid var(--ink);padding:14px 0}
+  .bn:first-child{border-top:3px solid var(--ink)}
+  .bn b{font-size:clamp(3.2rem,8vw,7.4rem);line-height:.8}
+  .bn span{font-weight:600;font-size:1rem;padding-bottom:6px;max-width:260px}
+  .reach-note{margin:20px 0;font-size:1.02rem;max-width:620px}
+  .soc-row{display:flex;flex-wrap:wrap;gap:10px}
+  .soc-row a{text-decoration:none;background:var(--ink);color:#fff;padding:11px 18px;font-family:'Saira';font-weight:800;font-stretch:90%;text-transform:uppercase;letter-spacing:.04em;min-height:44px;display:inline-flex;align-items:center}
+  .soc-row a:hover{background:var(--y);color:var(--ink)}
+  .clip{margin-top:clamp(36px,5vw,64px);background:#fff;border:3px solid var(--ink);padding:clamp(22px,3.5vw,42px);position:relative;transform:rotate(-.6deg);box-shadow:10px 10px 0 var(--ink)}
+  .clip::before{content:"";position:absolute;top:-16px;left:40px;width:120px;height:28px;background:rgba(255,212,0,.85);transform:rotate(-4deg)}
+  .clip .dotw{display:inline-block;background:var(--ink);color:var(--y);padding:5px 10px;margin-bottom:14px}
+  .clip blockquote{font-family:'Saira';font-weight:600;font-stretch:88%;font-size:clamp(1.08rem,1.8vw,1.4rem);line-height:1.38}
+  .clip blockquote b{background:var(--y);padding:0 4px}
+  .clip figcaption{margin-top:16px;font-weight:700}
+  .clip figcaption span{display:block;font-weight:500;color:var(--mute);font-size:.92rem}
+  @media (max-width:860px){.reach{grid-template-columns:1fr}.reach-vid{max-width:340px}.clip{transform:none;box-shadow:6px 6px 0 var(--ink)}}
+
+  /* ===== MOTTO ===== */
+  .motto{background:var(--y);position:relative;overflow:hidden;text-align:center;padding:clamp(60px,9vw,120px) var(--gut)}
+  .motto::before,.motto::after{content:"";position:absolute;left:0;right:0;height:22px;background:var(--checker) 0 0/22px 22px}
+  .motto::before{top:0}.motto::after{bottom:0}
+  .motto blockquote{font-size:clamp(2rem,6.2vw,5.6rem);max-width:1180px;margin:14px auto 0}
+  .motto blockquote span{display:block;color:transparent;-webkit-text-stroke:2px var(--ink)}
+  .motto cite{display:block;margin-top:22px;font-style:normal}
+  .motto .lines{position:absolute;left:-60px;top:50%;display:flex;flex-direction:column;gap:9px;transform:translateY(-50%)}
+  .motto .lines i{display:block;height:9px;background:var(--ink);transform:skewX(-30deg)}
+  .motto .lines i:nth-child(1){width:180px}.motto .lines i:nth-child(2){width:130px}.motto .lines i:nth-child(3){width:80px}
+  @media (max-width:760px){.motto .lines{display:none}.motto blockquote span{-webkit-text-stroke:1.5px var(--ink)}}
+
+  /* ===== RESULTATER: swiss grid ===== */
+  .res{display:grid;grid-template-columns:repeat(3,1fr);border-top:3px solid var(--ink);border-left:3px solid var(--ink)}
+  .res > div{border-right:3px solid var(--ink);border-bottom:3px solid var(--ink);padding:clamp(18px,2.4vw,30px);min-height:clamp(170px,18vw,240px);display:flex;flex-direction:column;justify-content:space-between;gap:18px;position:relative}
+  .res > div .ix{position:absolute;right:14px;top:12px}
+  .res .rn{font-size:clamp(2.8rem,5.6vw,5.2rem)}
+  .res .rl{font-weight:600;max-width:280px}
+  .res > div:nth-child(1){background:var(--y)}
+  .res > div:nth-child(5){background:var(--ink);color:var(--y)}
+  .res > div:nth-child(5) .rl{color:#fff}
+  .dkse{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;margin-top:24px}
+  .dkse .big{font-size:clamp(3rem,7vw,6rem);color:transparent;-webkit-text-stroke:2px var(--ink)}
+  .dkse .txt{font-weight:600;font-size:1.06rem;max-width:420px}
+  @media (max-width:860px){.res{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.res{grid-template-columns:1fr}.res > div{min-height:0}.dkse{grid-template-columns:1fr;gap:6px}}
+
+  /* ===== SÆSON 2026 ===== */
+  .s-top{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(20px,3vw,44px);align-items:start}
+  .s-poster{position:relative;display:block;border:3px solid var(--y)}
+  .s-poster img{width:100%;aspect-ratio:2/3;object-fit:cover}
+  .s-poster .stamp{position:absolute;right:-12px;bottom:26px;background:var(--y);color:var(--ink);padding:8px 14px;transform:rotate(-6deg);font-family:'Saira';font-style:italic;font-weight:900;font-stretch:120%;font-size:.9rem;border:3px solid var(--ink)}
+  .podium{display:grid;grid-template-columns:repeat(3,1fr);align-items:end;gap:8px;margin-bottom:24px}
+  .pod{text-align:center;color:var(--ink)}
+  .pod .blk{background:var(--y);padding:12px 6px;display:flex;flex-direction:column;justify-content:flex-end;clip-path:polygon(0 10px,10px 0,100% 0,100% 100%,0 100%)}
+  .pod .p{font-size:clamp(3rem,6.4vw,5.8rem);line-height:.82}
+  .pod .l{font-family:'Saira';font-style:italic;font-weight:900;font-stretch:120%;text-transform:uppercase;font-size:1rem;margin-top:6px}
+  .pod .d{font-size:.78rem;font-weight:600;margin-top:2px}
+  .pod.a .blk{height:clamp(190px,20vw,240px)}
+  .pod.b .blk{height:clamp(160px,17vw,200px)}
+  .pod.c .blk{height:clamp(140px,14vw,170px);background:#fff}
+  .ages{border:3px solid var(--y);padding:16px 18px;margin-bottom:22px}
+  .ages p{margin-bottom:10px;color:#ddd}
+  .ages-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  .ages-row span{border:2px solid #444;padding:10px 6px;text-align:center;font-family:'Saira';font-weight:800;font-stretch:80%;font-size:1.3rem;text-transform:uppercase}
+  .ages-row .me{background:var(--y);color:var(--ink);border-color:var(--y)}
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:2px solid #333}
+  .fact{padding:14px 12px 14px 0;border-bottom:2px solid #333;display:grid;grid-template-columns:38px 1fr;gap:10px}
+  .fact .ic{font-size:1.4rem}
+  .fact b{display:block;font-family:'Saira';font-weight:800;font-stretch:85%;text-transform:uppercase;font-size:1.06rem;line-height:1.1}
+  .fact span{font-size:.9rem;color:#bbb}
+  .final{margin-top:clamp(40px,5vw,64px);border:3px solid var(--y);position:relative}
+  .final-head{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:end;padding:clamp(20px,3vw,34px);border-bottom:3px solid var(--y)}
+  .final-head h3{font-size:clamp(1.9rem,4.2vw,3.6rem);color:var(--y)}
+  .final-head p{max-width:640px;margin-top:12px;color:#ddd}
+  .final-head .need{text-align:right}
+  .final-head .need b{display:block;font-size:clamp(3.4rem,7vw,6rem);color:var(--y)}
+  .heats{display:grid;grid-template-columns:repeat(4,1fr)}
+  .heat{padding:20px;border-right:3px solid var(--y)}
+  .heat:last-child{border-right:0}
+  .heat .h{display:block;color:var(--y)}
+  .heat .r{display:block;font-size:clamp(3rem,5vw,4.4rem);margin:6px 0 10px}
+  .heat p{font-size:.92rem;color:#ccc}
+  .heat.win{background:var(--y);color:var(--ink)}
+  .heat.win .h{color:var(--ink)}.heat.win p{color:var(--ink)}
+  .s-photos{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:clamp(140px,15vw,220px);gap:10px;margin-top:clamp(36px,5vw,60px);grid-auto-flow:dense}
+  .s-photos a{position:relative;display:block;border:3px solid var(--y);overflow:hidden}
+  .s-photos a .ht{position:absolute;inset:0;--dot:5px}
+  .s-photos .w{grid-column:span 2}.s-photos .t{grid-row:span 2}
+  .s-end{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;margin-top:clamp(28px,4vw,46px)}
+  .s-quote{background:var(--y);color:var(--ink);padding:clamp(22px,3vw,36px)}
+  .s-quote p{font-size:clamp(1.5rem,3vw,2.5rem)}
+  .s-quote cite{display:block;margin-top:14px;font-style:normal}
+  .press{border:3px solid #fff;padding:clamp(20px,3vw,30px);text-decoration:none;display:flex;flex-direction:column;gap:12px;justify-content:space-between;background:#fff;color:var(--ink);position:relative}
+  .press .src{color:var(--mute)}
+  .press b{font-family:'Saira';font-weight:800;font-stretch:85%;font-size:1.36rem;text-transform:uppercase;line-height:1.08}
+  .press .go{font-family:'Saira';font-style:italic;font-weight:900;font-stretch:110%;text-transform:uppercase}
+  .press:hover{background:var(--y)}
+  @media (max-width:960px){.s-top{grid-template-columns:1fr}.s-poster{max-width:420px}.heats{grid-template-columns:1fr 1fr}.heat:nth-child(2){border-right:0}.heat:nth-child(-n+2){border-bottom:3px solid var(--y)}.s-end{grid-template-columns:1fr}}
+  @media (max-width:560px){.facts{grid-template-columns:1fr}.ages-row{grid-template-columns:1fr 1fr}.final-head{grid-template-columns:1fr}.final-head .need{text-align:left}.heats{grid-template-columns:1fr}.heat{border-right:0!important;border-bottom:3px solid var(--y)}.heat:last-child{border-bottom:0}.s-photos{grid-template-columns:1fr 1fr;grid-auto-rows:140px}.pod .l{font-size:.86rem}.pod .d{display:none}}
+
+  /* ===== KALENDER ===== */
+  .cal{border-top:3px solid var(--ink)}
+  .cal-row{display:grid;grid-template-columns:clamp(150px,22vw,290px) 1fr auto;gap:20px;align-items:center;padding:16px 0;border-bottom:3px solid var(--ink);position:relative}
+  .cal-date{font-size:clamp(1.6rem,3.2vw,2.8rem);line-height:.9}
+  .cal-venue b{display:block;font-family:'Saira';font-weight:800;font-stretch:85%;text-transform:uppercase;font-size:clamp(1.15rem,2vw,1.6rem);line-height:1.05}
+  .cal-venue span{font-size:.92rem;font-weight:500}
+  .cls{font-style:normal;font-weight:700;padding:1px 7px;margin-right:4px}
+  .cls-f1000{background:var(--ink);color:var(--y)}
+  .cls-kart{background:#fff;border:2px solid var(--ink)}
+  .cal-badge{font-family:'JetBrains Mono';font-weight:700;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:7px 11px;white-space:nowrap}
+  .b-done{background:transparent;box-shadow:inset 0 0 0 2px var(--ink)}
+  .b-next{background:var(--y);box-shadow:inset 0 0 0 2px var(--ink)}
+  .b-up{background:var(--ink);color:var(--y)}
+  .cal-row.done .cal-date,.cal-row.done .cal-venue{opacity:.55}
+  .cal-row.done::after{content:"";position:absolute;right:0;top:50%;width:28px;height:28px;margin-top:-14px;background:var(--checker) 0 0/7px 7px;opacity:.0}
+  .cal-row.next{background:var(--y);margin:0 calc(var(--gut) * -1);padding-left:var(--gut);padding-right:var(--gut)}
+  @media (max-width:640px){.cal-row{grid-template-columns:1fr auto;gap:6px 12px}.cal-date{grid-column:1/-1}.cal-venue{grid-column:1}.cal-badge{grid-column:2;grid-row:2;align-self:start}}
+
+  /* ===== REJSE ===== */
+  .journey{display:grid;grid-template-columns:1fr 1fr;gap:clamp(22px,4vw,56px);align-items:start}
+  .van .ht{aspect-ratio:16/10;border:3px solid var(--ink);--dot:5px}
+  .van .cap{margin-top:12px;font-weight:600;max-width:520px}
+  .laps{position:relative;display:grid;gap:0;border-left:3px solid var(--ink);margin-left:12px}
+  .lap{position:relative;padding:0 0 26px 30px}
+  .lap::before{content:"";position:absolute;left:-12px;top:6px;width:21px;height:21px;background:var(--y);border:3px solid var(--ink);transform:rotate(45deg)}
+  .lap .k{font-size:clamp(2rem,4vw,3.2rem);display:block;margin-bottom:4px}
+  .lap h4{font-family:'Saira';font-weight:800;font-stretch:85%;text-transform:uppercase;font-size:1.2rem}
+  .lap p{font-size:.98rem}
+  .lap.future::before{background:var(--checker) 0 0/7px 7px}
+  .lap.future .k{color:transparent;-webkit-text-stroke:2px var(--ink)}
+  @media (max-width:860px){.journey{grid-template-columns:1fr}}
+
+  /* ===== HVORFOR ===== */
+  .why{display:grid;grid-template-columns:repeat(4,1fr);border-top:3px solid var(--y)}
+  .why > div{padding:24px 22px 28px 0;border-right:1px solid #333;padding-left:22px}
+  .why > div:first-child{padding-left:0}
+  .why > div:last-child{border-right:0}
+  .why .n{font-size:3.6rem;color:transparent;-webkit-text-stroke:2px var(--y);display:block;margin-bottom:14px}
+  .why h4{font-family:'Saira';font-style:italic;font-weight:900;font-stretch:115%;text-transform:uppercase;font-size:1.3rem;color:var(--y);margin-bottom:8px}
+  .why p{color:#ccc}
+  @media (max-width:900px){.why{grid-template-columns:1fr 1fr}.why > div{padding-left:0!important;border-right:0;border-bottom:1px solid #333}}
+  @media (max-width:520px){.why{grid-template-columns:1fr}}
+
+  /* ===== PAKKER: race tickets ===== */
+  .tix{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .tk{background:#fff;border:3px solid var(--ink);display:flex;flex-direction:column;position:relative}
+  .tk .top{padding:20px 20px 16px;border-bottom:3px dashed var(--ink);position:relative}
+  .tk .top::before,.tk .top::after{content:"";position:absolute;bottom:-14px;width:24px;height:24px;border-radius:50%;background:var(--paper);border:3px solid var(--ink)}
+  .tk .top::before{left:-15px;clip-path:inset(0 0 0 50%)}
+  .tk .top::after{right:-15px;clip-path:inset(0 50% 0 0)}
+  .tk .tier{font-size:2.1rem;display:block;margin:6px 0 10px}
+  .tk .price{font-size:clamp(2.6rem,3.8vw,3.4rem);white-space:nowrap}
+  .tk .price small{font-size:.42em;letter-spacing:.02em}
+  .tk ul{list-style:none;padding:18px 20px;flex:1}
+  .tk li{padding:7px 0 7px 22px;border-bottom:1px solid #ddd;position:relative;font-weight:500;font-size:.96rem}
+  .tk li::before{content:"";position:absolute;left:0;top:13px;width:10px;height:10px;background:var(--ink);transform:skewX(-14deg)}
+  .tk .btn{margin:0 20px 20px;justify-content:center}
+  .tk.plat{background:var(--ink);color:#fff}
+  .tk.plat .top{border-bottom-color:var(--y)}
+  .tk.plat .tier,.tk.plat .price{color:var(--y)}
+  .tk.plat li{border-bottom-color:#333}
+  .tk.plat li::before{background:var(--y)}
+  .tk .badge{position:absolute;top:-15px;right:14px;background:var(--y);color:var(--ink);padding:5px 11px;border:3px solid var(--ink);font-family:'Saira';font-style:italic;font-weight:900;font-stretch:115%;text-transform:uppercase;font-size:.78rem}
+  .tk .serial{display:flex;justify-content:space-between}
+  .pkg-note{margin-top:22px;font-weight:600;max-width:680px}
+  @media (max-width:1080px){.tix{grid-template-columns:1fr 1fr;gap:26px 16px}}
+  @media (max-width:560px){.tix{grid-template-columns:1fr}}
+
+  /* ===== SOCIAL ===== */
+  .socg{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:3px solid var(--ink)}
+  .socg a{display:flex;align-items:center;gap:16px;padding:24px;text-decoration:none;border-right:3px solid var(--ink);background:#fff;min-height:96px}
+  .socg a:last-child{border-right:0}
+  .socg a:hover{background:var(--y)}
+  .socg .ic{width:52px;height:52px;background:var(--ink);color:var(--y);display:grid;place-items:center;flex:none}
+  .socg b{display:block;font-family:'Saira';font-style:italic;font-weight:900;font-stretch:115%;text-transform:uppercase;font-size:1.3rem;line-height:1}
+  .socg span{font-size:.92rem;color:var(--mute)}
+  @media (max-width:760px){.socg{grid-template-columns:1fr}.socg a{border-right:0;border-bottom:3px solid var(--ink)}.socg a:last-child{border-bottom:0}}
+
+  /* ===== KONTAKT ===== */
+  .contact{background:var(--y);position:relative;overflow:hidden}
+  .contact .big10{position:absolute;right:-3vw;top:-4vw;font-family:'Saira';font-style:italic;font-weight:900;font-stretch:125%;font-size:min(40vw,560px);line-height:.8;color:transparent;-webkit-text-stroke:3px rgba(11,11,11,.9);pointer-events:none}
+  .contact-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,60px);align-items:end;padding:clamp(20px,3vw,30px) 0 clamp(60px,8vw,100px)}
+  .contact h2{font-size:clamp(2.5rem,6.6vw,6rem)}
+  .contact p{font-size:1.08rem;font-weight:500;max-width:520px;margin-top:20px}
+  .clist{display:grid;gap:0;border-top:3px solid var(--ink);background:var(--y)}
+  .clist a{display:grid;grid-template-columns:110px 1fr;gap:16px;align-items:baseline;padding:16px 0;border-bottom:3px solid var(--ink);text-decoration:none;min-width:0}
+  .clist b{font-family:'Saira';font-weight:800;font-stretch:72%;font-size:clamp(1.7rem,3.6vw,2.9rem);line-height:1;text-transform:uppercase;overflow-wrap:anywhere;min-width:0}
+  .clist a.mail b{text-transform:none;font-stretch:70%;font-size:clamp(1.25rem,2.5vw,2.1rem)}
+  .clist a:hover b{text-decoration:underline;text-decoration-thickness:3px}
+  @media (max-width:860px){.contact-grid{grid-template-columns:1fr}.contact .big10{font-size:70vw;top:auto;bottom:10%}}
+  @media (max-width:420px){.clist a{grid-template-columns:1fr;gap:4px}}
+
+  footer{background:var(--ink);color:#fff;padding:36px 0 90px}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px}
+  .foot .socials{display:flex;gap:10px}
+  .foot .socials a{width:44px;height:44px;display:grid;place-items:center;background:#1c1c1c;color:var(--y)}
+  .foot .socials a:hover{background:var(--y);color:var(--ink)}
+  .foot-note{margin-top:22px;color:#999;font-size:.86rem}
+
+  /* ===== variant pill ===== */
+  .vpill{position:fixed;left:12px;bottom:12px;z-index:90;background:var(--ink);color:#fff;font:600 12px/1 'Inter',sans-serif;padding:10px 13px;border:2px solid var(--y);text-decoration:none;display:flex;gap:6px;align-items:center}
+  .vpill b{color:var(--y)}
+  .vpill:hover{background:var(--y);color:var(--ink)}.vpill:hover b{color:var(--ink)}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.ticker-track,.marquee{animation:none}}
+</style>
+</head>
+<body>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track" id="tickerTrack"></div></div>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand" aria-label="Bjerring Racing, til toppen">
+      <svg viewBox="0 0 130 100" fill="currentColor" aria-hidden="true"><g transform="skewX(-14) translate(22 0)"><path d="M0 40 L30 40 L34 50 L30 60 L0 60 L10 50 Z"/><path d="M36 8 H86 Q104 8 104 25 Q104 40 90 45 H70 V34 H82 Q88 34 88 27 Q88 20 82 20 H52 V44 H36 Z"/><path d="M36 54 H92 Q108 58 108 74 Q108 92 88 92 H36 Z M52 66 V80 H84 Q91 80 91 73 Q91 66 84 66 Z" fill-rule="evenodd"/></g></svg>
+      <span class="wm"><b>BJERRING</b><span>RACING</span></span>
+    </a>
+    <div class="nav-links" id="navlinks">
+      <a href="#om">Om Mason</a>
+      <a href="#video">Video</a>
+      <a href="#galleri">Galleri</a>
+      <a href="#resultater">Resultater</a>
+      <a href="#saeson">Sæson 2026</a>
+      <a href="#kalender">Kalender</a>
+      <a href="#sponsor">Sponsorpakker</a>
+      <a href="#kontakt" class="cta">Bliv sponsor</a>
+    </div>
+    <button class="nav-toggle" id="navtoggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- PLAKAT N° 01 · HERO -->
+<header class="hero grain" id="top">
+  <svg class="hero-arcs" viewBox="0 0 400 400" fill="none" stroke="#0b0b0b" aria-hidden="true">
+    <circle cx="200" cy="200" r="60" stroke-width="2"/><circle cx="200" cy="200" r="95" stroke-width="2"/><circle cx="200" cy="200" r="130" stroke-width="2"/><circle cx="200" cy="200" r="165" stroke-width="2"/><circle cx="200" cy="200" r="198" stroke-width="2"/>
+  </svg>
+    <div class="wrap">
+    <div class="pstrip mono"><span>Plakat N° 01 / 12</span><span class="rule"></span><b>Sæson 2026 · DK + SE + NO</b></div>
+    <div class="hero-grid">
+      <div class="reveal in">
+        <div class="h-meta mono"><span>Bjerring Racing</span><span>Startnummer #10</span><span>KEDA Motorsport</span></div>
+        <div class="sig">Mason Bjerring</div>
+        <span class="sig-line"></span>
+        <span class="tagline">100% PURE RACING</span>
+        <h1 class="disp"><em>Fra <span class="o">gokart</span></em><em>til racerbil</em></h1>
+        <p class="lead">Jeg hedder Mason, jeg er 13 år, og jeg kører Aquila Formula 1000 under KEDA Motorsport, med løb i Danmark og udlandet. Motorsport er mit liv, og drømmen er hele vejen til toppen.</p>
+        <a class="s26chip" href="#saeson" aria-label="Se hvordan første sæson gik: P2 Rookie, P3 Junior, P4 Overall"><img src="../assets/s26-poster.jpg" alt=""><span><span class="k mono">🏁 Første sæson i formelbil</span><b>P2 Rookie · P3 Junior · P4 Overall</b></span><span class="go">Se sæsonen →</span></a>
+        <div class="hero-cta">
+          <a href="#sponsor" class="btn btn-k">Bliv sponsor →</a>
+          <a href="#video" class="btn btn-o">▶ Se videoer</a>
+        </div>
+      </div>
+      <div class="hero-photo reveal in">
+        <span class="cap">AQUILA FORMULA 1000 · #10</span>
+        <span class="keda">KEDA MOTORSPORT</span>
+        <div class="ht"><div class="htc"><img src="../assets/about-main.jpg" alt="Mason Max Carøe Bjerring i kørerdragt med armene over kors"></div></div>
+        <div class="plate10" aria-hidden="true"><small>#</small>10</div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="hero-stats">
+      <div><b class="cond">100+</b><span>Podieplaceringer</span></div>
+      <div><b class="cond">P4</b><span>Til DM, yngste i feltet</span></div>
+      <div><b class="cond">P3</b><span>Svensk Junior-RM 2026, debutsæson</span></div>
+      <div><b class="cond">8 mio.</b><span>Visninger i 2026</span></div>
+    </div>
+  </div>
+  <div class="checker"></div>
+</header>
+
+<!-- SPONSORER -->
+<div class="spons">
+  <div class="spons-lab">Vi kører med støtte fra</div>
+  <div class="marquee-box">
+    <div class="marquee" id="marqueeTrack">
+      <img src="../assets/sp26-00.png" alt="Auto-Syn"><img src="../assets/sp26-01.png" alt="EJ"><img src="../assets/sp26-02.png" alt="Sponsor">
+      <img src="../assets/sp26-03.png" alt="Djurslands Bank"><img src="../assets/sp26-04.png" alt="Kabinescooter.nu"><img src="../assets/sp26-05.png" alt="Davai">
+      <img src="../assets/sp26-06.png" alt="Solid Skilte"><img src="../assets/sp26-07.png" alt="Dancrimp"><img src="../assets/sp26-08.png" alt="RW VVS">
+      <img src="../assets/sp26-09.png" alt="Rema 1000"><img src="../assets/sp26-10.png" alt="DOL Rådgivende Ingeniør"><img src="../assets/sp26-11.png" alt="Skovsbøl Holding">
+      <img src="../assets/sp26-12.png" alt="Sponsor"><img src="../assets/sp26-13.png" alt="Makeup Lagersalg"><img src="../assets/sp26-14.png" alt="Gitte & Torben">
+      <img src="../assets/sp26-15.png" alt="Super Dæk"><img src="../assets/sp26-16.png" alt="Mercedes"><img src="../assets/sp26-17.png" alt="Together For You">
+      <img src="../assets/sp26-18.png" alt="LB Gulvservice"><img src="../assets/sp26-19.png" alt="Romalt"><img src="../assets/sp26-20.png" alt="Professional's Choice">
+      <img src="../assets/sp26-21.png" alt="Niva Byg & Montage"><img src="../assets/sp26-22.png" alt="Grenaa Murerforretning"><img src="../assets/sp26-23.png" alt="Varme Pumpe Service">
+      <img src="../assets/sp26-24.png" alt="Holmegaard"><img src="../assets/sp26-25.png" alt="M. Junker"><img src="../assets/sp26-26.png" alt="Begravelsesforretning">
+      <img src="../assets/sp26-27.png" alt="Nilsson"><img src="../assets/sp26-28.png" alt="Küdahl">
+    </div>
+  </div>
+</div>
+
+<!-- PLAKAT N° 02 · OM -->
+<section class="poster grain" id="om">
+  <div class="wrap">
+    <div class="pstrip mono"><span>Plakat N° 02 / 12</span><span class="rule"></span><b>Hvem er jeg?</b></div>
+    <div class="about" style="margin-top:clamp(30px,4vw,54px)">
+      <div class="about-photo reveal">
+        <div class="ht on-paper"><div class="htc"><img src="../assets/s26-flag.jpg" alt="Mason Max Carøe Bjerring i kørerdragt med Dannebrog"></div><img class="clr" src="../assets/s26-flag.jpg" alt=""></div>
+        <span class="tag">AQUILA FORMULA 1000 · #10</span>
+        <span class="vert">Mason Max Carøe Bjerring · 13 år</span>
+        <div class="pip"><img src="../assets/about-pip.jpg" alt="Mason ved sin Aquila Formula 1000 racerbil #10 med pokal"></div>
+      </div>
+      <div class="about-copy reveal">
+        <span class="mono" style="display:block;margin-bottom:12px">Hvem er jeg?</span>
+        <h2 class="disp">Gør min rejse til <span class="hl">vores rejse</span></h2>
+        <p>Jeg hedder <strong>Mason Max Carøe Bjerring</strong>, er <strong>13 år</strong> og har kørt gokart, siden jeg var 6. Motorsport er mit liv, og min drøm er at nå hele vejen til toppen.</p>
+        <p>Nu kører jeg <strong>Aquila Formula 1000</strong> under KEDA Motorsport, og i 2026 venter en fuld sæson med løb i både Danmark og udlandet. Teamet bag mig var imponeret over min fart. Nu handler det om at udvikle mig som racerkører.</p>
+        <p class="pull">Skal du med til Padborg Park, så giver jeg en tur i en racerbil! 🏎️</p>
+        <div class="sig2">Mason</div><br>
+        <a href="#sponsor" class="btn btn-k">Bliv en del af holdet →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLAKAT N° 03 · VIDEO -->
+<section class="poster dark" id="video">
+  <div class="wrap">
+    <div class="pstrip mono"><span>Plakat N° 03 / 12</span><span class="rule"></span><b>På fuld gas</b></div>
+    <div class="p-head reveal" style="color:var(--y)">
+      <div class="p-no">03</div>
+      <div style="color:#fff"><span class="eb mono" style="color:var(--y)">På fuld gas</span><h2 class="disp">Se Mason i <span class="hl">aktion</span></h2><p style="color:#ccc">Mason på banen i Aquila Formula 1000. Tryk play og oplev farten.</p></div>
+    </div>
+    <div class="vgrid reveal">
+      <figure class="vp"><video src="../assets/vid-3.mp4" poster="../assets/vp-3.jpg" controls preload="metadata" playsinline></video><figcaption><b>Klar i paddocken</b><span class="mono">01</span></figcaption></figure>
+      <figure class="vp"><video src="../assets/vid-0.mp4" poster="../assets/vp-0.jpg" controls preload="metadata" playsinline></video><figcaption><b>Ud på banen</b><span class="mono">02</span></figcaption></figure>
+      <figure class="vp"><video src="../assets/vid-1.mp4" poster="../assets/vp-1.jpg" controls preload="metadata" playsinline></video><figcaption><b>Gennem svinget</b><span class="mono">03</span></figcaption></figure>
+      <figure class="vp"><video src="../assets/vid-2.mp4" poster="../assets/vp-2.jpg" controls preload="metadata" playsinline></video><figcaption><b>Bag kulisserne</b><span class="mono">04</span></figcaption></figure>
+    </div>
+    <p class="vnote">🎬 Følg flere klip på TikTok og Instagram, og se løbene live på YouTube (søg "Aquila Formula 1000").</p>
+  </div>
+</section>
+
+<!-- PLAKAT N° 04 · GALLERI -->
+<section class="poster yel grain" id="galleri">
+  <div class="wrap">
+    <div class="pstrip mono"><span>Plakat N° 04 / 12</span><span class="rule"></span><b>Galleri</b></div>
+    <div class="p-head reveal">
+      <div class="p-no">04</div>
+      <div><span class="eb mono">Galleri</span><h2 class="disp">Øjeblikke fra banen</h2><p>Fra de første gokart-runder til pokaler, podier og racerbilen.</p></div>
+    </div>
+    <div class="gal reveal">
+      <a href="../assets/race-pan.jpg" target="_blank" class="w3 h2"><div class="ht on-white"><div class="htc"><img src="../assets/race-pan.jpg" alt="Mason på fuld fart i Aquila Formula 1000 racerbil #10"></div><img class="clr" src="../assets/race-pan.jpg" alt=""></div><span class="lbl mono">Fuld fart</span></a>
+      <a href="../assets/van-rear.jpg" target="_blank" class="h2"><div class="ht on-white"><div class="htc"><img src="../assets/van-rear.jpg" alt="Bjerring Racing kassevogn bagfra med sponsorlogoer"></div><img class="clr" src="../assets/van-rear.jpg" alt=""></div><span class="lbl mono">Kassevognen</span></a>
+      <a href="../assets/kart2.jpg" target="_blank" class="w2 h2"><div class="ht on-white"><div class="htc"><img src="../assets/kart2.jpg" alt="Mason med pokaler og sejrskrans"></div><img class="clr" src="../assets/kart2.jpg" alt=""></div><span class="lbl mono">Gokart-årene</span></a>
+      <a href="../assets/van-side.jpg" target="_blank" class="w2"><div class="ht on-white"><div class="htc"><img src="../assets/van-side.jpg" alt="Bjerring Racing kassevogn fra siden"></div><img class="clr" src="../assets/van-side.jpg" alt=""></div></a>
+      <a href="../assets/race-pack.jpg" target="_blank" class="w2"><div class="ht on-white"><div class="htc"><img src="../assets/race-pack.jpg" alt="Mason #10 i feltet på banen"></div><img class="clr" src="../assets/race-pack.jpg" alt=""></div><span class="lbl mono">I feltet</span></a>
+      <a href="../assets/team.jpg" target="_blank" class="w2"><div class="ht on-white"><div class="htc"><img src="../assets/team.jpg" alt="Mason og teamet ved racerbilen"></div><img class="clr" src="../assets/team.jpg" alt=""></div><span class="lbl mono">Holdet</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- PLAKAT N° 05 · RÆKKEVIDDE -->
+<section class="poster grain" id="raekkevidde">
+  <div class="wrap">
+    <div class="pstrip mono"><span>Plakat N° 05 / 12</span><span class="rule"></span><b>På sociale medier</b></div>
+    <div class="p-head reveal">
+      <div class="p-no">05</div>
+      <div><span class="eb mono">På sociale medier</span><h2 class="disp">Vist på tværs af <span class="hl">sociale medier</span></h2><p>Mason og holdet deler løb, test og livet bag rattet. Det giver sponsorerne synlighed langt ud over banen.</p></div>
+    </div>
+    <div class="reach reveal">
+      <figure class="reach-vid"><video src="../assets/social-vid.mp4" poster="../assets/social-poster.jpg" controls preload="metadata" playsinline></video></figure>
+      <div>
+        <div class="bignums">
+          <div class="bn"><b class="cond">8 mio.</b><span>Visninger i 2026</span></div>
+          <div class="bn"><b class="cond">35.000+</b><span>Følgere på Facebook</span></div>
+          <div class="bn"><b class="cond">Nr. 4</b><span>Mest fulgte racerkører på Facebook i Danmark</span></div>
+        </div>
+        <p class="reach-note">Kun Kevin Magnussen, Tom Kristensen og Jan Magnussen har flere Facebook-følgere blandt danske racerkørere. Din virksomheds logo bliver set millioner af gange, på og uden for banen.</p>
+        <div class="soc-row">
+          <a href="https://www.instagram.com/bjerring_racing" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/bjerringracing" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.tiktok.com/@bjerring_racing" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <figure class="clip reveal">
+      <span class="dotw mono">Driver of the Week · Rookie</span>
+      <blockquote>"DOTW ROOKIE: <b>Mason Bjerring!</b> He truly shown his pace. Mason fought really well, and in race 3 he managed to get the fastest lap of the race, showing that given time, he could catch up to the Top 5, hell, probably make podium too. This rookie DOTW was credited due to how much time he spent on the practice sessions and how fast he has gotten over the previous few days. It is certainly impressive, and I think he has himself and KEDA to thank for that!"</blockquote>
+      <figcaption>Pete Norback<span>Swedish Junior Racing Driver</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- MOTTO -->
+<section class="motto grain">
+  <div class="lines" aria-hidden="true"><i></i><i></i><i></i></div>
+  <span class="mono">Mottoet</span>
+  <blockquote class="disp">"In order to win, <span>first you have to finish."</span></blockquote>
+  <cite class="mono">John Nielsen</cite>
+</section>
+
+<!-- PLAKAT N° 06 · RESULTATER -->
+<section class="poster grain" id="resultater">
+  <div class="wrap">
+    <div class="pstrip mono"><span>Plakat N° 06 / 12</span><span class="rule"></span><b>Palmares</b></div>
+    <div class="p-head reveal">
+      <div class="p-no">06</div>
+      <div><span class="eb mono">Palmares</span><h2 class="disp">Resultater der <span class="hl">taler</span></h2><p>Et udvalg af milepæle fra gokart-karrieren. Tusindvis af omgange, lige til kanten af bilens grænse.</p></div>
+    </div>
+    <div class="res reveal">
+      <div><span class="ix mono">A</span><div class="rn cond">Nr. 4</div><div class="rl">Til DM, som yngste kører i feltet.</div></div>
+      <div><span class="ix mono">B</span><div class="rn cond">1. &amp; 2.</div><div class="rl">Plads samlet i Jysk-Fynsk Mesterskab.</div></div>
+      <div><span class="ix mono">C</span><div class="rn cond">Nr. 3</div><div class="rl">I Dansk Rotax Max Challenge ud af 46 deltagere.</div></div>
+      <div><span class="ix mono">D</span><div class="rn cond">2. plads</div><div class="rl">I DASU Ungdomscup.</div></div>
+      <div><span class="ix mono">E</span><div class="rn cond">100+</div><div class="rl">Podieplaceringer gennem karrieren.</div></div>
+      <div><span class="ix mono">F</span><div class="rn cond">P3</div><div class="rl">I svensk Junior-RM i debutsæsonen i Aquila Formula 1000.</div></div>
+    </div>
+    <div class="dkse reveal"><div class="big disp">DK &amp; SE</div><div class="txt">Løb i både Danmark og udlandet, bl.a. Mittsverigebanan i Sverige.</div></div>
+  </div>
+</section>
+
+<!-- PLAKAT N° 07 · SÆSON 2026 -->
+<section class="poster dark" id="saeson">
+  <div class="checker sm"></div>
+  <div class="wrap">
+    <div class="pstrip mono"><span>Plakat N° 07 / 12</span><span class="rule"></span><b>Sæson 2026 · Aquila Formula 1000</b></div>
+    <div class="p-head reveal" style="color:var(--y)">
+      <div class="p-no">07</div>
+      <div style="color:#fff"><span class="eb mono" style="color:var(--y)">Sæson 2026 · Aquila Formula 1000</span><h2 class="disp">Hvilken første <span class="hl">sæson</span></h2><p style="color:#ccc">13 år gammel, direkte fra gokart og første sæson nogensinde i formelbil. Alligevel sluttede Mason på mesterskabspodiet i det officielle svenske Junior-RM.</p></div>
+    </div>
+    <div class="s-top reveal">
+      <a class="s-poster" href="../assets/s26-poster.jpg" target="_blank"><img src="../assets/s26-poster.jpg" alt="Mason Bjerring med Dannebrog og pokal ved racerbilen #10: P2 Rookie, P3 Junior, P4 Overall" loading="lazy" decoding="async"><span class="stamp">FØRSTE SÆSON: DONE</span></a>
+      <div>
+        <div class="podium">
+          <div class="pod b"><div class="blk"><div class="p cond">P3</div><div class="l">🥉 Junior</div><div class="d">Svensk Junior-RM</div></div></div>
+          <div class="pod a"><div class="blk"><div class="p cond">P2</div><div class="l">🥈 Rookie</div><div class="d">Rookie Championship</div></div></div>
+          <div class="pod c"><div class="blk"><div class="p cond">P4</div><div class="l">🏁 Overall</div><div class="d">Hele Aquila F1000-feltet</div></div></div>
+        </div>
+        <div class="ages"><p>Foran ham i det samlede mesterskab sluttede kun tre kørere:</p><div class="ages-row"><span>26 år</span><span>19 år</span><span>17 år</span><span class="me">Mason: 13 år</span></div></div>
+        <div class="facts">
+          <div class="fact"><span class="ic">🏆</span><div><b>Dobbelt-podie på Sturup</b><span>To gange P3 samme weekend</span></div></div>
+          <div class="fact"><span class="ic">🇳🇴</span><div><b>Podie på Rudskogen</b><span>Endnu et podie i Norge</span></div></div>
+          <div class="fact"><span class="ic">⭐</span><div><b>Rookie Driver of the Week</b><span>Kåret efter en weekend med markant fremgang</span></div></div>
+          <div class="fact"><span class="ic">📈</span><div><b>Fra gokart til formelbil</b><span>Ny bil, nye baner og ældre konkurrenter</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="final reveal">
+      <div class="final-head">
+        <div><span class="mono" style="color:var(--y)">Sæsonfinalen · Ring Djursland</span><h3 class="disp" style="margin-top:10px">Alt afgjort på sidste weekend</h3><p>Mason skulle bruge 67 point for at sikre P3 i Junior-mesterskabet, på en bane han aldrig havde kørt, med kun 10 minutters træning. Han satte alligevel P3 i kvalifikationen.</p></div>
+        <div class="need"><b class="cond">67</b><span class="mono">point krævet</span></div>
+      </div>
+      <div class="heats">
+        <div class="heat"><span class="h mono">Kvalifikation</span><span class="r cond">P3</span><p>Kun 10 minutters træning på en helt ny bane, og alligevel P3 i tidskørslen.</p></div>
+        <div class="heat"><span class="h mono">Heat 1</span><span class="r cond">P5</span><p>Ramt hårdt bagfra fra P3 og en tur halvt af banen. Kæmpede sig tilbage op til de forreste.</p></div>
+        <div class="heat"><span class="h mono">Heat 2</span><span class="r cond">P8</span><p>Op på P2, men kontakt ved en overhaling gav en Stop &amp; Go-straf og et fald til P10. Hentede to pladser igen.</p></div>
+        <div class="heat win"><span class="h mono">Heat 3</span><span class="r cond">P5</span><p>Skulle slutte i top 7. Kørte med hovedet på den våde bane, og P3 i mesterskabet var sikret. 🥉</p></div>
+      </div>
+    </div>
+    <div class="s-photos reveal">
+      <a href="../assets/s26-pan.jpg" target="_blank" class="w"><div class="ht on-white"><div class="htc"><img src="../assets/s26-pan.jpg" alt="Mason i fuld fart i racerbil #10" loading="lazy" decoding="async"></div><img class="clr" src="../assets/s26-pan.jpg" alt="" loading="lazy"></div></a>
+      <a href="../assets/s26-podium.jpg" target="_blank" class="t"><div class="ht on-white"><div class="htc"><img src="../assets/s26-podium.jpg" alt="Mason på podiet på Ring Djursland med Dannebrog" loading="lazy" decoding="async"></div><img class="clr" src="../assets/s26-podium.jpg" alt="" loading="lazy"></div></a>
+      <a href="../assets/s26-duel.jpg" target="_blank"><div class="ht on-white"><div class="htc"><img src="../assets/s26-duel.jpg" alt="Tæt duel med mesterskabsvinderen #58" loading="lazy" decoding="async"></div><img class="clr" src="../assets/s26-duel.jpg" alt="" loading="lazy"></div></a>
+      <a href="../assets/s26-front.jpg" target="_blank"><div class="ht on-white"><div class="htc"><img src="../assets/s26-front.jpg" alt="Mason #10 foran feltet" loading="lazy" decoding="async"></div><img class="clr" src="../assets/s26-front.jpg" alt="" loading="lazy"></div></a>
+      <a href="../assets/s26-rain.jpg" target="_blank" class="w"><div class="ht on-white"><div class="htc"><img src="../assets/s26-rain.jpg" alt="Mason fører feltet an på våd bane" loading="lazy" decoding="async"></div><img class="clr" src="../assets/s26-rain.jpg" alt="" loading="lazy"></div></a>
+      <a href="../assets/s26-trophies.jpg" target="_blank" class="t"><div class="ht on-white"><div class="htc"><img src="../assets/s26-trophies.jpg" alt="Mason med sine to pokaler ved racerbilen" loading="lazy" decoding="async"></div><img class="clr" src="../assets/s26-trophies.jpg" alt="" loading="lazy"></div></a>
+      <a href="../assets/s26-pack.jpg" target="_blank"><div class="ht on-white"><div class="htc"><img src="../assets/s26-pack.jpg" alt="Mason i feltet på Ring Djursland" loading="lazy" decoding="async"></div><img class="clr" src="../assets/s26-pack.jpg" alt="" loading="lazy"></div></a>
+      <a href="../assets/s26-team.jpg" target="_blank"><div class="ht on-white"><div class="htc"><img src="../assets/s26-team.jpg" alt="Mason og KEDA Motorsport fejrer sæsonen" loading="lazy" decoding="async"></div><img class="clr" src="../assets/s26-team.jpg" alt="" loading="lazy"></div></a>
+    </div>
+    <div class="s-end reveal">
+      <blockquote class="s-quote"><p class="disp">"Første sæson i Formel 1000: DONE! Næste år går vi efter guldet." 🚀</p><cite class="mono">Mason Bjerring · Tak til KEDA Motorsport, sponsorer, familie, venner og følgere</cite></blockquote>
+      <a class="press" href="https://www.motorsporten.dk/news.asp?aID=81882" target="_blank" rel="noopener"><span class="src mono">Motorsporten.dk · 22. september 2026</span><b>13-årige Mason Bjerring sluttede blandt Sveriges bedste juniorer i sin første formelsæson</b><span class="go">Læs artiklen →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- PLAKAT N° 08 · KALENDER -->
+<section class="poster grain" id="kalender">
+  <div class="wrap">
+    <div class="pstrip mono"><span>Plakat N° 08 / 12</span><span class="rule"></span><b>Kommende løb</b></div>
+    <div class="p-head reveal">
+      <div class="p-no">08</div>
+      <div><span class="eb mono">Kommende løb</span><h2 class="disp">Race-kalender <span class="hl">2026</span></h2><p>Mason kører to klasser i 2026: <b>Gokart DM</b> og <b>Aquila Formula 1000</b>. Følg sæsonen i Danmark, Sverige og Norge.</p></div>
+    </div>
+    <div class="cal reveal">
+      <div class="cal-row" data-end="2026-05-31"><div class="cal-date disp">30.-31. maj</div><div class="cal-venue"><b>Gelleråsen Arena</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇸🇪 Sverige</span></div><span class="cal-badge"></span></div>
+      <div class="cal-row" data-end="2026-06-14"><div class="cal-date disp">13.-14. juni</div><div class="cal-venue"><b>Mittsverigebanan</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇸🇪 Sverige</span></div><span class="cal-badge"></span></div>
+      <div class="cal-row" data-end="2026-06-21"><div class="cal-date disp">19.-21. juni</div><div class="cal-venue"><b>Midtjysk Karting Bane</b><span><em class="cls cls-kart">Gokart DM</em> · 🇩🇰 Danmark</span></div><span class="cal-badge"></span></div>
+      <div class="cal-row" data-end="2026-06-28"><div class="cal-date disp">27.-28. juni</div><div class="cal-venue"><b>Sturup Raceway</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇸🇪 Sverige</span></div><span class="cal-badge"></span></div>
+      <div class="cal-row" data-end="2026-07-05"><div class="cal-date disp">4.-5. juli</div><div class="cal-venue"><b>Ring Knutstorp</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇸🇪 Sverige</span></div><span class="cal-badge"></span></div>
+      <div class="cal-row" data-end="2026-07-26"><div class="cal-date disp">25.-26. juli</div><div class="cal-venue"><b>Kinnekulle Ring</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇸🇪 Sverige</span></div><span class="cal-badge"></span></div>
+      <div class="cal-row" data-end="2026-08-09"><div class="cal-date disp">8.-9. august</div><div class="cal-venue"><b>Rudskogen</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇳🇴 Norge</span></div><span class="cal-badge"></span></div>
+      <div class="cal-row" data-end="2026-09-20"><div class="cal-date disp">19.-20. september</div><div class="cal-venue"><b>Ring Djursland</b><span><em class="cls cls-f1000">Formula 1000</em> · 🇩🇰 Danmark</span></div><span class="cal-badge"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLAKAT N° 09 · REJSEN -->
+<section class="poster yel grain" id="rejse">
+  <div class="wrap">
+    <div class="pstrip mono"><span>Plakat N° 09 / 12</span><span class="rule"></span><b>Rejsen mod toppen</b></div>
+    <div class="p-head reveal">
+      <div class="p-no">09</div>
+      <div><span class="eb mono">Rejsen mod toppen</span><h2 class="disp">Fra de første runder til international racing</h2></div>
+    </div>
+    <div class="journey">
+      <div class="van reveal">
+        <div class="ht on-white"><div class="htc"><img src="../assets/van-side.jpg" alt="Bjerring Racing kassevogn med sponsorlogoer"></div><img class="clr" src="../assets/van-side.jpg" alt=""></div>
+        <p class="cap">Holdets kassevogn med sponsorernes logoer. Din virksomhed kører med på vejene og banen i hele Danmark.</p>
+      </div>
+      <div class="laps reveal">
+        <div class="lap"><span class="k disp">6 år</span><h4>Det startede med gokart</h4><p>Bag rattet siden jeg var 6 år, forelsket i fart lige siden.</p></div>
+        <div class="lap"><span class="k disp">100+</span><h4>Podier i national elite</h4><p>Over 100 podier, DM-top og mesterskabsmedaljer på tværs af klasser.</p></div>
+        <div class="lap"><span class="k disp">2026</span><h4>Racerbil · Aquila Formula 1000</h4><p>Første sæson under KEDA Motorsport: P3 Junior, P2 Rookie og P4 Overall.</p></div>
+        <div class="lap future"><span class="k disp">🏆 Mål</span><h4>Målet: international racing</h4><p>2026 handler om at kæmpe helt i front, og tage næste skridt ud i verden.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLAKAT N° 10 · HVORFOR -->
+<section class="poster dark">
+  <div class="wrap">
+    <div class="pstrip mono"><span>Plakat N° 10 / 12</span><span class="rule"></span><b>Hvorfor være med?</b></div>
+    <div class="p-head reveal" style="color:var(--y)">
+      <div class="p-no">10</div>
+      <div style="color:#fff"><span class="eb mono" style="color:var(--y)">Hvorfor være med?</span><h2 class="disp">Mere end et logo på en bil</h2><p style="color:#ccc">Som sponsor bliver du en del af Danmarks bedste sponsor-fællesskab, hvor virksomheder mødes, netværker og deler passionen for fart.</p></div>
+    </div>
+    <div class="why reveal">
+      <div><span class="n disp">01</span><h4>👀 Synlighed</h4><p>Dit logo kører med på bil, kassevogn, dragt og banner, på banen og på vejene i hele Danmark.</p></div>
+      <div><span class="n disp">02</span><h4>🤝 Netværk</h4><p>Mød andre engagerede virksomheder i fællesskabet og skab nye forbindelser uden for banen.</p></div>
+      <div><span class="n disp">03</span><h4>📱 Sociale medier</h4><p>Eksponering til over 35.000 følgere og millioner af visninger på Instagram, Facebook og TikTok.</p></div>
+      <div><span class="n disp">04</span><h4>🏁 Trackday</h4><p>Oplev farten selv, kom med til Padborg Park og få en tur i racerbilen.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLAKAT N° 11 · PAKKER -->
+<section class="poster grain" id="sponsor">
+  <div class="wrap">
+    <div class="pstrip mono"><span>Plakat N° 11 / 12</span><span class="rule"></span><b>Sponsorpakker 2026</b></div>
+    <div class="p-head reveal">
+      <div class="p-no">11</div>
+      <div><span class="eb mono">Sponsorpakker 2026</span><h2 class="disp">Vælg din <span class="hl">plads på holdet</span></h2><p>Fra logo på kassevognen til eksklusiv hovedsponsor med navnet på hjelmen. Der er en pakke til enhver virksomhed.</p></div>
+    </div>
+    <div class="tix reveal">
+      <div class="tk">
+        <div class="top"><div class="serial mono"><span>Billet · Adgang</span><span>Nr. 001</span></div><span class="tier disp">🥉 Bronze</span><div class="price cond">5.000 <small>kr.</small></div></div>
+        <ul><li>Logo på kassevognen</li><li>Banner ved løb</li><li>Logo på teamtøjet</li><li>Omtale på sociale medier</li></ul>
+        <a href="#kontakt" class="btn btn-o">Vælg Bronze</a>
+      </div>
+      <div class="tk">
+        <div class="top"><div class="serial mono"><span>Billet · Paddock</span><span>Nr. 002</span></div><span class="tier disp">🥈 Sølv</span><div class="price cond">10.000 <small>kr.</small></div></div>
+        <ul><li>Logo på bil &amp; kassevogn</li><li>Logo på kørerdragt (arm)</li><li>Banner ved løb</li><li>Eksponering på sociale medier</li></ul>
+        <a href="#kontakt" class="btn btn-o">Vælg Sølv</a>
+      </div>
+      <div class="tk">
+        <div class="top"><div class="serial mono"><span>Billet · Pit lane</span><span>Nr. 003</span></div><span class="tier disp">🥇 Guld</span><div class="price cond">20.000 <small>kr.</small></div></div>
+        <ul><li>Stort logo på bil &amp; kassevogn</li><li>Logo på kørerdragt (bryst)</li><li>Banner ved løb</li><li>Trackday på Padborg Park</li></ul>
+        <a href="#kontakt" class="btn btn-o">Vælg Guld</a>
+      </div>
+      <div class="tk plat">
+        <span class="badge">Hovedsponsor</span>
+        <div class="top"><div class="serial mono"><span>Billet · Grid</span><span>Nr. 010</span></div><span class="tier disp">💎 Platin</span><div class="price cond">30.000 <small>kr. +</small></div></div>
+        <ul><li>Eksklusiv hovedsponsor</li><li>Logo på front &amp; side af bilen</li><li>Logo på kassevogn, dragt &amp; hjelm</li><li>Trackday på Padborg Park</li></ul>
+        <a href="#kontakt" class="btn btn-y">Vælg Platin</a>
+      </div>
+    </div>
+    <p class="pkg-note">Alle pakker giver din virksomhed synlighed nationalt og internationalt, repræsenteret professionelt på og uden for banen.</p>
+  </div>
+</section>
+
+<!-- FØLG MED -->
+<section class="poster grain" id="social" style="padding-top:0">
+  <div class="wrap">
+    <div class="p-head reveal" style="margin-top:0">
+      <div></div>
+      <div><span class="eb mono">Følg med</span><h2 class="disp">Vær med på rejsen, <span class="hl">hver dag</span></h2></div>
+    </div>
+    <div class="socg reveal">
+      <a href="https://www.instagram.com/bjerring_racing" target="_blank" rel="noopener"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span><span><b>Instagram</b><span>@bjerring_racing</span></span></a>
+      <a href="https://www.facebook.com/bjerringracing" target="_blank" rel="noopener"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12Z"/></svg></span><span><b>Facebook</b><span>@bjerringracing</span></span></a>
+      <a href="https://www.tiktok.com/@bjerring_racing" target="_blank" rel="noopener"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.3 2 1.5 3.6 3.5 3.9v2.6c-1.3 0-2.5-.4-3.6-1.1v6.2a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v2.7a3 3 0 1 0 2.1 2.8V3h2.7Z"/></svg></span><span><b>TikTok</b><span>@bjerring_racing</span></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- PLAKAT N° 12 · KONTAKT -->
+<section class="contact grain" id="kontakt">
+  <div class="checker"></div>
+  <div class="big10" aria-hidden="true">10</div>
+  <div class="wrap">
+    <div class="pstrip mono"><span>Plakat N° 12 / 12</span><span class="rule"></span><b>Kom med på rejsen</b></div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <span class="mono">Kom med på rejsen</span>
+        <h2 class="disp" style="margin-top:12px">Send en mail og kom med på rejsen</h2>
+        <p>Ring eller skriv, så finder vi den sponsorpakke, der passer din virksomhed bedst. Og husk: der venter en tur i racerbilen på Padborg Park.</p>
+      </div>
+      <div class="clist reveal">
+        <a href="mailto:Lassebjerring@hotmail.com" class="mail"><span class="mono">✉️ Email</span><b>Lassebjerring@hotmail.com</b></a>
+        <a href="tel:+4593840696"><span class="mono">🏎️ Mason Bjerring</span><b>93 84 06 96</b></a>
+        <a href="tel:+4528909990"><span class="mono">📞 Lasse Bjerring</span><b>28 90 99 90</b></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a href="#top" class="brand"><svg viewBox="0 0 130 100" fill="currentColor" aria-hidden="true"><g transform="skewX(-14) translate(22 0)"><path d="M0 40 L30 40 L34 50 L30 60 L0 60 L10 50 Z"/><path d="M36 8 H86 Q104 8 104 25 Q104 40 90 45 H70 V34 H82 Q88 34 88 27 Q88 20 82 20 H52 V44 H36 Z"/><path d="M36 54 H92 Q108 58 108 74 Q108 92 88 92 H36 Z M52 66 V80 H84 Q91 80 91 73 Q91 66 84 66 Z" fill-rule="evenodd"/></g></svg><span class="wm"><b>BJERRING</b><span>RACING</span></span></a>
+      <div class="socials">
+        <a href="https://www.facebook.com/bjerringracing" target="_blank" rel="noopener" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12Z"/></svg></a>
+        <a href="https://www.instagram.com/bjerring_racing" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.tiktok.com/@bjerring_racing" target="_blank" rel="noopener" aria-label="TikTok"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.3 2 1.5 3.6 3.5 3.9v2.6c-1.3 0-2.5-.4-3.6-1.1v6.2a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v2.7a3 3 0 1 0 2.1 2.8V3h2.7Z"/></svg></a>
+      </div>
+    </div>
+    <p class="foot-note">© 2026 Bjerring Racing · Mason Max Carøe Bjerring #10 · Aquila Formula 1000 · KEDA Motorsport · Ultimate Driver Development 🏁</p>
+  </div>
+</footer>
+
+<a class="vpill" href="index.html">Variation <b>11</b> af 11 · ← Alle varianter</a>
+
+<script>
+const tgl=document.getElementById('navtoggle'),links=document.getElementById('navlinks');
+if(tgl&&links){
+  tgl.addEventListener('click',()=>links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+}
+const tt=document.getElementById('tickerTrack');
+if(tt){const its=["SÆSON 2026 · DK + SVERIGE","BJERRING RACING","KEDA MOTORSPORT","100% PURE RACING","STARTNUMMER #10","FRA GOKART TIL RACERBIL","GØR MIN REJSE TIL VORES REJSE","AQUILA FORMULA 1000","100+ PODIEPLACERINGER","35.000+ FØLGERE","8 MIO. VISNINGER I 2026","NR. 4 PÅ FACEBOOK I DANMARK"];const h=its.map(x=>'<span>'+x+'</span><span class="di">■</span>').join('');tt.innerHTML=h+h;}
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+function fillMarquee(){
+  const mq=document.getElementById('marqueeTrack'); if(!mq) return;
+  const unit=mq.dataset.unit || (mq.dataset.unit=mq.innerHTML);
+  mq.innerHTML=unit; let copies=1;
+  while(mq.scrollWidth < window.innerWidth*2 && copies<16){ mq.insertAdjacentHTML('beforeend',unit); copies++; }
+  if(copies%2!==0){ mq.insertAdjacentHTML('beforeend',unit); }
+}
+window.addEventListener('load',fillMarquee);
+let _mqT; window.addEventListener('resize',()=>{clearTimeout(_mqT);_mqT=setTimeout(fillMarquee,200)});
+(function(){
+  const rows=document.querySelectorAll('#kalender .cal-row'); if(!rows.length) return;
+  const today=new Date(); today.setHours(0,0,0,0); let nextSet=false;
+  rows.forEach(r=>{
+    const badge=r.querySelector('.cal-badge'); if(!badge) return;
+    const end=new Date(r.getAttribute('data-end')+'T23:59:59');
+    if(end < today){ r.classList.add('done'); badge.textContent='Kørt'; badge.classList.add('b-done'); }
+    else if(!nextSet){ nextSet=true; r.classList.add('next'); badge.textContent='Næste løb'; badge.classList.add('b-next'); }
+    else { badge.textContent='Kommende'; badge.classList.add('b-up'); }
+  });
+})();
+</script>
+</body>
+</html>
