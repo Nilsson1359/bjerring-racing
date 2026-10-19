@@ -44,7 +44,7 @@ h2 em,h1 em{font-style:inherit;color:var(--y)}
 .center .lbl{justify-content:center}
 
 /* ===== REV LIGHTS (scroll progress) ===== */
-.rev{position:fixed;top:0;left:0;right:0;z-index:60;height:16px;background:#050506;border-bottom:1px solid #1b1b1f;display:flex;justify-content:center;align-items:center;gap:5px;padding:0 10px}
+.rev{position:fixed;top:0;left:0;right:0;z-index:60;transform:translateZ(0);height:16px;background:#050506;border-bottom:1px solid #1b1b1f;display:flex;justify-content:center;align-items:center;gap:5px;padding:0 10px}
 .rev i{flex:0 1 34px;height:7px;border-radius:4px;background:#1c1d21;transition:background .12s,box-shadow .12s}
 .rev i.on.g{background:var(--g);box-shadow:0 0 8px var(--g)}
 .rev i.on.r{background:var(--r);box-shadow:0 0 8px var(--r)}
@@ -53,7 +53,7 @@ h2 em,h1 em{font-style:inherit;color:var(--y)}
 @keyframes blink{50%{opacity:.25}}
 
 /* ===== NAV ===== */
-nav{position:fixed;top:16px;left:0;right:0;z-index:55;background:rgba(10,10,11,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{position:fixed;top:16px;left:0;right:0;z-index:55;background:#0b0b0c;transform:translateZ(0);border-bottom:1px solid var(--line)}
 .nav-in{max-width:1240px;margin:0 auto;padding:0 24px;height:62px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:#fff;flex:none}
 .brand svg{height:34px;width:auto;color:var(--y)}
@@ -83,7 +83,8 @@ nav{position:fixed;top:16px;left:0;right:0;z-index:55;background:rgba(10,10,11,.
   linear-gradient(0deg,rgba(6,6,7,1) 0%,rgba(6,6,7,.0) 42%),
   repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 1px,transparent 1px 3px)}
 .rec{position:absolute;top:96px;right:24px;display:flex;gap:14px;align-items:center;font-family:var(--hud);font-size:.72rem;letter-spacing:.14em;color:#fff;z-index:2}
-.rec .dot{width:9px;height:9px;border-radius:50%;background:var(--r);box-shadow:0 0 10px var(--r);animation:blink 1.2s steps(2) infinite}
+.rec .dot{width:9px;height:9px;border-radius:50%;background:var(--r);box-shadow:0 0 10px var(--r);animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35}}
 .rec .cam{padding:4px 8px;background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.2)}
 .hero-copy{max-width:690px;position:relative;z-index:2}
 .hero .name{font-family:'Kaushan Script',cursive;font-size:clamp(2.1rem,4.4vw,3.2rem);color:#fff;line-height:1;transform:rotate(-4deg);transform-origin:left;display:inline-block;position:relative;margin:10px 0 14px}
@@ -318,7 +319,7 @@ nav{position:fixed;top:16px;left:0;right:0;z-index:55;background:rgba(10,10,11,.
 .btnw .code{position:absolute;top:18px;right:18px;font-family:var(--hud);font-size:.62rem;letter-spacing:.12em;color:var(--dim)}
 
 /* ===== PACKAGES (tyre compounds) ===== */
-.pkgs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;align-items:stretch}
+.pkgs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:stretch}
 .pkg{background:var(--panel);border:1px solid var(--line2);padding:26px 22px;display:flex;flex-direction:column;position:relative}
 .tyre{width:72px;height:72px;margin-bottom:16px}
 .pkg .tier{font-family:var(--cond);font-weight:800;text-transform:uppercase;font-size:1.5rem;letter-spacing:.03em;line-height:1}
@@ -564,7 +565,7 @@ footer{padding:40px 0 90px;border-top:1px solid var(--line);margin-top:96px}
         <div><span>Team</span><b>KEDA Motorsport</b></div>
         <div><span>Bag rattet siden</span><b>6 år gammel</b></div>
       </div>
-      <p style="color:#fff;font-weight:600">Skal du med til Padborg Park, så giver jeg en tur i en racerbil! 🏎️</p>
+      <p style="color:#fff;font-weight:600">Bliver du Platin- eller hovedsponsor, får du en tur i en rigtig racerbil på Padborg Park! 🏎️</p>
       <a href="#sponsor" class="btn btn-y" style="margin-top:8px">Bliv en del af holdet →</a>
     </div>
     <div class="profile rv">
@@ -800,10 +801,10 @@ footer{padding:40px 0 90px;border-top:1px solid var(--line);margin-top:96px}
       <p>Som sponsor bliver du en del af Danmarks bedste sponsor-fællesskab, hvor virksomheder mødes, netværker og deler passionen for fart.</p>
     </div>
     <div class="why">
-      <div class="btnw rv"><span class="code">BTN 01</span><div class="knob">👀</div><h4>Synlighed</h4><p>Dit logo kører med på bil, kassevogn, dragt og banner, på banen og på vejene i hele Danmark.</p></div>
+      <div class="btnw rv"><span class="code">BTN 01</span><div class="knob">👀</div><h4>Synlighed</h4><p>Dit logo kører med på racerbil, teambil, kørerdragt og teamtøj, på banen og på vejene i hele Danmark.</p></div>
       <div class="btnw rv"><span class="code">BTN 02</span><div class="knob">🤝</div><h4>Netværk</h4><p>Mød andre engagerede virksomheder i fællesskabet og skab nye forbindelser uden for banen.</p></div>
       <div class="btnw rv"><span class="code">BTN 03</span><div class="knob">📱</div><h4>Sociale medier</h4><p>Eksponering til over 35.000 følgere og millioner af visninger på Instagram, Facebook og TikTok.</p></div>
-      <div class="btnw rv"><span class="code">BTN 04</span><div class="knob">🏁</div><h4>Trackday</h4><p>Oplev farten selv, kom med til Padborg Park og få en tur i racerbilen.</p></div>
+      <div class="btnw rv"><span class="code">BTN 04</span><div class="knob">🏁</div><h4>Trackday</h4><p>Oplev farten selv. Med Platin eller Hovedsponsor får du en tur i en rigtig racerbil på Padborg Park.</p></div>
     </div>
   </div>
 </section>
@@ -812,42 +813,56 @@ footer{padding:40px 0 90px;border-top:1px solid var(--line);margin-top:96px}
 <section class="pad" id="sponsor">
   <div class="wrap">
     <div class="sec-head center rv">
-      <span class="lbl">Sponsorpakker 2026</span>
+      <span class="lbl">Sponsorpakker 2027</span>
       <h2>Vælg din <em>plads på holdet</em></h2>
-      <p>Fra logo på kassevognen til eksklusiv hovedsponsor med navnet på hjelmen. Der er en pakke til enhver virksomhed.</p>
+      <p>Fra præsentation på sociale medier til hovedsponsor med logo på hele siden af racerbilen. Der er en pakke til enhver virksomhed.</p>
     </div>
     <div class="pkgs">
       <div class="pkg rv">
+        <svg class="tyre" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="#151517" stroke="#2c2d32" stroke-width="2"/><circle cx="36" cy="36" r="25" fill="none" stroke="#6f727a" stroke-width="5"/><circle cx="36" cy="36" r="15" fill="#2a2b30"/><circle cx="36" cy="36" r="5" fill="#0a0a0b"/></svg>
+        <div class="tier">Jern</div><div class="cmp">🔩 COMPOUND C1</div>
+        <div class="price">3.000 <small>kr.</small></div>
+        <ul><li>Præsentation på sociale medier</li></ul>
+        <a href="#kontakt" class="btn btn-o">Vælg Jern</a>
+      </div>
+      <div class="pkg rv">
         <svg class="tyre" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="#151517" stroke="#2c2d32" stroke-width="2"/><circle cx="36" cy="36" r="25" fill="none" stroke="#c07a43" stroke-width="5"/><circle cx="36" cy="36" r="15" fill="#2a2b30"/><circle cx="36" cy="36" r="5" fill="#0a0a0b"/></svg>
-        <div class="tier">Bronze</div><div class="cmp">🥉 COMPOUND C1</div>
+        <div class="tier">Bronze</div><div class="cmp">🥉 COMPOUND C2</div>
         <div class="price">5.000 <small>kr.</small></div>
-        <ul><li>Logo på kassevognen</li><li>Banner ved løb</li><li>Logo på teamtøjet</li><li>Omtale på sociale medier</li></ul>
+        <ul><li>Præsentation på sociale medier</li><li>Lille logo på teamets bil</li><li>Logo på vandret flade af racerbilen</li><li>Med bag kulisserne til løb</li></ul>
         <a href="#kontakt" class="btn btn-o">Vælg Bronze</a>
       </div>
       <div class="pkg rv">
         <svg class="tyre" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="#151517" stroke="#2c2d32" stroke-width="2"/><circle cx="36" cy="36" r="25" fill="none" stroke="#c9ccd2" stroke-width="5"/><circle cx="36" cy="36" r="15" fill="#2a2b30"/><circle cx="36" cy="36" r="5" fill="#0a0a0b"/></svg>
-        <div class="tier">Sølv</div><div class="cmp">🥈 COMPOUND C2</div>
-        <div class="price">10.000 <small>kr.</small></div>
-        <ul><li>Logo på bil &amp; kassevogn</li><li>Logo på kørerdragt (arm)</li><li>Banner ved løb</li><li>Eksponering på sociale medier</li></ul>
+        <div class="tier">Sølv</div><div class="cmp">🥈 COMPOUND C3</div>
+        <div class="price">15.000 <small>kr.</small></div>
+        <ul><li>Præsentation på sociale medier</li><li>Logo på teamets bil og synligt logo på racerbilen</li><li>Logo på overarmen af kørerdragten og på teamtøj</li><li>Med bag kulisserne til løb i Danmark</li><li>Adgang til netværksaftener</li></ul>
         <a href="#kontakt" class="btn btn-o">Vælg Sølv</a>
       </div>
       <div class="pkg rv">
         <svg class="tyre" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="#151517" stroke="#2c2d32" stroke-width="2"/><circle cx="36" cy="36" r="25" fill="none" stroke="#FFD400" stroke-width="5"/><circle cx="36" cy="36" r="15" fill="#2a2b30"/><circle cx="36" cy="36" r="5" fill="#0a0a0b"/></svg>
-        <div class="tier">Guld</div><div class="cmp">🥇 COMPOUND C3</div>
-        <div class="price">20.000 <small>kr.</small></div>
-        <ul><li>Stort logo på bil &amp; kassevogn</li><li>Logo på kørerdragt (bryst)</li><li>Banner ved løb</li><li>Trackday på Padborg Park</li></ul>
+        <div class="tier">Guld</div><div class="cmp">🥇 COMPOUND C4</div>
+        <div class="price">30.000 <small>kr.</small></div>
+        <ul><li>Præsentation på sociale medier</li><li>Stort logo på teamets bil og på forskærmen/fronten af racerbilen</li><li>Logo på ben/læg og underarm af kørerdragten</li><li>Logo på teamtøj</li><li>VIP-adgang til løb i Danmark</li><li>Gratis adgang til netværksaftener</li></ul>
         <a href="#kontakt" class="btn btn-o">Vælg Guld</a>
       </div>
-      <div class="pkg plat rv">
-        <span class="hs">Hovedsponsor</span>
-        <svg class="tyre" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="#151517" stroke="#FFD400" stroke-width="2"/><circle cx="36" cy="36" r="25" fill="none" stroke="#e9f2ff" stroke-width="5" stroke-dasharray="10 4"/><circle cx="36" cy="36" r="15" fill="#2a2b30"/><circle cx="36" cy="36" r="5" fill="#FFD400"/></svg>
+      <div class="pkg rv">
+        <svg class="tyre" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="#151517" stroke="#2c2d32" stroke-width="2"/><circle cx="36" cy="36" r="25" fill="none" stroke="#e9f2ff" stroke-width="5" stroke-dasharray="10 4"/><circle cx="36" cy="36" r="15" fill="#2a2b30"/><circle cx="36" cy="36" r="5" fill="#0a0a0b"/></svg>
         <div class="tier">Platin</div><div class="cmp">💎 COMPOUND C5</div>
-        <div class="price">30.000 <small>kr. +</small></div>
-        <ul><li>Eksklusiv hovedsponsor</li><li>Logo på front &amp; side af bilen</li><li>Logo på kassevogn, dragt &amp; hjelm</li><li>Trackday på Padborg Park</li></ul>
-        <a href="#kontakt" class="btn btn-y">Vælg Platin</a>
+        <div class="price">45.000 <small>kr.</small></div>
+        <ul><li>Præsentation på sociale medier</li><li>Stort logo på teamets bil og stort logo på racerbilen, placering efter eget ønske</li><li>Stort logo på brystet af kørerdragten og på teamtøj</li><li>VIP-adgang til løb i Danmark</li><li>Gratis adgang til netværksaftener</li><li>En tur i en rigtig racerbil på Padborg Park</li></ul>
+        <a href="#kontakt" class="btn btn-o">Vælg Platin</a>
+      </div>
+      <div class="pkg plat rv">
+        <span class="hs">Størst synlighed</span>
+        <svg class="tyre" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="#151517" stroke="#FFD400" stroke-width="2"/><circle cx="36" cy="36" r="25" fill="none" stroke="#FFD400" stroke-width="5" stroke-dasharray="10 4"/><circle cx="36" cy="36" r="15" fill="#2a2b30"/><circle cx="36" cy="36" r="5" fill="#FFD400"/></svg>
+        <div class="tier">Hovedsponsor</div><div class="cmp">🏆 COMPOUND C6</div>
+        <div class="price">100.000 <small>kr.</small></div>
+        <ul><li>Præsentation på sociale medier</li><li>Stort logo på hele siden af racerbilen eller placering efter eget ønske</li><li>Stort logo øverst på brystet af kørerdragten</li><li>Logo på bryst og arm af teamtøjet</li><li>VIP-adgang til løb i Danmark</li><li>Gratis adgang til netværksaftener</li><li>En tur i en rigtig racerbil på Padborg Park for dig og fire medarbejdere</li></ul>
+        <a href="#kontakt" class="btn btn-y">Vælg Hovedsponsor</a>
       </div>
     </div>
-    <p class="pkg-note">Alle pakker giver din virksomhed synlighed nationalt og internationalt, repræsenteret professionelt på og uden for banen.</p>
+    <p class="pkg-note">Alle priser er ekskl. moms og gælder hele kalenderåret 2027. Alle pakker giver din virksomhed synlighed nationalt og internationalt, på og uden for banen.</p>
   </div>
 </section>
 
@@ -874,7 +889,7 @@ footer{padding:40px 0 90px;border-top:1px solid var(--line);margin-top:96px}
         <div>
           <span class="call"><i></i>BOX, BOX · KOM MED PÅ REJSEN</span>
           <h2>Send en mail og<br>kom med på rejsen</h2>
-          <p>Ring eller skriv, så finder vi den sponsorpakke, der passer din virksomhed bedst. Og husk: der venter en tur i racerbilen på Padborg Park.</p>
+          <p>Ring eller skriv, så finder vi den sponsorpakke, der passer din virksomhed bedst. Og husk: med Platin eller Hovedsponsor venter en tur i en rigtig racerbil på Padborg Park.</p>
         </div>
         <div class="clist">
           <a href="mailto:Lassebjerring@hotmail.com" class="ci"><div class="ic">✉️</div><div style="min-width:0"><small>Email</small><b>Lassebjerring@hotmail.com</b></div></a>
