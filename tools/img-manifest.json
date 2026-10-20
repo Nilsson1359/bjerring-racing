@@ -318,5 +318,33 @@
   "sizes": [
    464
   ]
+ },
+ "vid-mechanic.jpg": {
+  "w": 464,
+  "h": 832,
+  "sizes": [
+   464
+  ]
+ },
+ "vid-interview.jpg": {
+  "w": 464,
+  "h": 824,
+  "sizes": [
+   464
+  ]
+ },
+ "vid-helmet.jpg": {
+  "w": 464,
+  "h": 832,
+  "sizes": [
+   464
+  ]
+ },
+ "vid-race.jpg": {
+  "w": 700,
+  "h": 384,
+  "sizes": [
+   700
+  ]
  }
 }

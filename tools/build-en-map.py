@@ -75,7 +75,7 @@ P=[
 # results
 ('Palmares · Timing','Palmarès · Timing'),
 ('<h2>Resultater der <em>taler</em></h2>','<h2>Results that <em>speak</em></h2>'),
-('<p>Et udvalg af milepæle fra gokart-karrieren. Tusindvis af omgange, lige til kanten af bilens grænse.</p>','<p>A selection of milestones from the karting career. Thousands of laps, right on the edge of the limit.</p>'),
+('<p>Et udvalg af milepæle fra karrieren, fra gokart til formelbil. Tusindvis af omgange, lige til kanten af bilens grænse.</p>','<p>A selection of milestones from his career, from karting to formula cars. Thousands of laps, right on the edge of the limit.</p>'),
 ('<span>RESULTAT</span><span>MESTERSKAB</span><span style="text-align:right">SEKTORER</span>','<span>RESULT</span><span>CHAMPIONSHIP</span><span style="text-align:right">SECTORS</span>'),
 ('<span class="p">Nr. 4</span><span class="t">Til DM, som yngste kører i feltet.</span>','<span class="p">No. 4</span><span class="t">In the Danish Championship, as the youngest driver in the field.</span>'),
 ('<span class="p">1. &amp; 2.</span><span class="t">Plads samlet i Jysk-Fynsk Mesterskab.</span>','<span class="p">1st &amp; 2nd</span><span class="t">Overall in the Jysk-Fynsk Championship.</span>'),
@@ -83,7 +83,9 @@ P=[
 ('<span class="p">2. plads</span><span class="t">I DASU Ungdomscup.</span>','<span class="p">2nd place</span><span class="t">In the DASU Youth Cup.</span>'),
 ('<span class="t">Podieplaceringer gennem karrieren.</span>','<span class="t">Podium finishes throughout the career.</span>'),
 ('<span class="t">I svensk Junior-RM i debutsæsonen i Aquila Formula 1000.</span>','<span class="t">In the Swedish Junior Championship in his Aquila Formula 1000 debut season.</span>'),
-('Løb i både Danmark og udlandet, bl.a. Mittsverigebanan i Sverige.','Racing in Denmark and abroad, including Mittsverigebanan in Sweden.'),
+('Løb i Danmark, Sverige og Norge, bl.a. Mittsverigebanan og Rudskogen.','Racing in Denmark, Sweden and Norway, including Mittsverigebanan and Rudskogen.'),
+('<span class="t">I Rookie-mesterskabet i debutsæsonen i Aquila Formula 1000.</span>','<span class="t">In the Rookie Championship in his Aquila Formula 1000 debut season.</span>'),
+('<b>Med mekanikeren</b>','<b>With my mechanic</b>'),('<b>Interview på engelsk</b>','<b>Interview in English</b>'),('<b>Hjelmen på, klar</b>','<b>Helmet on, ready</b>'),('<b>Forbi kaosset</b>','<b>Past the chaos</b>'),
 # season
 ('Sæson 2026 · Aquila Formula 1000','Season 2026 · Aquila Formula 1000'),
 ('<h2>Hvilken første <em>sæson</em></h2>','<h2>What a first <em>season</em></h2>'),

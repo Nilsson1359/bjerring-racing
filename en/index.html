@@ -189,6 +189,7 @@ nav{position:fixed;top:16px;left:0;right:0;z-index:55;background:#0b0b0c;transfo
 .mv{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .cam-tile{position:relative;background:#000;border:1px solid var(--line2);overflow:hidden}
 .cam-tile video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#000}
+.cam-tile.fit video{object-fit:contain}
 .cam-tile .bar{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 12px;background:#0c0c0e;border-top:1px solid var(--line2)}
 .cam-tile .bar b{font-family:var(--cond);font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:1rem}
 .cam-tile .bar span{font-family:var(--hud);font-size:.62rem;letter-spacing:.14em;color:var(--y)}
@@ -630,10 +631,10 @@ footer{padding:40px 0 90px;border-top:1px solid var(--line);margin-top:96px}
       <p>Mason on track in the Aquila Formula 1000. Press play and feel the speed.</p>
     </div>
     <div class="mv rv">
-      <figure class="cam-tile"><span class="tag"><i></i>CAM 1</span><video src="/assets/vid-3.mp4" data-poster="/assets/vp-3-464.webp" controls preload="none" playsinline></video><figcaption class="bar"><b>Ready in the paddock</b><span>PADDOCK</span></figcaption></figure>
-      <figure class="cam-tile"><span class="tag"><i></i>CAM 2</span><video src="/assets/vid-0.mp4" data-poster="/assets/vp-0-464.webp" controls preload="none" playsinline></video><figcaption class="bar"><b>Out on track</b><span>PIT EXIT</span></figcaption></figure>
-      <figure class="cam-tile"><span class="tag"><i></i>CAM 3</span><video src="/assets/vid-1.mp4" data-poster="/assets/vp-1-464.webp" controls preload="none" playsinline></video><figcaption class="bar"><b>Through the corner</b><span>SECTOR 2</span></figcaption></figure>
-      <figure class="cam-tile"><span class="tag"><i></i>CAM 4</span><video src="/assets/vid-2.mp4" data-poster="/assets/vp-2-480.webp" controls preload="none" playsinline></video><figcaption class="bar"><b>Behind the scenes</b><span>GARAGE</span></figcaption></figure>
+      <figure class="cam-tile"><span class="tag"><i></i>CAM 1</span><video src="/assets/vid-mechanic.mp4" data-poster="/assets/vid-mechanic-464.webp" controls preload="none" playsinline></video><figcaption class="bar"><b>With my mechanic</b><span>PADDOCK</span></figcaption></figure>
+      <figure class="cam-tile"><span class="tag"><i></i>CAM 2</span><video src="/assets/vid-interview.mp4" data-poster="/assets/vid-interview-464.webp" controls preload="none" playsinline></video><figcaption class="bar"><b>Interview in English</b><span>INTERVIEW</span></figcaption></figure>
+      <figure class="cam-tile"><span class="tag"><i></i>CAM 3</span><video src="/assets/vid-helmet.mp4" data-poster="/assets/vid-helmet-464.webp" controls preload="none" playsinline></video><figcaption class="bar"><b>Helmet on, ready</b><span>PIT LANE</span></figcaption></figure>
+      <figure class="cam-tile fit"><span class="tag"><i></i>CAM 4</span><video src="/assets/vid-race.mp4" data-poster="/assets/vid-race-700.webp" controls preload="none" playsinline></video><figcaption class="bar"><b>Past the chaos</b><span>RACE</span></figcaption></figure>
     </div>
     <p class="note">🎬 Follow more clips on TikTok and Instagram, and watch the races live on YouTube (search "Aquila Formula 1000").</p>
   </div>
@@ -710,18 +711,19 @@ footer{padding:40px 0 90px;border-top:1px solid var(--line);margin-top:96px}
     <div class="sec-head rv">
       <span class="lbl">Palmarès · Timing</span>
       <h2>Results that <em>speak</em></h2>
-      <p>A selection of milestones from the karting career. Thousands of laps, right on the edge of the limit.</p>
+      <p>A selection of milestones from his career, from karting to formula cars. Thousands of laps, right on the edge of the limit.</p>
     </div>
     <div class="tower rv">
       <div class="tower-h"><span>RESULT</span><span>CHAMPIONSHIP</span><span style="text-align:right">SECTORS</span></div>
+      <div class="trow"><span class="p">P3</span><span class="t">In the Swedish Junior Championship in his Aquila Formula 1000 debut season.</span><span class="sect"><i></i><i class="p"></i><i class="p"></i></span></div>
+      <div class="trow"><span class="p">P2</span><span class="t">In the Rookie Championship in his Aquila Formula 1000 debut season.</span><span class="sect"><i class="p"></i><i class="p"></i><i></i></span></div>
       <div class="trow"><span class="p">No. 4</span><span class="t">In the Danish Championship, as the youngest driver in the field.</span><span class="sect"><i></i><i class="p"></i><i></i></span></div>
       <div class="trow"><span class="p">1st &amp; 2nd</span><span class="t">Overall in the Jysk-Fynsk Championship.</span><span class="sect"><i class="p"></i><i class="p"></i><i></i></span></div>
       <div class="trow"><span class="p">No. 3</span><span class="t">In the Danish Rotax Max Challenge out of 46 entrants.</span><span class="sect"><i></i><i></i><i class="p"></i></span></div>
       <div class="trow"><span class="p">2nd place</span><span class="t">In the DASU Youth Cup.</span><span class="sect"><i class="y"></i><i class="p"></i><i></i></span></div>
       <div class="trow"><span class="p">100+</span><span class="t">Podium finishes throughout the career.</span><span class="sect"><i class="p"></i><i class="p"></i><i class="p"></i></span></div>
-      <div class="trow"><span class="p">P3</span><span class="t">In the Swedish Junior Championship in his Aquila Formula 1000 debut season.</span><span class="sect"><i></i><i class="p"></i><i class="p"></i></span></div>
     </div>
-    <div class="dkse rv"><div class="big">DK &amp; SE</div><div class="txt">Racing in Denmark and abroad, including Mittsverigebanan in Sweden.</div></div>
+    <div class="dkse rv"><div class="big">DK · SE · NO</div><div class="txt">Racing in Denmark, Sweden and Norway, including Mittsverigebanan and Rudskogen.</div></div>
   </div>
 </section>
 

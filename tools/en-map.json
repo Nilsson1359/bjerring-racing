@@ -52,6 +52,10 @@
 "<h4>Visibility</h4><p>Your logo rides along on the race car, team vehicle, race suit and team wear, at the track and on the roads all over Denmark.</p>"
 ],
 [
+"<p>Et udvalg af milepæle fra karrieren, fra gokart til formelbil. Tusindvis af omgange, lige til kanten af bilens grænse.</p>",
+"<p>A selection of milestones from his career, from karting to formula cars. Thousands of laps, right on the edge of the limit.</p>"
+],
+[
 "<h4>Sociale medier</h4><p>Eksponering til over 35.000 følgere og millioner af visninger på Instagram, Facebook og TikTok.</p>",
 "<h4>Social media</h4><p>Exposure to over 35,000 followers and millions of views on Instagram, Facebook and TikTok.</p>"
 ],
@@ -78,10 +82,6 @@
 [
 "<p>Oplev farten selv. Med Platin eller Hovedsponsor får du en tur i en rigtig racerbil på Padborg Park.</p>",
 "<p>Feel the speed yourself. With Platinum or Main sponsor you get a ride in a real race car at Padborg Park.</p>"
-],
-[
-"<p>Et udvalg af milepæle fra gokart-karrieren. Tusindvis af omgange, lige til kanten af bilens grænse.</p>",
-"<p>A selection of milestones from the karting career. Thousands of laps, right on the edge of the limit.</p>"
 ],
 [
 "<h4>Podier i national elite</h4><p>Over 100 podier, DM-top og mesterskabsmedaljer på tværs af klasser.</p>",
@@ -140,6 +140,10 @@
 "<b>From karting to formula</b><span>New car, new tracks, older rivals</span>"
 ],
 [
+"<span class=\"t\">I Rookie-mesterskabet i debutsæsonen i Aquila Formula 1000.</span>",
+"<span class=\"t\">In the Rookie Championship in his Aquila Formula 1000 debut season.</span>"
+],
+[
 "<p>Kun 10 minutters træning på en helt ny bane, og alligevel P3 i tidskørslen.</p>",
 "<p>Only 10 minutes of practice on a brand new track, and still P3 in qualifying.</p>"
 ],
@@ -184,6 +188,10 @@
 "<p>From the first karting laps to trophies, podiums and the race car.</p>"
 ],
 [
+"Løb i Danmark, Sverige og Norge, bl.a. Mittsverigebanan og Rudskogen.",
+"Racing in Denmark, Sweden and Norway, including Mittsverigebanan and Rudskogen."
+],
+[
 "<b>Dobbelt-podie på Sturup</b><span>To gange P3 samme weekend</span>",
 "<b>Double podium at Sturup</b><span>P3 twice in the same weekend</span>"
 ],
@@ -194,10 +202,6 @@
 [
 "<p>Foran ham i det samlede mesterskab sluttede kun tre kørere:</p>",
 "<p>Only three drivers finished ahead of him in the overall championship:</p>"
-],
-[
-"Løb i både Danmark og udlandet, bl.a. Mittsverigebanan i Sverige.",
-"Racing in Denmark and abroad, including Mittsverigebanan in Sweden."
 ],
 [
 ">Fra de første runder<br>til <em>international racing</em></h2>",
@@ -596,6 +600,10 @@
 "BOX, BOX · JOIN THE JOURNEY"
 ],
 [
+"<b>Interview på engelsk</b>",
+"<b>Interview in English</b>"
+],
+[
 "return 'Nr. '+Math.round(v)",
 "return 'No. '+Math.round(v)"
 ],
@@ -644,8 +652,16 @@
 "<b>Ready in the paddock</b>"
 ],
 [
+"<b>Hjelmen på, klar</b>",
+"<b>Helmet on, ready</b>"
+],
+[
 "toLocaleString('da-DK')",
 "toLocaleString('en-US')"
+],
+[
+"<b>Med mekanikeren</b>",
+"<b>With my mechanic</b>"
 ],
 [
 "aria-label=\"Nøgletal\"",
@@ -666,6 +682,10 @@
 [
 "Math.round(v)+' mio.'",
 "Math.round(v)+'M'"
+],
+[
+"<b>Forbi kaosset</b>",
+"<b>Past the chaos</b>"
 ],
 [
 "b.textContent='Kørt'",
