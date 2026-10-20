@@ -497,6 +497,7 @@ footer{padding:40px 0 90px;border-top:1px solid var(--line);margin-top:96px}
 }
 
 .foot-note{color:#8b8d93}
+.reach-vid video{aspect-ratio:464/816;width:100%;object-fit:cover;background:#000}
 
 .links a.lang{font-family:var(--hud);font-weight:700;letter-spacing:.08em;font-size:.8rem;border:1px solid var(--line2);padding:4px 8px}
 
@@ -640,10 +641,10 @@ footer{padding:40px 0 90px;border-top:1px solid var(--line);margin-top:96px}
       <p>Mason på banen i Aquila Formula 1000. Tryk play og oplev farten.</p>
     </div>
     <div class="mv rv">
-      <figure class="cam-tile"><span class="tag"><i></i>CAM 1</span><video src="/assets/vid-3.mp4" poster="/assets/vp-3-464.webp" controls preload="none" playsinline></video><figcaption class="bar"><b>Klar i paddocken</b><span>PADDOCK</span></figcaption></figure>
-      <figure class="cam-tile"><span class="tag"><i></i>CAM 2</span><video src="/assets/vid-0.mp4" poster="/assets/vp-0-464.webp" controls preload="none" playsinline></video><figcaption class="bar"><b>Ud på banen</b><span>PIT EXIT</span></figcaption></figure>
-      <figure class="cam-tile"><span class="tag"><i></i>CAM 3</span><video src="/assets/vid-1.mp4" poster="/assets/vp-1-464.webp" controls preload="none" playsinline></video><figcaption class="bar"><b>Gennem svinget</b><span>SEKTOR 2</span></figcaption></figure>
-      <figure class="cam-tile"><span class="tag"><i></i>CAM 4</span><video src="/assets/vid-2.mp4" poster="/assets/vp-2-480.webp" controls preload="none" playsinline></video><figcaption class="bar"><b>Bag kulisserne</b><span>GARAGE</span></figcaption></figure>
+      <figure class="cam-tile"><span class="tag"><i></i>CAM 1</span><video src="/assets/vid-3.mp4" data-poster="/assets/vp-3-464.webp" controls preload="none" playsinline></video><figcaption class="bar"><b>Klar i paddocken</b><span>PADDOCK</span></figcaption></figure>
+      <figure class="cam-tile"><span class="tag"><i></i>CAM 2</span><video src="/assets/vid-0.mp4" data-poster="/assets/vp-0-464.webp" controls preload="none" playsinline></video><figcaption class="bar"><b>Ud på banen</b><span>PIT EXIT</span></figcaption></figure>
+      <figure class="cam-tile"><span class="tag"><i></i>CAM 3</span><video src="/assets/vid-1.mp4" data-poster="/assets/vp-1-464.webp" controls preload="none" playsinline></video><figcaption class="bar"><b>Gennem svinget</b><span>SEKTOR 2</span></figcaption></figure>
+      <figure class="cam-tile"><span class="tag"><i></i>CAM 4</span><video src="/assets/vid-2.mp4" data-poster="/assets/vp-2-480.webp" controls preload="none" playsinline></video><figcaption class="bar"><b>Bag kulisserne</b><span>GARAGE</span></figcaption></figure>
     </div>
     <p class="note">🎬 Følg flere klip på TikTok og Instagram, og se løbene live på YouTube (søg "Aquila Formula 1000").</p>
   </div>
@@ -677,7 +678,7 @@ footer{padding:40px 0 90px;border-top:1px solid var(--line);margin-top:96px}
       <p>Mason og holdet deler løb, test og livet bag rattet. Det giver sponsorerne synlighed langt ud over banen.</p>
     </div>
     <div class="reach rv">
-      <figure class="reach-vid"><video src="/assets/social-vid.mp4" poster="/assets/social-poster-464.webp" controls preload="none" playsinline></video></figure>
+      <figure class="reach-vid"><video src="/assets/social-vid.mp4" data-poster="/assets/social-poster-464.webp" controls preload="none" playsinline></video></figure>
       <div class="tele">
         <div class="tele-row">
           <div class="tcell"><span class="k">Visninger 2026</span><div class="v" data-count="8" data-fmt="mio">8 mio.</div><span class="s">Visninger i 2026</span>
@@ -1061,6 +1062,11 @@ footer{padding:40px 0 90px;border-top:1px solid var(--line);margin-top:96px}
     else{b.textContent='Kommende';b.classList.add('b-up')}
   });
 })();
+</script>
+<script>
+(function(){var v=document.querySelectorAll('video[data-poster]');function set(x){x.poster=x.getAttribute('data-poster');x.removeAttribute('data-poster')}
+if(!('IntersectionObserver' in window)){v.forEach(set);return}
+var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){set(e.target);o.unobserve(e.target)}})},{rootMargin:'600px 0px'});v.forEach(function(x){o.observe(x)})})();
 </script>
 <script>
 /* Cookiefri besøgstælling på egen server. Gemmer ingen cookies eller IP-adresser. */

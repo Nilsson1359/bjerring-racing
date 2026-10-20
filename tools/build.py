@@ -82,6 +82,14 @@ def poster_sub(mo):
     return f'poster="/assets/{name.rsplit(".",1)[0]}-{m["sizes"][0]}.webp"'
 body = re.sub(r'poster="/assets/([\w\-]+\.jpg)"', poster_sub, body)
 body = body.replace('controls preload="metadata"', 'controls preload="none"')
+# plakater på videoer længere nede hentes først når de nærmer sig skærmen
+body = re.sub(r'(<video src="[^"]+") poster="', r'\1 data-poster="', body)
+body = body.replace('</body>', '''<script>
+(function(){var v=document.querySelectorAll('video[data-poster]');function set(x){x.poster=x.getAttribute('data-poster');x.removeAttribute('data-poster')}
+if(!('IntersectionObserver' in window)){v.forEach(set);return}
+var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){set(e.target);o.unobserve(e.target)}})},{rootMargin:'600px 0px'});v.forEach(function(x){o.observe(x)})})();
+</script>
+</body>''',1)
 
 # sprog-knap i menuen
 body = body.replace('      <a href="#kontakt" class="btn btn-y">Bliv sponsor</a>\n    </div>',
@@ -99,7 +107,7 @@ body = body.replace('</body>', '''<script>
 # tilgængelighed: logo-link får sit navn fra den synlige tekst; lysere fodnote
 body = body.replace(' aria-label="Bjerring Racing, til toppen"', '')
 style = style.replace('.sector h4{', 'h3.h4{font-style:normal;font-stretch:100%;line-height:1.15}\n.sector h4{').replace('.sector h4{', '.sector h3.h4{').replace('.btnw h4{', '.btnw h3.h4{')
-style += '\n.foot-note{color:#8b8d93}\n'
+style += '\n.foot-note{color:#8b8d93}\n.reach-vid video{aspect-ratio:464/816;width:100%;object-fit:cover;background:#000}\n'
 # heltevideo hentes først når siden er færdig (sparer båndbredde i første visning)
 body = body.replace("else{hv.src='/assets/mason-onboard.mp4';var p=hv.play();if(p&&p.catch)p.catch(function(){});}",
   "else{var go=function(){hv.src='/assets/mason-onboard.mp4';var p=hv.play();if(p&&p.catch)p.catch(function(){});};if(document.readyState==='complete')go();else window.addEventListener('load',function(){setTimeout(go,150)});}")
