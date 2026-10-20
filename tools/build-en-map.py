@@ -86,6 +86,7 @@ P=[
 ('Løb i Danmark, Sverige og Norge, bl.a. Mittsverigebanan og Rudskogen.','Racing in Denmark, Sweden and Norway, including Mittsverigebanan and Rudskogen.'),
 ('<span class="t">I Rookie-mesterskabet i debutsæsonen i Aquila Formula 1000.</span>','<span class="t">In the Rookie Championship in his Aquila Formula 1000 debut season.</span>'),
 ('alt="Racerkørere med flest følgere på Facebook i Danmark: 1. Kevin Magnussen, 2. Tom Kristensen, 3. Jan Magnussen, 4. Mason Bjerring, 5. Frederik Vesti"','alt="Danish racing drivers with the most Facebook followers: 1. Kevin Magnussen, 2. Tom Kristensen, 3. Jan Magnussen, 4. Mason Bjerring, 5. Frederik Vesti"'),
+('/assets/fb-top5-','/assets/fb-top5-en-'),
 ('<b>Med mekanikeren</b>','<b>With my mechanic</b>'),('<b>Interview på engelsk</b>','<b>Interview in English</b>'),('<b>Hjelmen på, klar</b>','<b>Helmet on, ready</b>'),('<b>Forbi kaosset</b>','<b>Past the chaos</b>'),
 # season
 ('Sæson 2026 · Aquila Formula 1000','Season 2026 · Aquila Formula 1000'),
