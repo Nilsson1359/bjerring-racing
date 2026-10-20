@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://bjerringracing.dk/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image><image:loc>https://bjerringracing.dk/assets/og-image.jpg</image:loc></image:image>
+    <image:image><image:loc>https://bjerringracing.dk/assets/mason-portrait-738.webp</image:loc></image:image>
+    <image:image><image:loc>https://bjerringracing.dk/assets/s26-poster-1024.webp</image:loc></image:image>
+    <image:image><image:loc>https://bjerringracing.dk/assets/s26-pan-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://bjerringracing.dk/assets/race-pan-1500.webp</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="da" href="https://bjerringracing.dk/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bjerringracing.dk/en/"/>
   </url>
   <url>
     <loc>https://bjerringracing.dk/en/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="da" href="https://bjerringracing.dk/"/>
