@@ -16,6 +16,14 @@ src = open('design/v10.html', encoding='utf-8').read()
 manifest = json.load(open('tools/img-manifest.json'))
 fonts_css = open('tools/fonts.css').read().replace("url(assets/fonts/", "url(/assets/fonts/")
 fonts_css = re.sub(r'\s*\n\s*', '', fonts_css)
+# Overskrifts-skrifter vises først når de er hentet (forudindlæst, små) så layoutet ikke hopper;
+# brødtekst bruger en Arial-fallback med Inter-mål, så skiftet ikke flytter noget.
+fonts_css = fonts_css.replace("font-family: 'Saira';font-style: italic;", "font-family: 'Saira';font-style: italic;font-display: block;")
+fonts_css = fonts_css.replace("font-family: 'Kaushan Script';", "font-family: 'Kaushan Script';font-display: block;")
+fonts_css = re.sub(r"(font-family: '(?:Saira|Kaushan Script)';font-style: italic;font-display: block;[^}]*?)font-display: swap;", r"\1", fonts_css)
+fonts_css = re.sub(r"(font-family: 'Kaushan Script';font-display: block;[^}]*?)font-display: swap;", r"\1", fonts_css)
+fonts_css += "@font-face{font-family:'Inter Fallback';src:local('Arial');size-adjust:107.1%;ascent-override:90.4%;descent-override:22.5%;line-gap-override:0%}"
+
 
 # ---------- split ----------
 style = src[src.index('<style>') + 7: src.index('</style>')]
@@ -99,6 +107,7 @@ assert "window.addEventListener('load',function(){setTimeout(go" in body, 'video
 
 style += '\n.links a.lang{font-family:var(--hud);font-weight:700;letter-spacing:.08em;font-size:.8rem;border:1px solid var(--line2);padding:4px 8px}\n'
 style = style.replace('.vpill', '.vpill-unused')
+style = style.replace("font-family:'Inter',system-ui,sans-serif", "font-family:'Inter','Inter Fallback',system-ui,sans-serif")
 
 # ---------- head ----------
 CAL = [
@@ -194,6 +203,7 @@ def head(lang):
 <link rel="preload" href="/assets/fonts/Saira-fa4952.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/Inter-1ab1ad.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/SairaCondensed-1c5f1e.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/KaushanScript-6f0301.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Bjerring Racing">
 <meta property="og:locale" content="{'da_DK' if da else 'en_GB'}">
